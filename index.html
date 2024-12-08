@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gmx.css">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <style>
+        .robust, .frameworks {
+            font-size: 4rem;
+            justify-content: space-around;
+        }
+        .fast {
+            font-size: 5rem;
+            justify-content: center;
+        }
+        .frameworks i {
+            transition: .1s;
+        }
+        .frameworks i:nth-child(3) {
+            font-size: 5.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <aside>
+            <nav>
+                <li class="active">
+                    <i><iconify-icon icon="material-symbols:home" width="24" height="24"></iconify-icon></i>
+                    <span>Home</span>
+                </li>
+                <li>
+                    <i><iconify-icon icon="mdi:paint-outline" width="24" height="24"></iconify-icon></i>
+                    <span>Theme</span>
+                </li>
+                <li>
+                    <i><iconify-icon icon="mdi:book-outline" width="24" height="24"></iconify-icon></i>
+                    <span>Docs</span>
+                </li>
+            </nav>
+        </aside>
+        <article>
+            <section class="hero">
+                <h1 class="display padding accent-gradient round-full">GMX.css</h1>
+                <h5 class="small">GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the components to the animations to the theming.</h5>
+            </section>
+            <section class="grid-2" id="features">
+                <div class="container primary">
+                    <nav class="align-start">
+                        <button class="fab small right-margin"><i><iconify-icon icon="mdi:rocket-outline"></iconify-icon></i></button>
+                        <article>
+                            <h5>Fast</h5>
+                            <p class="no-margin">GMX.css is an rewritten Material Design-based CSS framework, with an smallest size and good code quality.</p>
+                        </article>
+                        <br>
+                    </nav>
+                    <br>
+                    <nav class="fast">
+                        <i><iconify-icon icon="mdi:lightning-bolt"></iconify-icon></i>
+                        <i>...</i>
+                        <i><iconify-icon icon="mdi:checkbox-multiple-marked-circle-outline"></iconify-icon></i>
+                    </nav>
+                </div>
+                <div class="container primary">
+                    <nav class="align-start">
+                        <button class="fab small right-margin"><i><iconify-icon icon="mdi:check-all"></iconify-icon></i></button>
+                        <article>
+                            <h5>Robust</h5>
+                            <p class="no-margin">Even in some edge cases like being printed, used in high contrast mode, or with JS off, most of GMX.css is still usable.</p>
+                        </article>
+                    </nav>
+                    <br>
+                    <nav class="robust">
+                        <i><iconify-icon icon="mdi:important-devices"></iconify-icon></i>
+                        <i><iconify-icon icon="mdi:printer-check"></iconify-icon></i>
+                        <i><iconify-icon icon="mdi:contrast-circle"></iconify-icon></i>
+                        <i><iconify-icon icon="mdi:toggle-switch-off-outline"></iconify-icon></i>
+                    </nav>
+                </div>
+                <div class="container primary">
+                    <nav class="align-start">
+                        <button class="fab small right-margin"><i><iconify-icon icon="mdi:star-four-points-outline"></iconify-icon></i></button>
+                        <article>
+                            <h5>Pure</h5>
+                            <p class="no-margin">The code is written just with pure CSS and dont limited to one framework, so you can reusable it with HTML5 or your favorite framework.</p>
+                        </article>
+                    </nav>
+                    <br>
+                    <nav class="frameworks">
+                        <i><iconify-icon icon="simple-icons:eleventy"></iconify-icon></i>
+                    <i><iconify-icon icon="simple-icons:react"></iconify-icon></i>
+                    <i><iconify-icon icon="simple-icons:svelte"></iconify-icon></i>
+                    <i><iconify-icon icon="simple-icons:astro"></iconify-icon></i>
+                    <i><iconify-icon icon="simple-icons:vuedotjs"></iconify-icon></i>
+                    </nav>
+                </div>
+                <div class="container primary">
+                    <nav class="align-start">
+                        <button class="fab small right-margin"><i><iconify-icon icon="mdi:image-size-select-small"></iconify-icon></i></button>
+                        <article>
+                            <h5>Micro</h5>
+                            <p class="no-margin">Any Material Design-based framework was really heavy at size, GMX.css is built efficient and tiny as possible, makes it 10x smaller than any framework.</p>
+                        </article>
+                    </nav>
+                    <br>
+                    <div class="card">
+                        <nav>
+                            <span class="btn icon tonal right-margin"><i><iconify-icon icon="mdi:file-document-check-outline"></iconify-icon></i></span>
+                            <div>
+                                <h5>6.5 KB</h5>
+                                <p class="small no-margin">Minified</p>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section class="grid-2 gap-small" id="features">
+                <div class="container">
+                    <header>
+                        <h3>Button</h3>
+                    </header>
+                    <footer>
+                        <button>Button</button>
+                        <button class="tonal">Button</button>
+                        <button class="outline">Button</button>
+                        <button class="text">Button</button>
+                        <button class="elevated">Button</button>
+                        <br><br>
+                        <button><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i>Button</button>
+                        <button class="tonal"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i>Button</button>
+                        <button class="outline"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i>Button</button>
+                        <button class="text"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i>Button</button>
+                        <button class="elevated"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i>Button</button>
+                        <br><br>
+                        <button class="icon"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                        <button class="icon tonal"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                        <button class="icon outline"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                        <button class="icon text"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                        <button class="icon elevated"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Segmented button</h3>
+                    </header>
+                    <footer>
+                        <nav class="segmented">
+
+                            <input type="radio" name="segmented-b" id="segmented-b-0" checked>
+                            <label class="btn" for="segmented-b-0">
+                                <i><iconify-icon icon="mdi:triangle-outline"></iconify-icon></i>
+                                <i class="checked"><iconify-icon icon="mdi:check"></iconify-icon></i>
+                                Tab A
+                            </label>
+
+                            <input type="radio" name="segmented-b" id="segmented-b-1">
+                            <label class="btn" for="segmented-b-1">
+                                <i><iconify-icon icon="mdi:square-outline"></iconify-icon></i>
+                                <i class="checked"><iconify-icon icon="mdi:check"></iconify-icon></i>
+                                Tab B
+                            </label>
+
+                            <input type="radio" name="segmented-b" id="segmented-b-2" disabled>
+                            <label class="btn" for="segmented-b-2"><i><iconify-icon icon="mdi:circle-outline"></iconify-icon></i>Tab C</label>
+
+                        </nav>
+                        <br>
+                        <nav class="segmented">
+
+                            <input type="checkbox" name="segmented-a" id="segmented-a-0" checked>
+                            <label class="btn" for="segmented-a-0">
+                                <i><iconify-icon icon="mdi:triangle-outline"></iconify-icon></i>
+                                <i class="checked"><iconify-icon icon="mdi:check"></iconify-icon></i>
+                                Tab A
+                            </label>
+
+                            <input type="checkbox" name="segmented-a" id="segmented-a-1">
+                            <label class="btn" for="segmented-a-1">
+                                <i><iconify-icon icon="mdi:square-outline"></iconify-icon></i>
+                                <i class="checked"><iconify-icon icon="mdi:check"></iconify-icon></i>
+                                Tab B
+                            </label>
+
+                            <input type="checkbox" name="segmented-a" id="segmented-a-2" disabled>
+                            <label class="btn" for="segmented-a-2"><i><iconify-icon icon="mdi:circle-outline"></iconify-icon></i>Tab C</label>
+
+                        </nav>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>FAB</h3>
+                    </header>
+                    <footer>
+                        <button class="fab small tonal"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                        <button class="fab tonal"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                        <button class="fab large tonal"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i></button>
+                        <button class="fab extended tonal"><i><iconify-icon icon="mdi:edit-outline"></iconify-icon></i>Hello</button>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Card</h3>
+                    </header>
+                    <footer>
+                        <div class="card">Hello</div>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Dialog</h3>
+                    </header>
+                    <dialog id="dialog-demo">
+                        <i><iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon></i>
+                        <br>
+                        <h6>Permanently delete?</h6>
+                        <p class="small">Deleting the selected messages will also remove them from all synced devices.</p>
+                        <form method="dialog">
+                            <button class="text">Cancel</button>
+                            <button class="tonal">Delete</button>
+                        </form>
+                    </dialog>
+                    <footer>
+                        <button class="tonal" onclick="document.getElementById('dialog-demo').showModal()">Open</button>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Bottom sheet</h3>
+                    </header>
+                    <dialog id="bottom-sheet-demo" class="bottom-sheet">
+                        <br>
+                        <nav class="flex-row all-max gap-small">
+                            <div class="field">
+                                <input type="date" placeholder="">
+                                <label><span>Start</span></label>
+                            </div>
+                            <div class="field">
+                                <input type="date" placeholder="">
+                                <label><span>End</span></label>
+                            </div>
+                        </nav>
+                        <br>
+                        <form method="dialog">
+                            <button class="full">Add event</button>
+                        </form>
+                    </dialog>
+                    <footer>
+                        <button class="tonal" onclick="document.getElementById('bottom-sheet-demo').showModal()">Open</button>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>List</h3>
+                    </header>
+                    <footer>
+                        <ul class="list-box">
+                            <li>
+                                <i><iconify-icon icon="mdi:person-outline"></iconify-icon></i>
+                                <article>
+                                    <h5 class="small">This is a headline</h5>
+                                    <p class="small">This is supporting text</p>
+                                </article>
+                            </li>
+                            <li>
+                                <i><iconify-icon icon="mdi:person-outline"></iconify-icon></i>
+                                <article>
+                                    <h5 class="small">This is a headline</h5>
+                                    <p class="small">This is an example of supporting text for a list item component showcase.</p>
+                                </article>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Menu</h3>
+                    </header>
+                    <footer>
+                        <ul class="menu">
+                            <li>
+                                <i><iconify-icon icon="mdi:arrow-u-left-top"></iconify-icon></i>
+                                <span>Undo</span>
+                            </li>
+                            <li disabled>
+                                <i><iconify-icon icon="mdi:arrow-u-right-top"></iconify-icon></i>
+                                <span>Redo</span>
+                            </li>
+                            <li disabled>
+                                <i><iconify-icon icon="mdi:content-cut"></iconify-icon></i>
+                                <span>Cut</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Radios</h3>
+                    </header>
+                    <footer>
+                        <form>
+                            <label class="radio">
+                                <input type="radio" name="radio-demo" id="radio-checked" checked>
+                                <span>Checked</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="radio-demo" id="radio-unchecked">
+                                <span>Not checked</span>
+                            </label>
+                          </form>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Checkbox</h3>
+                    </header>
+                    <footer>
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>Checked</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Not checked</span>
+                            </label>
+                          </form>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Switch</h3>
+                    </header>
+                    <footer>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span></span>
+                          </label>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                          </label>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Text field</h3>
+                    </header>
+                    <footer>
+                        <div class="field">
+                            <input type="text" placeholder="">
+                            <label><span>Field</span></label>
+                        </div>
+                        <div class="field">
+                            <i><iconify-icon icon="mdi:edit"></iconify-icon></i>
+                            <textarea placeholder=""></textarea>
+                            <label><span>Field</span></label>
+                        </div>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Chip</h3>
+                    </header>
+                    <footer>
+                        <nav class="gap-tiny">
+                            <label class="btn chip">
+                                <input type="checkbox">
+                                <span>Chip</span>
+                            </label>
+                            <label class="btn chip">
+                                <i><iconify-icon icon="mdi:edit"></iconify-icon></i>
+                                <input type="checkbox">
+                                <span>Chip</span>
+                            </label>
+                            <label class="btn chip">
+                                <input type="checkbox">
+                                <span>Chip</span>
+                                <i><iconify-icon icon="mdi:chevron-down"></iconify-icon></i>
+                            </label>
+                        </nav>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Tabs</h3>
+                    </header>
+                    <footer>
+                        <div class="tabs">
+                            <label>
+                                <input type="radio" name="tabs-demo" id="tabs-checked" checked="">
+                                <span>Hello</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tabs-demo" id="tabs-unchecked">
+                                <span>World</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="tabs-demo" id="tabs-other">
+                                <span>The longest item</span>
+                            </label>
+                        </div>
+                        <br>
+                        <div class="tabs variable">
+                            <label>
+                                <i><iconify-icon icon="mdi:square-outline"></iconify-icon></i>
+                                <input type="radio" name="tabs-variable-demo" id="tabs-variable-checked" checked="">
+                                <span>Hello</span>
+                            </label>
+                            <label>
+                                <i><iconify-icon icon="mdi:circle-outline"></iconify-icon></i>
+                                <input type="radio" name="tabs-variable-demo" id="tabs-variable-unchecked">
+                                <span>World</span>
+                            </label>
+                            <label>
+                                <i><iconify-icon icon="mdi:emoji-outline"></iconify-icon></i>
+                                <input type="radio" name="tabs-variable-demo" id="tabs-variable-other">
+                                <span>The longest item</span>
+                            </label>
+                        </div>
+                    </footer>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+</body>
+</html>
