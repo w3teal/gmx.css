@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @media (prefers-color-scheme: light) {
+
     :root,
     ::backdrop {
         --m3-scheme-primary: rgb(101, 85, 143);
@@ -82,46 +83,199 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     height: 1em;
 }
 
-:is(.grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12) {
+.grid {
     display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(var(--num), 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
 }
 
-@media only screen and (min-width: 900px) {
-    .grid-2 {
+.grid>* {
+    margin: 0;
+    grid-column: span var(--num);
+}
+
+.grid>.s1,
+.grid.all-s1>* {
+    --num: 1;
+}
+
+.grid>.s2,
+.grid.all-s2>* {
+    --num: 2;
+}
+
+.grid>.s3,
+.grid.all-s3>* {
+    --num: 3;
+}
+
+.grid>.s4,
+.grid.all-s4>* {
+    --num: 4;
+}
+
+.grid>.s5,
+.grid.all-s5>* {
+    --num: 5;
+}
+
+.grid>.s6,
+.grid.all-s6>* {
+    --num: 6;
+}
+
+.grid>.s7,
+.grid.all-s7>* {
+    --num: 7;
+}
+
+.grid>.s8,
+.grid.all-s8>* {
+    --num: 8;
+}
+
+.grid>.s9,
+.grid.all-s9>* {
+    --num: 9;
+}
+
+.grid>.s10,
+.grid.all-s10>* {
+    --num: 10;
+}
+
+.grid>.s11,
+.grid.all-s11>* {
+    --num: 11;
+}
+
+.grid>.s12,
+.grid.all-s12>* {
+    --num: 12;
+}
+
+@media screen and (min-width: 48em) {
+    .grid>.m1,
+    .grid.all-m1>* {
+        --num: 1;
+    }
+    
+    .grid>.m2,
+    .grid.all-m2>* {
         --num: 2;
     }
-    .grid-3 {
+    
+    .grid>.m3,
+    .grid.all-m3>* {
         --num: 3;
     }
-    .grid-4 {
+    
+    .grid>.m4,
+    .grid.all-m4>* {
         --num: 4;
     }
-    .grid-5 {
-        --num: 5
+    
+    .grid>.m5,
+    .grid.all-m5>* {
+        --num: 5;
     }
-    .grid-6 {
+    
+    .grid>.m6,
+    .grid.all-m6>* {
         --num: 6;
     }
-    .grid-7 {
+    
+    .grid>.m7,
+    .grid.all-m7>* {
         --num: 7;
     }
-    .grid-8 {
+    
+    .grid>.m8,
+    .grid.all-m8>* {
         --num: 8;
     }
-    .grid-9 {
+    
+    .grid>.m9,
+    .grid.all-m9>* {
         --num: 9;
     }
-    .grid-10 {
+    
+    .grid>.m10,
+    .grid.all-m10>* {
         --num: 10;
     }
-    .grid-11 {
+    
+    .grid>.m11,
+    .grid.all-m11>* {
         --num: 11;
     }
-    .grid-12 {
+    
+    .grid>.m12,
+    .grid.all-m12>* {
         --num: 12;
+    }    
+}
+
+@media screen and (min-width: 64em) {
+    .grid>.l1,
+    .grid.all-l1>* {
+        --num: 1;
     }
+    
+    .grid>.l2,
+    .grid.all-l2>* {
+        --num: 2;
+    }
+    
+    .grid>.l3,
+    .grid.all-l3>* {
+        --num: 3;
+    }
+    
+    .grid>.l4,
+    .grid.all-l4>* {
+        --num: 4;
+    }
+    
+    .grid>.l5,
+    .grid.all-l5>* {
+        --num: 5;
+    }
+    
+    .grid>.l6,
+    .grid.all-l6>* {
+        --num: 6;
+    }
+    
+    .grid>.l7,
+    .grid.all-l7>* {
+        --num: 7;
+    }
+    
+    .grid>.l8,
+    .grid.all-l8>* {
+        --num: 8;
+    }
+    
+    .grid>.l9,
+    .grid.all-l9>* {
+        --num: 9;
+    }
+    
+    .grid>.l10,
+    .grid.all-l10>* {
+        --num: 10;
+    }
+    
+    .grid>.l11,
+    .grid.all-l11>* {
+        --num: 11;
+    }
+    
+    .grid>.l12,
+    .grid.all-l12>* {
+        --num: 12;
+    }    
 }
 
 .no-margin {
@@ -172,12 +326,16 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     width: 100%;
 }
 
-.gap-tiny {
-    grid-gap: .5rem;
+.gap-sm {
+    gap: .25rem;
 }
 
-.gap-small {
-    grid-gap: 1rem;
+.gap-md {
+    gap: .85rem;
+}
+
+.gap-lg {
+    gap: 2rem;
 }
 
 .flex-row {
@@ -234,7 +392,7 @@ body {
 }
 
 body {
-    font-family: "Roboto", serif;
+    font-family: var(--m3-font);
     font-size: 1rem;
     letter-spacing: .03125rem;
     line-height: 1.5rem;
@@ -267,29 +425,32 @@ main>article {
     padding: 0 1.5rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 64em) {
     main>aside {
         position: fixed;
         background-color: var(--m3-scheme-surface);
         top: auto;
         bottom: 0;
-        padding: .75rem 0 .25rem;
+        padding: .25rem 0;
         width: 100%;
         z-index: 100;
         height: min-content;
     }
-    
+
     main>aside>:is(nav, .row) {
         justify-content: space-around;
         flex-direction: row;
     }
+
     main {
         width: 95%;
         margin: 0 auto 2rem;
     }
+
     main>article {
         padding: 0 0 !important;
     }
+
     dialog {
         min-width: 100% !important;
         width: 100%;
@@ -308,7 +469,7 @@ label.radio *,
     text-align: start;
 }
 
-:is(nav, .row) *:not(main>aside *, :is(h1,h2,h3,h4,h5,h6)) {
+:is(nav, .row) *:not(main>aside *, :is(h1, h2, h3, h4, h5, h6)) {
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -454,27 +615,33 @@ h6.small {
     font-size: 1rem
 }
 
-h1.display {
+h1.display,
+.display-xxxl {
     font-size: 4.25rem;
 }
 
-h2.display {
+h2.display,
+.display-xxl {
     font-size: 3.75rem;
 }
 
-h3.display {
+h3.display,
+.display-xl {
     font-size: 3rem;
 }
 
-h4.display {
+h4.display,
+.display-lg {
     font-size: 2.125rem;
 }
 
-h5.display {
+h5.display,
+.display-md {
     font-size: 1.25rem;
 }
 
-h6.display {
+h6.display,
+.display-sm {
     font-size: 1rem;
 }
 
@@ -662,7 +829,7 @@ dialog {
 }
 
 dialog:not(.bottom-sheet)[open] {
-    animation: dialog-in .5s cubic-bezier(.05,.7,.1,1), dialog-opacity .5s cubic-bezier(.05,.7,.1,1);
+    animation: dialog-in .5s cubic-bezier(.05, .7, .1, 1), dialog-opacity .5s cubic-bezier(.05, .7, .1, 1);
 }
 
 @keyframes dialog-in {
@@ -670,7 +837,7 @@ dialog:not(.bottom-sheet)[open] {
         transform: translateY(-3rem) scaleY(.9);
         clip-path: inset(0 0 100% 0 round var(--m3-util-rounding-extra-large));
     }
-    
+
     100% {
         transform: translateY(0) scaleY(1);
         clip-path: inset(0 0 0 0 round var(--m3-util-rounding-extra-large));
@@ -681,6 +848,7 @@ dialog:not(.bottom-sheet)[open] {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -697,13 +865,14 @@ dialog.bottom-sheet {
 }
 
 dialog[open].bottom-sheet {
-    animation: dialog-bottom .5s cubic-bezier(.05,.7,.1,1);
+    animation: dialog-bottom .5s cubic-bezier(.05, .7, .1, 1);
 }
 
 @keyframes dialog-bottom {
     0% {
         transform: translateY(100%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -925,7 +1094,7 @@ dialog form {
     position: relative;
 }
 
-.field:not(:last-child, :is(nav,.row) .field) {
+.field:not(:last-child, :is(nav, .row) .field) {
     margin-bottom: 1rem;
 }
 

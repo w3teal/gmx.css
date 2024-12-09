@@ -6,22 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="gmx.css">
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
-    <style>
-        .robust, .frameworks {
-            font-size: 4rem;
-            justify-content: space-around;
-        }
-        .fast {
-            font-size: 5rem;
-            justify-content: center;
-        }
-        .frameworks i {
-            transition: .1s;
-        }
-        .frameworks i:nth-child(3) {
-            font-size: 5.5rem;
-        }
-    </style>
 </head>
 <body>
 
@@ -47,7 +31,7 @@
                 <h1 class="display padding accent-gradient round-full">GMX.css</h1>
                 <h5 class="small">GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the components to the animations to the theming.</h5>
             </section>
-            <section class="grid-2" id="features">
+            <section class="grid all-m6 all-s12 gap-lg" id="features">
                 <div class="container primary">
                     <nav class="align-start">
                         <button class="fab small right-margin"><i><iconify-icon icon="mdi:rocket-outline"></iconify-icon></i></button>
@@ -56,12 +40,6 @@
                             <p class="no-margin">GMX.css is an rewritten Material Design-based CSS framework, with an smallest size and good code quality.</p>
                         </article>
                         <br>
-                    </nav>
-                    <br>
-                    <nav class="fast">
-                        <i><iconify-icon icon="mdi:lightning-bolt"></iconify-icon></i>
-                        <i>...</i>
-                        <i><iconify-icon icon="mdi:checkbox-multiple-marked-circle-outline"></iconify-icon></i>
                     </nav>
                 </div>
                 <div class="container primary">
@@ -72,13 +50,6 @@
                             <p class="no-margin">Even in some edge cases like being printed, used in high contrast mode, or with JS off, most of GMX.css is still usable.</p>
                         </article>
                     </nav>
-                    <br>
-                    <nav class="robust">
-                        <i><iconify-icon icon="mdi:important-devices"></iconify-icon></i>
-                        <i><iconify-icon icon="mdi:printer-check"></iconify-icon></i>
-                        <i><iconify-icon icon="mdi:contrast-circle"></iconify-icon></i>
-                        <i><iconify-icon icon="mdi:toggle-switch-off-outline"></iconify-icon></i>
-                    </nav>
                 </div>
                 <div class="container primary">
                     <nav class="align-start">
@@ -87,14 +58,6 @@
                             <h5>Pure</h5>
                             <p class="no-margin">The code is written just with pure CSS and dont limited to one framework, so you can reusable it with HTML5 or your favorite framework.</p>
                         </article>
-                    </nav>
-                    <br>
-                    <nav class="frameworks">
-                        <i><iconify-icon icon="simple-icons:eleventy"></iconify-icon></i>
-                    <i><iconify-icon icon="simple-icons:react"></iconify-icon></i>
-                    <i><iconify-icon icon="simple-icons:svelte"></iconify-icon></i>
-                    <i><iconify-icon icon="simple-icons:astro"></iconify-icon></i>
-                    <i><iconify-icon icon="simple-icons:vuedotjs"></iconify-icon></i>
                     </nav>
                 </div>
                 <div class="container primary">
@@ -105,19 +68,9 @@
                             <p class="no-margin">Any Material Design-based framework was really heavy at size, GMX.css is built efficient and tiny as possible, makes it 10x smaller than any framework.</p>
                         </article>
                     </nav>
-                    <br>
-                    <div class="card">
-                        <nav>
-                            <span class="btn icon tonal right-margin"><i><iconify-icon icon="mdi:file-document-check-outline"></iconify-icon></i></span>
-                            <div>
-                                <h5>6.5 KB</h5>
-                                <p class="small no-margin">Minified</p>
-                            </div>
-                        </nav>
-                    </div>
                 </div>
             </section>
-            <section class="grid-2 gap-small" id="features">
+            <section class="grid all-l6 all-s12" id="features">
                 <div class="container">
                     <header>
                         <h3>Button</h3>
@@ -233,7 +186,7 @@
                     </header>
                     <dialog id="bottom-sheet-demo" class="bottom-sheet">
                         <br>
-                        <nav class="flex-row all-max gap-small">
+                        <nav class="flex-row all-max gap-md">
                             <div class="field">
                                 <input type="date" placeholder="">
                                 <label><span>Start</span></label>
@@ -366,7 +319,7 @@
                         <h3>Chip</h3>
                     </header>
                     <footer>
-                        <nav class="gap-tiny">
+                        <nav class="gap-sm">
                             <label class="btn chip">
                                 <input type="checkbox">
                                 <span>Chip</span>
