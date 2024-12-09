@@ -9,10 +9,12 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
 
 ## Misc
 
+- [x] Responsive (nice for mobile & desktop)
 - [ ] Better name
 - [ ] Minified version
+- [ ] Ripple effect
 - [ ] Theme generator
-- [ ] Demos
+- [ ] More demos
 - [ ] NPM
 - [ ] Get 100 star milestone...
 
