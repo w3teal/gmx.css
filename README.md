@@ -16,7 +16,6 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
 - [ ] Theme generator
 - [ ] More demos
 - [ ] NPM
-- [ ] Get 100 star milestone...
 
 ## Features
 
