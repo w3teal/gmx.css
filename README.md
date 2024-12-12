@@ -24,18 +24,18 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
   - [x] FAB (Floating action button)
 - [x] Card
   - [ ] With image
-- [x] Dialog
+- [x] Dialog <kbd>JS</kbd>
   - [x] Animation/transition
   - [x] Bottom sheet
-- [ ] Snackbar
+- [ ] Snackbar <kbd>JS</kbd>
 - [x] List box
-- [ ] Progress
+- [x] Progress
 - [x] Menu
   - [ ] Dropdown
 - [x] Radio
 - [x] Checkbox
   - [x] Switch
-- [ ] Slider
+- [ ] Slider <kbd>JS</kbd>
 - [x] Text field
 - [x] Chip
 - [x] Tabs
