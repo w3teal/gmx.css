@@ -13,23 +13,30 @@
         <aside>
             <nav>
                 <li class="active">
-                    <i><iconify-icon icon="material-symbols:home" width="24" height="24"></iconify-icon></i>
+                    <i><iconify-icon icon="material-symbols:home"></iconify-icon></i>
                     <span>Home</span>
                 </li>
                 <li>
-                    <i><iconify-icon icon="mdi:paint-outline" width="24" height="24"></iconify-icon></i>
-                    <span>Theme</span>
-                </li>
-                <li>
-                    <i><iconify-icon icon="mdi:book-outline" width="24" height="24"></iconify-icon></i>
-                    <span>Docs</span>
+                    <a href="https://github.com/LIGMATV/gmx.css">
+                        <i><iconify-icon icon="mdi:github"></iconify-icon></i>
+                        <span>GitHub</span>
+                    </a>
                 </li>
             </nav>
         </aside>
         <article>
-            <section class="hero">
-                <h1 class="display padding accent-gradient round-full">GMX.css</h1>
+            <section class="text-center">
+                <h1 class="display padding-xl accent-gradient round-full">GMX.css</h1>
                 <h5 class="small">GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the components to the animations to the theming.</h5>
+                <br><br>
+                <div class="container">
+                    <i class="display-md"><iconify-icon icon="mdi:code-tags"></iconify-icon></i>
+                    <br>
+                    <h6>Getting started</h6>
+                    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/LIGMATV/gmx.css@refs/heads/main/gmx.css&quot;&gt;</pre>
+                </div>
+                <br>
+                <p class="small">v0.0.12</p>
             </section>
             <section class="grid all-m6 all-s12 gap-lg" id="features">
                 <div class="container primary">
@@ -230,6 +237,21 @@
                 </div>
                 <div class="container">
                     <header>
+                        <h3>Progress</h3>
+                    </header>
+                    <footer>
+                        <progress></progress>
+                        <br>
+                        <progress value="30" max="100"></progress>
+                        <br><br>
+                        <nav class="gap-md">
+                            <progress class="circle" value="30" max="100" style="--value: 30;"></progress>
+                        <progress class="circle spin" style="--value: 30;"></progress>
+                        </nav>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
                         <h3>Menu</h3>
                     </header>
                     <footer>
@@ -251,7 +273,7 @@
                 </div>
                 <div class="container">
                     <header>
-                        <h3>Radios</h3>
+                        <h3>Radio</h3>
                     </header>
                     <footer>
                         <form>
