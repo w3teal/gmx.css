@@ -82,7 +82,6 @@ a {
 
 pre {
     overflow-x: auto;
-    scrollbar-width: thin;
 }
 
 i {
@@ -292,6 +291,30 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     }
 }
 
+.elevate-none {
+    box-shadow: var(--m3-util-elevation-0) !important;
+}
+
+.elevate-sm {
+    box-shadow: var(--m3-util-elevation-1) !important;
+}
+
+.elevate-md {
+    box-shadow: var(--m3-util-elevation-2) !important;
+}
+
+.elevate-l {
+    box-shadow: var(--m3-util-elevation-3) !important;
+}
+
+.elevate-xl {
+    box-shadow: var(--m3-util-elevation-4) !important;
+}
+
+.elevate-xxl {
+    box-shadow: var(--m3-util-elevation-5) !important;
+}
+
 .no-margin {
     margin: 0;
 }
@@ -308,56 +331,60 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     margin-right: 1rem;
 }
 
+.padding-none {
+    padding: 0 !important;
+}
+
 .padding-md {
-    padding: 1rem;
+    padding: 1rem !important;
 }
 
 .padding-lg {
-    padding: 1.75rem;
+    padding: 1.75rem !important;
 }
 
 .padding-xl {
-    padding: 2.5rem;
+    padding: 2.5rem !important;
 }
 
 .round-tiny {
-    border-radius: var(--m3-util-rounding-extra-small);
+    border-radius: var(--m3-util-rounding-extra-small) !important;
 }
 
-.round-small {
-    border-radius: var(--m3-util-rounding-small);
+.round-sm {
+    border-radius: var(--m3-util-rounding-small) !important;
 }
 
-.round {
-    border-radius: var(--m3-util-rounding-medium);
+.round-md {
+    border-radius: var(--m3-util-rounding-medium) !important;
 }
 
-.round-large {
-    border-radius: var(--m3-util-rounding-large);
+.round-lg {
+    border-radius: var(--m3-util-rounding-large) !important;
 }
 
-.round-extra {
-    border-radius: var(--m3-util-rounding-extra-large);
+.round-xl {
+    border-radius: var(--m3-util-rounding-extra-large) !important;
 }
 
 .round-full {
-    border-radius: var(--m3-util-rounding-full);
+    border-radius: var(--m3-util-rounding-full) !important;
+}
+
+.gap-sm {
+    gap: .25rem !important;
+}
+
+.gap-md {
+    gap: .85rem !important;
+}
+
+.gap-lg {
+    gap: 2rem !important;
 }
 
 .full {
     width: 100%;
-}
-
-.gap-sm {
-    gap: .25rem;
-}
-
-.gap-md {
-    gap: .85rem;
-}
-
-.gap-lg {
-    gap: 2rem;
 }
 
 .flex-row {
@@ -441,7 +468,7 @@ main {
 }
 
 main>aside {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -455,13 +482,13 @@ main>aside>:is(nav, .row) {
 }
 
 main>article {
-    flex: 1;
+    width: 93.5%;
+    margin: 0 0 0 auto;
     padding: 0 1.5rem;
 }
 
 @media screen and (max-width: 64em) {
     main>aside {
-        position: fixed;
         background-color: var(--m3-scheme-surface);
         top: auto;
         bottom: 0;
@@ -482,6 +509,7 @@ main>article {
     }
 
     main>article {
+        width: 100%;
         padding: 0 0 !important;
     }
 
@@ -552,7 +580,6 @@ main>article>section {
 main>aside * {
     align-self: center;
 }
-
 
 .card {
     padding: 1rem;
@@ -674,6 +701,12 @@ h6.display,
     font-size: 1rem;
 }
 
+img.btn {
+    object-fit: cover;
+    object-position: center;
+    border: none;
+}
+
 :where(button, .btn) {
     display: inline-flex;
     align-items: center;
@@ -727,6 +760,7 @@ h6.display,
 :where(button, .btn).text,
 :where(button, .btn).outline,
 .segmented .btn {
+    box-shadow: none;
     background-color: transparent;
     color: var(--m3-scheme-primary);
 }
@@ -917,6 +951,11 @@ dialog::backdrop {
 
 dialog form {
     text-align: right;
+}
+
+details .menu {
+    position: absolute;
+    z-index: 2;
 }
 
 .list-box,
@@ -1206,7 +1245,7 @@ progress.circle.spin {
     position: relative;
 }
 
-.field:not(:last-child, :is(nav, .row) .field) {
+.field:not(:last-child, :is(nav, .row) .field, .grid>.field) {
     margin-bottom: 1rem;
 }
 
