@@ -1,5 +1,7 @@
 # gmx.css
 
+**G**allant **M**aterial e**X**perience
+
 Layout and look inspired by [m3-svelte](https://github.com/KTibow/m3-svelte).  
 GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the components to the animations to the theming. See the [website](http://ligmatv.is-a.dev/gmx.css/) for demos.
 
@@ -10,7 +12,6 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
 ## Misc
 
 - [x] Responsive (nice for mobile & desktop)
-- [ ] Better name
 - [ ] Minified version
 - [ ] Ripple effect
 - [ ] Theme generator
@@ -23,7 +24,7 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
   - [x] Segmented button
   - [x] FAB (Floating action button)
 - [x] Card
-  - [ ] With image
+  - [x] With image
 - [x] Dialog <kbd>JS</kbd>
   - [x] Animation/transition
   - [x] Bottom sheet
@@ -31,7 +32,7 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
 - [x] List box
 - [x] Progress
 - [x] Menu
-  - [ ] Dropdown
+  - [x] Dropdown
 - [x] Radio
 - [x] Checkbox
   - [x] Switch
