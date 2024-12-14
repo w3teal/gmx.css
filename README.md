@@ -36,7 +36,7 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
 - [x] Radio
 - [x] Checkbox
   - [x] Switch
-- [ ] Slider <kbd>JS</kbd>
+- [x] Slider <kbd>JS</kbd>
 - [x] Text field
 - [x] Chip
 - [x] Tabs
