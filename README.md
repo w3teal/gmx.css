@@ -1,4 +1,4 @@
-# gmx.css
+# GMX.css
 
 **G**allant **M**aterial e**X**perience
 
@@ -7,36 +7,4 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
 
 ![GMX.css features](https://github.com/user-attachments/assets/fdf35b72-6b9c-4143-9d65-17af5d3d2919)
 
-# To-do list
-
-## Misc
-
-- [x] Responsive (nice for mobile & desktop)
-- [ ] Minified version
-- [ ] Ripple effect
-- [ ] Theme generator
-- [ ] More demos
-- [x] [NPM](https://www.npmjs.com/package/gmx.css)
-
-## Features
-
-- [x] Buttons
-  - [x] Segmented button
-  - [x] FAB (Floating action button)
-- [x] Card
-  - [x] With image
-- [x] Dialog <kbd>JS</kbd>
-  - [x] Animation/transition
-  - [x] Bottom sheet
-- [ ] Snackbar <kbd>JS</kbd>
-- [x] List box
-- [x] Progress
-- [x] Menu
-  - [x] Dropdown
-- [x] Radio
-- [x] Checkbox
-  - [x] Switch
-- [x] Slider <kbd>JS</kbd>
-- [x] Text field
-- [x] Chip
-- [x] Tabs
+Track to-do list in https://github.com/LIGMATV/gmx.css/issues/1
