@@ -62,6 +62,33 @@
     --m3-font: Roboto, system-ui, sans-serif;
 }
 
+:root {
+    --m3-snackbar-shape: var(--m3-util-rounding-extra-small);
+    --m3-segmented-button-shape: var(--m3-util-rounding-full);
+    --m3-button-shape: var(--m3-util-rounding-full);
+    --m3-slider-track-out-shape: .5rem;
+    --m3-slider-track-in-shape: .125rem;
+    --m3-slider-thumb-shape: var(--m3-util-rounding-full);
+    --m3-chip-shape: var(--m3-util-rounding-small);
+    --m3-textfield-outlined-shape: var(--m3-util-rounding-extra-small);
+    --m3-textfield-filled-shape: var(--m3-util-rounding-extra-small);
+    --m3-datefield-shape: var(--m3-util-rounding-extra-small);
+    --m3-date-picker-shape: var(--m3-util-rounding-large);
+    --m3-slider-track-out-shape: .5rem;
+    --m3-slider-track-in-shape: .125rem;
+    --m3-slider-thumb-shape: var(--m3-util-rounding-full);
+    --m3-menu-shape: var(--m3-util-rounding-extra-small);
+    --m3-linear-progress-shape: var(--m3-util-rounding-full);
+    --m3-bottom-sheet-shape: var(--m3-util-rounding-extra-large);
+    --m3-card-shape: var(--m3-util-rounding-medium);
+    --m3-fab-small-shape: var(--m3-util-rounding-small);
+    --m3-fab-normal-shape: var(--m3-util-rounding-large);
+    --m3-fab-large-shape: var(--m3-util-rounding-extra-large);
+    --m3-dialog-shape: var(--m3-util-rounding-extra-large);
+    --m3-switch-track-shape: var(--m3-util-rounding-full);
+    --m3-switch-handle-shape: var(--m3-util-rounding-full);
+}
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -585,7 +612,7 @@ main>aside * {
     padding: 1rem;
     background-color: var(--m3-scheme-surface-container-low);
     box-shadow: var(--m3-util-elevation-1);
-    border-radius: var(--m3-util-rounding-medium);
+    border-radius: var(--m3-card-shape);
 }
 
 .container:not(:has(>header, >footer)),
@@ -713,7 +740,7 @@ img.btn {
     justify-content: center;
     background-color: var(--m3-scheme-primary);
     border: 1px solid transparent;
-    border-radius: var(--m3-util-rounding-full);
+    border-radius: var(--m3-button-shape);
     color: var(--m3-scheme-on-primary);
     font-family: inherit;
     font-size: .875rem;
@@ -793,6 +820,10 @@ img.btn {
     box-shadow: var(--m3-util-elevation-2);
 }
 
+.segmented {
+    border-radius: var(--m3-segmented-button-shape);
+}
+
 .segmented label {
     border-radius: 0;
 }
@@ -802,11 +833,11 @@ img.btn {
 }
 
 .segmented label:first-of-type {
-    border-radius: var(--m3-util-rounding-full) 0 0 var(--m3-util-rounding-full);
+    border-radius: var(--m3-segmented-button-shape) 0 0 var(--m3-segmented-button-shape);
 }
 
 .segmented label:last-of-type {
-    border-radius: 0 var(--m3-util-rounding-full) var(--m3-util-rounding-full) 0;
+    border-radius: 0 var(--m3-segmented-button-shape)var(--m3-segmented-button-shape) 0;
 }
 
 .segmented input:checked+label {
@@ -858,18 +889,18 @@ main>aside li:not(.active):hover i,
 }
 
 :where(button, .btn).fab.small {
-    border-radius: var(--m3-util-rounding-small);
+    border-radius: var(--m3-fab-small-shape);
 }
 
 :where(button, .btn).fab {
     box-shadow: var(--m3-util-elevation-2);
     width: 3.5rem;
-    border-radius: var(--m3-util-rounding-large);
+    border-radius: var(--m3-fab-normal-shape);
 }
 
 :where(button, .btn).fab.large {
     width: 5.5rem;
-    border-radius: var(--m3-util-rounding-extra-large);
+    border-radius: var(--m3-fab-large-shape);
 }
 
 :where(button, .btn).fab.large i * {
@@ -888,7 +919,7 @@ dialog {
     position: fixed;
     background-color: var(--m3-scheme-surface-container-high);
     border: none;
-    border-radius: var(--m3-util-rounding-extra-large);
+    border-radius: var(--m3-dialog-shape);
     min-width: 35rem;
     max-width: 35rem;
     text-align: center;
@@ -926,7 +957,7 @@ dialog.bottom-sheet {
     overflow: hidden;
     background-color: var(--m3-scheme-surface-container-low);
     color: var(--m3-scheme-on-surface);
-    border-radius: var(--m3-util-rounding-extra-large) var(--m3-util-rounding-extra-large) 0 0;
+    border-radius: var(--m3-bottom-sheet-shape) var(--m3-bottom-sheet-shape) 0 0;
     padding: 1rem 1rem;
     border: none;
 }
@@ -989,7 +1020,7 @@ details .menu {
     box-shadow: var(--m3-util-elevation-2);
     font-size: .875rem;
     font-weight: 500;
-    border-radius: var(--m3-util-rounding-extra-small);
+    border-radius: var(--m3-menu-shape);
     padding: .5rem 0;
     min-width: 7rem;
     max-width: 17.5rem;
@@ -1029,7 +1060,7 @@ progress {
 progress:not(.circle) {
     position: relative;
     height: .25rem;
-    border-radius: var(--m3-util-rounding-full);
+    border-radius: var(--m3-linear-progress-shape);
     overflow: hidden;
 }
 
@@ -1184,7 +1215,7 @@ progress.circle.spin {
     bottom: 6px;
     background-color: var(--m3-scheme-outline);
     transition: .2s;
-    border-radius: var(--m3-util-rounding-full);
+    border-radius: var(--m3-switch-handle-shape);
 }
 
 .switch>input:not(:checked):active+span::before {
@@ -1241,6 +1272,98 @@ progress.circle.spin {
     transform: rotate(45deg);
 }
 
+.slider {
+    display: block;
+    position: relative;
+    height: 2.75rem;
+    min-width: 10rem;
+}
+
+.slider input {
+    position: absolute;
+    left: -.5rem;
+    right: -.5rem;
+    width: calc(100% + 1rem);
+    height: 100%;
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.slider input:active~.thumb {
+    width: .125rem;
+}
+
+.slider .track::before {
+    position: absolute;
+    content: " ";
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+    width: calc(var(--percent) - .375rem);
+    height: 1rem;
+    pointer-events: none;
+    background-color: var(--m3-scheme-primary);
+    border-start-start-radius: var(--m3-slider-track-out-shape);
+    border-end-start-radius: var(--m3-slider-track-out-shape);
+    border-start-end-radius: var(--m3-slider-track-in-shape);
+    border-end-end-radius: var(--m3-slider-track-in-shape);
+}
+
+.slider .track::after {
+    position: absolute;
+    content: " ";
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+    width: calc(100% - var(--percent) - .375rem);
+    height: 1rem;
+    pointer-events: none;
+    background-color: var(--m3-scheme-primary-container);
+    border-start-start-radius: var(--m3-slider-track-in-shape);
+    border-end-start-radius: var(--m3-slider-track-in-shape);
+    border-start-end-radius: var(--m3-slider-track-out-shape);
+    border-end-end-radius: var(--m3-slider-track-out-shape);
+}
+
+.slider .thumb {
+    position: absolute;
+    left: var(--percent);
+    translate: -50% 0;
+    width: .25rem;
+    height: 2.75rem;
+    border-radius: 1.25rem;
+    background-color: var(--m3-scheme-primary);
+    pointer-events: none;
+    transition: width .2s;
+}
+
+.slider .tooltip {
+    position: absolute;
+    background-color: var(--m3-scheme-inverse-surface);
+    color: var(--m3-scheme-inverse-on-surface);
+    width: 3rem;
+    text-align: center;
+    padding: .65rem 0;
+    font-weight: 500;
+    font-size: .875rem;
+    border-radius: var(--m3-slider-thumb-shape);
+    left: var(--percent);
+    top: -3rem;
+    translate: -50% 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
+}
+
+.slider:hover .tooltip {
+    opacity: 1;
+}
+
 .field {
     position: relative;
 }
@@ -1256,7 +1379,7 @@ progress.circle.spin {
     min-width: 15rem;
     border-bottom: 1px solid var(--m3-scheme-outline);
     background-color: var(--m3-scheme-surface-container-highest);
-    border-radius: var(--m3-util-rounding-extra-small) var(--m3-util-rounding-extra-small) 0 0;
+    border-radius: var(--m3-textfield-filled-shape) var(--m3-textfield-filled-shape) 0 0;
     box-sizing: border-box;
     font: inherit;
     padding: 1.5rem 1rem .5rem;
@@ -1315,8 +1438,9 @@ progress.circle.spin {
 }
 
 .chip {
+    display: inline-flex;
     padding: .35rem 1rem;
-    border-radius: var(--m3-util-rounding-small);
+    border-radius: var(--m3-chip-shape);
     background-color: var(--m3-scheme-surface);
     color: var(--m3-scheme-on-surface-variant);
     border: solid .0625rem var(--m3-scheme-outline);

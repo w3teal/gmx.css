@@ -50,11 +50,11 @@
                     </i>
                     <br>
                     <h6>Getting started</h6>
-                    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/LIGMATV/gmx.css@main/gmx.css&quot;&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js&quot;&gt;&lt;/script&gt;</pre>
+                    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/gmx.css/gmx.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/iconify-icon&quot;&gt;</pre>
                 </div>
                 <br>
-                <p class="small">v0.0.13</p>
+                <p class="small">v0.0.14</p>
             </section>
             <section class="grid all-m6 all-s12 gap-lg" id="features">
                 <div class="container primary">
@@ -322,7 +322,13 @@
                 </div>
                 <div class="container">
                     <header>
-                        <h3>Dialog</h3>
+                        <nav>
+                            <h3>Dialog</h3>
+                            <div class="flex-max"></div>
+                            <div class="btn icon tonal"><i>
+                                    <iconify-icon icon="mdi:language-javascript"></iconify-icon>
+                                </i></div>
+                        </nav>
                     </header>
                     <dialog id="dialog-demo">
                         <i>
@@ -343,7 +349,13 @@
                 </div>
                 <div class="container">
                     <header>
-                        <h3>Bottom sheet</h3>
+                        <nav>
+                            <h3>Bottom sheet</h3>
+                            <div class="flex-max"></div>
+                            <div class="btn icon tonal"><i>
+                                    <iconify-icon icon="mdi:language-javascript"></iconify-icon>
+                                </i></div>
+                        </nav>
                     </header>
                     <dialog id="bottom-sheet-demo" class="bottom-sheet">
                         <br>
@@ -510,6 +522,34 @@
                             <input type="checkbox" checked>
                             <span></span>
                         </label>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <nav>
+                            <h3>Slider</h3>
+                            <div class="flex-max"></div>
+                            <div class="btn icon tonal"><i>
+                                    <iconify-icon icon="mdi:language-javascript"></iconify-icon>
+                                </i></div>
+                        </nav>
+                    </header>
+                    <footer>
+                        <label class="slider" style="--percent: 53%">
+                            <input type="range" value="53" min="0" max="100" step="1" oninput="updateSlider(this)">
+                            <span class="track"></span>
+                            <span class="thumb"></span>
+                            <span class="tooltip">53</span>
+                        </label>
+                        <script>
+                            function updateSlider(slider) {
+                                const value = slider.value;
+                                const percent = value + '%';
+                                slider.parentElement.style.setProperty('--percent', percent);
+                                const tooltip = slider.parentElement.querySelector('.tooltip');
+                                tooltip.textContent = value;
+                            }
+                        </script>
                     </footer>
                 </div>
                 <div class="container">

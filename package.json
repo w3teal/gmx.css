@@ -1,11 +1,8 @@
 {
   "name": "gmx.css",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "GMX.css implements the Material 3 design system in Vanilla CSS/JS.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "gmx.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LIGMATV/gmx.css.git"
