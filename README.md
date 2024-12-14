@@ -16,7 +16,7 @@ GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the comp
 - [ ] Ripple effect
 - [ ] Theme generator
 - [ ] More demos
-- [ ] NPM
+- [x] [NPM](https://www.npmjs.com/package/gmx.css)
 
 ## Features
 
