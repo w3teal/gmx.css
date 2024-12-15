@@ -66,9 +66,6 @@
     --m3-snackbar-shape: var(--m3-util-rounding-extra-small);
     --m3-segmented-button-shape: var(--m3-util-rounding-full);
     --m3-button-shape: var(--m3-util-rounding-full);
-    --m3-slider-track-out-shape: .5rem;
-    --m3-slider-track-in-shape: .125rem;
-    --m3-slider-thumb-shape: var(--m3-util-rounding-full);
     --m3-chip-shape: var(--m3-util-rounding-small);
     --m3-textfield-outlined-shape: var(--m3-util-rounding-extra-small);
     --m3-textfield-filled-shape: var(--m3-util-rounding-extra-small);
@@ -85,6 +82,8 @@
     --m3-fab-normal-shape: var(--m3-util-rounding-large);
     --m3-fab-large-shape: var(--m3-util-rounding-extra-large);
     --m3-dialog-shape: var(--m3-util-rounding-extra-large);
+    --m3-checkbox-shape: .175rem;
+    --m3-radio-shape: var(--m3-util-rounding-full);
     --m3-switch-track-shape: var(--m3-util-rounding-full);
     --m3-switch-handle-shape: var(--m3-util-rounding-full);
 }
@@ -502,10 +501,12 @@ main>aside {
     padding: 0 .75rem;
 }
 
-main>aside>:is(nav, .row) {
+main>aside>:is(menu, .row) {
+    display: flex;
     height: 100%;
     justify-content: center;
     flex-direction: column;
+    padding: 0;
 }
 
 main>article {
@@ -525,7 +526,7 @@ main>article {
         height: min-content;
     }
 
-    main>aside>:is(nav, .row) {
+    main>aside>:is(menu, .row) {
         justify-content: space-around;
         flex-direction: row;
     }
@@ -538,6 +539,7 @@ main>article {
     main>article {
         width: 100%;
         padding: 0 0 !important;
+        margin-bottom: 2.25rem;
     }
 
     dialog {
@@ -1114,6 +1116,7 @@ progress.circle.spin {
 .checkbox,
 .radio {
     display: inline-block;
+    position: relative;
 }
 
 .checkbox:not(:last-child),
@@ -1121,8 +1124,6 @@ progress.circle.spin {
     margin-right: .75rem;
 }
 
-.checkbox input,
-.radio input,
 .switch input,
 .chip input,
 .tabs input {
@@ -1132,6 +1133,27 @@ progress.circle.spin {
     margin-bottom: 0;
     display: none;
     cursor: pointer;
+}
+
+.checkbox input,
+.radio input {
+    appearance: none;
+    width: 2.25rem;
+    height: 2.25rem;
+    position: absolute;
+    margin: -.35rem -.55rem;
+    border-radius: var(--m3-util-rounding-full);
+    background-color: transparent;
+    transition: .1s;
+}
+
+.radio input {
+    margin: -.375rem -.6rem;
+}
+
+.checkbox:hover input,
+.radio:hover input {
+    background-color: rgb(from var(--m3-scheme-primary) r g b / 10%);
 }
 
 .checkbox span,
@@ -1146,8 +1168,8 @@ progress.circle.spin {
     appearance: none;
     background-color: transparent;
     border: .15rem solid currentColor;
-    border-radius: var(--m3-util-rounding-extra-small);
-    padding: .5rem;
+    border-radius: var(--m3-checkbox-shape);
+    padding: .45rem;
     display: inline-block;
     position: relative;
     vertical-align: middle;
@@ -1165,17 +1187,17 @@ progress.circle.spin {
     content: '';
     display: block;
     position: absolute;
-    top: 4px;
-    left: 7px;
-    width: 5px;
-    height: 12px;
+    top: .3rem;
+    left: .4rem;
+    width: 4.75px;
+    height: .7rem;
     border: solid #ffffff;
-    border-width: 0 1px 1px 0;
+    border-width: 0 .1em .1em 0;
     transform: rotate(45deg);
 }
 
 .radio span::before {
-    border-radius: 50%;
+    border-radius: var(--m3-radio-shape);
     padding: .3rem;
     border: 4px solid transparent;
     outline: .15rem solid currentColor;
@@ -1211,8 +1233,8 @@ progress.circle.spin {
     content: "";
     width: 1rem;
     height: 1rem;
-    left: 6px;
-    bottom: 6px;
+    left: .4rem;
+    bottom: .4rem;
     background-color: var(--m3-scheme-outline);
     transition: .2s;
     border-radius: var(--m3-switch-handle-shape);
@@ -1263,12 +1285,12 @@ progress.circle.spin {
     content: '';
     display: block;
     position: absolute;
-    top: .5rem;
-    right: .75rem;
-    width: 4px;
-    height: 10px;
+    top: .45rem;
+    right: .65rem;
+    width: .3rem;
+    height: 11px;
     border: solid var(--m3-scheme-primary);
-    border-width: 0 1px 1px 0;
+    border-width: 0 .15em .15em 0;
     transform: rotate(45deg);
 }
 
@@ -1286,11 +1308,8 @@ progress.circle.spin {
     width: calc(100% + 1rem);
     height: 100%;
     opacity: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     margin: 0;
-    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
 }
 
@@ -1376,7 +1395,7 @@ progress.circle.spin {
     display: block;
     border: none;
     outline: none;
-    min-width: 15rem;
+    min-width: 15.5rem;
     border-bottom: 1px solid var(--m3-scheme-outline);
     background-color: var(--m3-scheme-surface-container-highest);
     border-radius: var(--m3-textfield-filled-shape) var(--m3-textfield-filled-shape) 0 0;

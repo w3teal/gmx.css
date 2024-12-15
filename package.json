@@ -1,6 +1,6 @@
 {
   "name": "gmx.css",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "GMX.css implements the Material 3 design system in Vanilla CSS/JS.",
   "main": "gmx.css",
   "repository": {
