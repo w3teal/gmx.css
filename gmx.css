@@ -120,6 +120,66 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     height: 1em;
 }
 
+.primary {
+    background: var(--m3-scheme-primary) !important;
+    color: var(--m3-scheme-on-primary) !important;
+}
+
+.primary-container {
+    background: var(--m3-scheme-primary-container) !important;
+    color: var(--m3-scheme-on-primary-container) !important;
+}
+
+.secondary {
+    background: var(--m3-scheme-secondary) !important;
+    color: var(--m3-scheme-on-secondary) !important;
+}
+
+.secondary-container {
+    background: var(--m3-scheme-secondary-container) !important;
+    color: var(--m3-scheme-on-secondary-container) !important;
+}
+
+.tertiary {
+    background: var(--m3-scheme-tertiary) !important;
+    color: var(--m3-scheme-on-tertiary) !important;
+}
+
+.tertiary-container {
+    background: var(--m3-scheme-tertiary-container) !important;
+    color: var(--m3-scheme-on-tertiary-container) !important;
+}
+
+.background {
+    background: var(--m3-scheme-background) !important;
+    color: var(--m3-scheme-on-background) !important;
+}
+
+.surface {
+    background: var(--m3-scheme-surface) !important;
+    color: var(--m3-scheme-on-surface) !important;
+}
+
+.inverse-surface {
+    background: var(--m3-scheme-inverse-surface) !important;
+    color: var(--m3-scheme-inverse-on-surface) !important;
+}
+
+.surface-variant {
+    background: var(--m3-scheme-surface-variant) !important;
+    color: var(--m3-scheme-on-surface-variant) !important;
+}
+
+.error {
+    background: var(--m3-scheme-error) !important;
+    color: var(--m3-scheme-on-error) !important;
+}
+
+.error-container {
+    background: var(--m3-scheme-error-container) !important;
+    color: var(--m3-scheme-on-error-container) !important;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -341,12 +401,8 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     box-shadow: var(--m3-util-elevation-5) !important;
 }
 
-.no-margin {
-    margin: 0;
-}
-
-.no-padding {
-    padding: 0;
+.margin-none {
+    margin: 0 !important;
 }
 
 .left-margin {
@@ -397,6 +453,10 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     border-radius: var(--m3-util-rounding-full) !important;
 }
 
+.gap-none {
+    gap: 0 !important;
+}
+
 .gap-sm {
     gap: .25rem !important;
 }
@@ -411,6 +471,10 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
 
 .full {
     width: 100%;
+}
+
+.flex {
+    display: flex !important;
 }
 
 .flex-row {
@@ -463,7 +527,15 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
     justify-content: space-around;
 }
 
-p.small {
+.overflow-hidden {
+    overflow: hidden;
+}
+
+summary {
+    cursor: pointer;
+}
+
+.text-sm {
     font-size: .875rem;
     line-height: 1.25rem;
     letter-spacing: .015625rem;
@@ -471,6 +543,7 @@ p.small {
 
 .accent-gradient {
     background-image: linear-gradient(to bottom, var(--m3-scheme-primary-container), var(--m3-scheme-tertiary-container));
+    color: var(--m3-scheme-on-primary-container);
 }
 
 html,
@@ -483,7 +556,7 @@ body {
     font-size: 1rem;
     letter-spacing: .03125rem;
     line-height: 1.5rem;
-    background-color: var(--m3-scheme-background);
+    background: var(--m3-scheme-background);
     color: var(--m3-scheme-on-background);
     min-height: 100vh;
 }
@@ -507,6 +580,7 @@ main>aside>:is(menu, .row) {
     justify-content: center;
     flex-direction: column;
     padding: 0;
+    margin: 0;
 }
 
 main>article {
@@ -517,7 +591,7 @@ main>article {
 
 @media screen and (max-width: 64em) {
     main>aside {
-        background-color: var(--m3-scheme-surface);
+        background: var(--m3-scheme-surface);
         top: auto;
         bottom: 0;
         padding: .25rem 0;
@@ -558,6 +632,8 @@ label.radio *,
     align-items: center;
     align-self: normal;
     text-align: start;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 :is(nav, .row) *:not(main>aside *, :is(h1, h2, h3, h4, h5, h6)) {
@@ -595,7 +671,7 @@ main>aside li i {
 }
 
 main>aside li.active i {
-    background-color: var(--m3-scheme-primary-container);
+    background: var(--m3-scheme-secondary-container);
 }
 
 main>aside li i * {
@@ -612,7 +688,8 @@ main>aside * {
 
 .card {
     padding: 1rem;
-    background-color: var(--m3-scheme-surface-container-low);
+    background: var(--m3-scheme-surface-container-low);
+    color: var(--m3-scheme-on-surface);
     box-shadow: var(--m3-util-elevation-1);
     border-radius: var(--m3-card-shape);
 }
@@ -622,7 +699,7 @@ main>aside * {
 .container>footer {
     padding: 1rem;
     border-radius: var(--m3-util-rounding-extra-large);
-    background-color: var(--m3-scheme-surface-container);
+    background: var(--m3-scheme-surface-container);
     color: var(--m3-scheme-on-surface);
 }
 
@@ -641,15 +718,11 @@ main>aside * {
     border-radius: var(--m3-util-rounding-small) var(--m3-util-rounding-small) var(--m3-util-rounding-extra-large) var(--m3-util-rounding-extra-large);
 }
 
-.container.primary {
-    background-color: rgb(from var(--m3-scheme-primary-container) r g b / 50%);
-    color: var(--m3-scheme-on-primary-container);
-}
-
 :is(h1, h2, h3, h4, h5, h6) {
     display: inline-block;
     font-weight: 400;
     margin: .75rem 0;
+    line-height: normal;
 }
 
 h1 {
@@ -740,7 +813,7 @@ img.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--m3-scheme-primary);
+    background: var(--m3-scheme-primary);
     border: 1px solid transparent;
     border-radius: var(--m3-button-shape);
     color: var(--m3-scheme-on-primary);
@@ -762,7 +835,7 @@ img.btn {
 }
 
 :where(button, .btn):hover {
-    background-color: rgb(from var(--m3-scheme-primary) r g b / 90%);
+    background: rgb(from var(--m3-scheme-primary) r g b / 90%);
     box-shadow: var(--m3-util-elevation-1);
 }
 
@@ -776,34 +849,34 @@ img.btn {
 }
 
 :where(button, .btn).tonal {
-    background-color: var(--m3-scheme-secondary-container);
+    background: var(--m3-scheme-secondary-container);
     color: var(--m3-scheme-on-secondary-container);
 }
 
 :where(button, .btn).tonal:hover,
 .segmented input:checked+.btn:hover,
 .chip:has(input:checked):hover {
-    background-color: rgb(from var(--m3-scheme-primary) r g b / 20%);
+    background: rgb(from var(--m3-scheme-primary) r g b / 20%);
 }
 
 :where(button, .btn).text,
 :where(button, .btn).outline,
-.segmented .btn {
+.segmented :where(button, .btn) {
     box-shadow: none;
-    background-color: transparent;
+    background: transparent;
     color: var(--m3-scheme-primary);
 }
 
 :where(button, .btn).text:hover,
 :where(button, .btn).outline:hover,
-.segmented .btn:hover,
+.segmented :where(button, .btn):hover,
 .tabs>label:has(input:checked):hover {
     box-shadow: none;
-    background-color: rgb(from var(--m3-scheme-primary) r g b / 10%);
+    background: rgb(from var(--m3-scheme-primary) r g b / 10%);
 }
 
 :where(button, .btn).outline,
-.segmented .btn {
+.segmented {
     border: .0625rem solid var(--m3-scheme-outline);
 }
 
@@ -812,42 +885,35 @@ img.btn {
 }
 
 :where(button, .btn).elevated {
-    background-color: var(--m3-scheme-surface-container-low);
+    background: var(--m3-scheme-surface-container-low);
     color: var(--m3-scheme-primary);
     box-shadow: var(--m3-util-elevation-1);
 }
 
 :where(button, .btn).elevated:hover {
-    background-color: rgb(from var(--m3-scheme-primary) r g b / 5%);
+    background: rgb(from var(--m3-scheme-primary) r g b / 5%);
     box-shadow: var(--m3-util-elevation-2);
 }
 
 .segmented {
+    display: inline-flex;
     border-radius: var(--m3-segmented-button-shape);
 }
 
-.segmented label {
+.segmented>* {
     border-radius: 0;
 }
 
-.segmented label:not(:last-child) {
-    border-right: none;
-}
-
-.segmented label:first-of-type {
-    border-radius: var(--m3-segmented-button-shape) 0 0 var(--m3-segmented-button-shape);
-}
-
-.segmented label:last-of-type {
-    border-radius: 0 var(--m3-segmented-button-shape)var(--m3-segmented-button-shape) 0;
+.segmented>*:not(:last-child) {
+    border-right: .0625rem solid var(--m3-scheme-outline);
 }
 
 .segmented input:checked+label {
-    background-color: var(--m3-scheme-secondary-container);
+    background: var(--m3-scheme-secondary-container);
 }
 
 .segmented input:checked+label:hover {
-    background-color: var(--m3-scheme-secondary-container);
+    background: var(--m3-scheme-secondary-container);
 }
 
 .segmented input:checked+label i:not(.checked) {
@@ -871,7 +937,7 @@ main>aside li:not(.active):hover i,
 .menu>*:hover,
 .chip:hover,
 .tabs>*:hover {
-    background-color: var(--m3-scheme-surface-container-highest);
+    background: var(--m3-scheme-surface-container-highest);
 }
 
 :where(button, .btn).icon,
@@ -919,7 +985,7 @@ main>aside li:not(.active):hover i,
 
 dialog {
     position: fixed;
-    background-color: var(--m3-scheme-surface-container-high);
+    background: var(--m3-scheme-surface-container-high);
     border: none;
     border-radius: var(--m3-dialog-shape);
     min-width: 35rem;
@@ -957,7 +1023,7 @@ dialog:not(.bottom-sheet)[open] {
 dialog.bottom-sheet {
     margin-bottom: 0;
     overflow: hidden;
-    background-color: var(--m3-scheme-surface-container-low);
+    background: var(--m3-scheme-surface-container-low);
     color: var(--m3-scheme-on-surface);
     border-radius: var(--m3-bottom-sheet-shape) var(--m3-bottom-sheet-shape) 0 0;
     padding: 1rem 1rem;
@@ -979,7 +1045,7 @@ dialog[open].bottom-sheet {
 }
 
 dialog::backdrop {
-    background-color: rgb(from var(--m3-scheme-scrim) r g b / 30%);
+    background: rgb(from var(--m3-scheme-scrim) r g b / 30%);
 }
 
 dialog form {
@@ -993,7 +1059,7 @@ details .menu {
 
 .list-box,
 .menu {
-    background-color: var(--m3-scheme-surface-container-high);
+    background: var(--m3-scheme-surface-container-high);
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -1018,7 +1084,7 @@ details .menu {
 }
 
 .menu {
-    background-color: var(--m3-scheme-surface-container);
+    background: var(--m3-scheme-surface-container);
     box-shadow: var(--m3-util-elevation-2);
     font-size: .875rem;
     font-weight: 500;
@@ -1067,19 +1133,19 @@ progress:not(.circle) {
 }
 
 ::-webkit-progress-value {
-    background-color: var(--m3-scheme-primary);
+    background: var(--m3-scheme-primary);
 }
 
 ::-webkit-progress-bar {
-    background-color: var(--m3-scheme-primary-container);
+    background: var(--m3-scheme-primary-container);
 }
 
 progress.circle::-webkit-progress-value {
-    background-color: transparent;
+    background: transparent;
 }
 
 progress.circle::-webkit-progress-bar {
-    background-color: transparent;
+    background: transparent;
 }
 
 progress.circle {
@@ -1095,7 +1161,7 @@ progress.circle::after {
     content: "";
     position: absolute;
     inset: 10%;
-    background-color: var(--m3-scheme-surface-container);
+    background: var(--m3-scheme-surface-container);
     border-radius: 50%;
 }
 
@@ -1141,32 +1207,33 @@ progress.circle.spin {
     width: 2.25rem;
     height: 2.25rem;
     position: absolute;
-    margin: -.35rem -.55rem;
+    margin: -.35rem -.45rem;
     border-radius: var(--m3-util-rounding-full);
-    background-color: transparent;
+    background: transparent;
     transition: .1s;
 }
 
 .radio input {
-    margin: -.375rem -.6rem;
+    margin: -.375rem -.5rem;
 }
 
 .checkbox:hover input,
 .radio:hover input {
-    background-color: rgb(from var(--m3-scheme-primary) r g b / 10%);
+    background: rgb(from var(--m3-scheme-primary) r g b / 10%);
 }
 
 .checkbox span,
 .radio span {
     position: relative;
     cursor: pointer;
+    padding: 0 .115rem;
 }
 
 .checkbox span:before,
 .radio span::before {
     content: '';
     appearance: none;
-    background-color: transparent;
+    background: transparent;
     border: .15rem solid currentColor;
     border-radius: var(--m3-checkbox-shape);
     padding: .45rem;
@@ -1179,7 +1246,7 @@ progress.circle.spin {
 
 .checkbox input:checked+span:before,
 .radio input:checked+span:before {
-    background-color: var(--m3-scheme-primary);
+    background: var(--m3-scheme-primary);
     border-color: var(--m3-scheme-primary);
 }
 
@@ -1188,7 +1255,7 @@ progress.circle.spin {
     display: block;
     position: absolute;
     top: .3rem;
-    left: .4rem;
+    left: .5rem;
     width: 4.75px;
     height: .7rem;
     border: solid #ffffff;
@@ -1222,7 +1289,7 @@ progress.circle.spin {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--m3-scheme-surface-container-highest);
+    background: var(--m3-scheme-surface-container-highest);
     border: solid .125rem var(--m3-scheme-outline);
     transition: .2s;
     border-radius: 2rem;
@@ -1235,7 +1302,7 @@ progress.circle.spin {
     height: 1rem;
     left: .4rem;
     bottom: .4rem;
-    background-color: var(--m3-scheme-outline);
+    background: var(--m3-scheme-outline);
     transition: .2s;
     border-radius: var(--m3-switch-handle-shape);
 }
@@ -1252,25 +1319,25 @@ progress.circle.spin {
 }
 
 .switch>input:hover+span:before {
-    background-color: var(--m3-scheme-on-surface-variant);
+    background: var(--m3-scheme-on-surface-variant);
     box-shadow: 0 0 0 .95rem rgb(from var(--m3-scheme-outline) r g b / 20%);
 }
 
 .switch>input:checked+span {
-    background-color: var(--m3-scheme-primary);
+    background: var(--m3-scheme-primary);
     border-color: var(--m3-scheme-primary);
 }
 
 .switch>input:checked+span:before {
     width: 1.55rem;
     height: 1.55rem;
-    background-color: #ffffff;
+    background: #ffffff;
     transform: translateX(1rem);
     bottom: 1.5px;
 }
 
 .switch>input:checked:hover+span:before {
-    background-color: var(--m3-scheme-secondary-container);
+    background: var(--m3-scheme-secondary-container);
     box-shadow: 0 0 0 .75rem rgb(from var(--m3-scheme-outline) r g b / 20%);
 }
 
@@ -1326,7 +1393,7 @@ progress.circle.spin {
     width: calc(var(--percent) - .375rem);
     height: 1rem;
     pointer-events: none;
-    background-color: var(--m3-scheme-primary);
+    background: var(--m3-scheme-primary);
     border-start-start-radius: var(--m3-slider-track-out-shape);
     border-end-start-radius: var(--m3-slider-track-out-shape);
     border-start-end-radius: var(--m3-slider-track-in-shape);
@@ -1342,7 +1409,7 @@ progress.circle.spin {
     width: calc(100% - var(--percent) - .375rem);
     height: 1rem;
     pointer-events: none;
-    background-color: var(--m3-scheme-primary-container);
+    background: var(--m3-scheme-primary-container);
     border-start-start-radius: var(--m3-slider-track-in-shape);
     border-end-start-radius: var(--m3-slider-track-in-shape);
     border-start-end-radius: var(--m3-slider-track-out-shape);
@@ -1356,14 +1423,14 @@ progress.circle.spin {
     width: .25rem;
     height: 2.75rem;
     border-radius: 1.25rem;
-    background-color: var(--m3-scheme-primary);
+    background: var(--m3-scheme-primary);
     pointer-events: none;
     transition: width .2s;
 }
 
 .slider .tooltip {
     position: absolute;
-    background-color: var(--m3-scheme-inverse-surface);
+    background: var(--m3-scheme-inverse-surface);
     color: var(--m3-scheme-inverse-on-surface);
     width: 3rem;
     text-align: center;
@@ -1397,7 +1464,7 @@ progress.circle.spin {
     outline: none;
     min-width: 15.5rem;
     border-bottom: 1px solid var(--m3-scheme-outline);
-    background-color: var(--m3-scheme-surface-container-highest);
+    background: var(--m3-scheme-surface-container-highest);
     border-radius: var(--m3-textfield-filled-shape) var(--m3-textfield-filled-shape) 0 0;
     box-sizing: border-box;
     font: inherit;
@@ -1406,7 +1473,7 @@ progress.circle.spin {
 }
 
 .field :is(input, textarea):hover {
-    background-color: rgb(from var(--m3-scheme-on-surface) r g b / 15%);
+    background: rgb(from var(--m3-scheme-on-surface) r g b / 15%);
 }
 
 .field label {
@@ -1439,7 +1506,7 @@ progress.circle.spin {
 }
 
 .field:has(i) :is(input, textarea) {
-    padding: 1.5rem 1rem .5rem 2.85rem ;
+    padding: 1.5rem 1rem .5rem 2.85rem;
 }
 
 .field:has(i) label {
@@ -1460,7 +1527,7 @@ progress.circle.spin {
     display: inline-flex;
     padding: .35rem 1rem;
     border-radius: var(--m3-chip-shape);
-    background-color: var(--m3-scheme-surface);
+    background: var(--m3-scheme-surface);
     color: var(--m3-scheme-on-surface-variant);
     border: solid .0625rem var(--m3-scheme-outline);
 }
@@ -1480,13 +1547,13 @@ progress.circle.spin {
 
 .chip:has(input:checked) {
     border-color: transparent;
-    background-color: var(--m3-scheme-secondary-container);
+    background: var(--m3-scheme-secondary-container);
     color: var(--m3-scheme-on-secondary-container);
 }
 
 .tabs {
     display: flex;
-    background-color: var(--m3-scheme-surface);
+    background: var(--m3-scheme-surface);
     border-bottom: 1px solid var(--m3-scheme-outline-variant);
 }
 
@@ -1532,5 +1599,5 @@ progress.circle.spin {
     height: .15rem;
     width: 3rem;
     margin: 0 auto;
-    background-color: var(--m3-scheme-primary);
+    background: var(--m3-scheme-primary);
 }

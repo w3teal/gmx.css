@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMX.css</title>
     <link rel="stylesheet" href="gmx.css">
+    <link rel="stylesheet" href="theme.css">
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
 </head>
 
@@ -40,7 +41,7 @@
         </aside>
         <article>
             <section class="text-center">
-                <h1 class="display padding-xl accent-gradient round-full">GMX.css</h1>
+                <h1 class="display padding-lg accent-gradient round-full">GMX.css</h1>
                 <h5 class="small">GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the components
                     to the animations to the theming.</h5>
                 <br><br>
@@ -54,10 +55,171 @@
 &lt;script src=&quot;https://unpkg.com/iconify-icon&quot;&gt;&lt;/script&gt;</pre>
                 </div>
                 <br>
-                <p class="small">v0.0.15</p>
+                <p class="text-sm">v0.0.16</p>
+                <br>
+                <div class="container">
+                    <h6>Select your favorite scheme 🎨</h6>
+                    <br><br>
+                    <nav class="segmented">
+
+                        <input type="radio" name="theme" id="theme-0">
+                        <label class="btn" for="theme-0" onclick="changeColor('red')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Red
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-1">
+                        <label class="btn" for="theme-1" onclick="changeColor('pink')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Pink
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-2" checked>
+                        <label class="btn" for="theme-2" onclick="changeColor('purple')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Purple
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-3">
+                        <label class="btn" for="theme-3" onclick="changeColor('indigo')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Indigo
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-4">
+                        <label class="btn" for="theme-4" onclick="changeColor('blue')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Blue
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-5">
+                        <label class="btn" for="theme-5" onclick="changeColor('cyan')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Cyan
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-6">
+                        <label class="btn" for="theme-6" onclick="changeColor('teal')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Teal
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-7">
+                        <label class="btn" for="theme-7" onclick="changeColor('green')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Green
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-8">
+                        <label class="btn" for="theme-8" onclick="changeColor('lime')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Lime
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-9">
+                        <label class="btn" for="theme-9" onclick="changeColor('yellow')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Yellow
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-10">
+                        <label class="btn" for="theme-10" onclick="changeColor('amber')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Amber
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-11">
+                        <label class="btn" for="theme-11" onclick="changeColor('orange')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Orange
+                        </label>
+
+                        <input type="radio" name="theme" id="theme-12">
+                        <label class="btn" for="theme-12" onclick="changeColor('monochrome')">
+                            <i class="checked">
+                                <iconify-icon icon="mdi:check"></iconify-icon>
+                            </i>
+                            Mono
+                        </label>
+
+                    </nav>
+                    <br><br>
+                    <details open>
+                        <summary class="text-sm">Color schemes</summary>
+                        <br>
+                        <div class="grid all-l3 all-m6 all-s12 gap-none overflow-hidden round-lg">
+                            <div class="padding-md primary">
+                                <h6>Primary</h6>
+                            </div>
+                            <div class="padding-md primary-container">
+                                <h6>Primary Container</h6>
+                            </div>
+                            <div class="padding-md secondary">
+                                <h6>Secondary</h6>
+                            </div>
+                            <div class="padding-md secondary-container">
+                                <h6>Secondary Container</h6>
+                            </div>
+                            <div class="padding-md tertiary">
+                                <h6>Tertiary</h6>
+                            </div>
+                            <div class="padding-md tertiary-container">
+                                <h6>Tertiary Container</h6>
+                            </div>
+                            <div class="padding-md background">
+                                <h6>Background</h6>
+                            </div>
+                            <div class="padding-md surface">
+                                <h6>Surface</h6>
+                            </div>
+                            <div class="padding-md inverse-surface">
+                                <h6>Inverse Surface</h6>
+                            </div>
+                            <div class="padding-md surface-variant">
+                                <h6>Surface Variant</h6>
+                            </div>
+                            <div class="padding-md error">
+                                <h6>Error</h6>
+                            </div>
+                            <div class="padding-md error-container">
+                                <h6>Error Container</h6>
+                            </div>
+                        </div>
+                    </details>
+                    <script>
+                        function changeColor(color) {
+                            document.body.className = ''; // Reset semua kelas
+                            document.body.classList.add(color); // Tambahkan kelas warna yang dipilih
+                        }
+                    </script>
+                </div>
             </section>
             <section class="grid all-m6 all-s12 gap-lg" id="features">
-                <div class="container primary">
+                <div class="container primary-container">
                     <nav class="align-start">
                         <button class="fab small right-margin"><i>
                                 <iconify-icon icon="mdi:rocket-outline"></iconify-icon>
@@ -79,7 +241,7 @@
                         </i>
                     </nav>
                 </div>
-                <div class="container primary">
+                <div class="container primary-container">
                     <nav class="align-start">
                         <button class="fab small right-margin"><i>
                                 <iconify-icon icon="mdi:check-all"></iconify-icon>
@@ -106,7 +268,7 @@
                         </i>
                     </nav>
                 </div>
-                <div class="container primary">
+                <div class="container primary-container">
                     <nav class="align-start">
                         <button class="fab small right-margin"><i>
                                 <iconify-icon icon="mdi:star-four-points-outline"></iconify-icon>
@@ -136,7 +298,7 @@
                         </i>
                     </nav>
                 </div>
-                <div class="container primary">
+                <div class="container primary-container">
                     <nav class="align-start">
                         <button class="fab small right-margin"><i>
                                 <iconify-icon icon="mdi:image-size-select-small"></iconify-icon>
@@ -155,7 +317,7 @@
                                 </i></span>
                             <div>
                                 <h5>6.5 KB</h5>
-                                <p class="small no-margin">Minified</p>
+                                <p class="text-sm no-margin">Minified</p>
                             </div>
                         </nav>
                     </div>
@@ -241,7 +403,7 @@
                                 </i>Tab C</label>
 
                         </nav>
-                        <br>
+                        <br><br>
                         <nav class="segmented">
 
                             <input type="checkbox" name="segmented-a" id="segmented-a-0" checked>
@@ -336,7 +498,7 @@
                         </i>
                         <br>
                         <h6>Permanently delete?</h6>
-                        <p class="small">Deleting the selected messages will also remove them from all synced devices.
+                        <p class="text-sm">Deleting the selected messages will also remove them from all synced devices.
                         </p>
                         <form method="dialog">
                             <button class="text">Cancel</button>
@@ -391,7 +553,7 @@
                                 </i>
                                 <article>
                                     <h5 class="small">This is a headline</h5>
-                                    <p class="small">This is supporting text</p>
+                                    <p class="text-sm">This is supporting text</p>
                                 </article>
                             </li>
                             <li>
@@ -400,7 +562,7 @@
                                 </i>
                                 <article>
                                     <h5 class="small">This is a headline</h5>
-                                    <p class="small">This is an example of supporting text for a list item component
+                                    <p class="text-sm">This is an example of supporting text for a list item component
                                         showcase.</p>
                                 </article>
                             </li>
