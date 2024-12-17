@@ -649,7 +649,7 @@ label.radio *,
 }
 
 .scroll {
-    overflow-x: auto;
+    overflow-x: auto !important;
 }
 
 .scroll>* {
