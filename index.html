@@ -41,12 +41,12 @@
         </aside>
         <article>
             <section class="text-center">
-                <h1 class="display padding-lg accent-gradient round-full">GMX.css</h1>
+                <div class="display-xxl in-block padding-lg accent-gradient round-full">GMX.css</div>
                 <h5 class="small">GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the components
                     to the animations to the theming.</h5>
                 <br><br>
                 <div class="container">
-                    <i class="display-md">
+                    <i class="text-lg">
                         <iconify-icon icon="mdi:code-tags"></iconify-icon>
                     </i>
                     <br>
@@ -55,12 +55,17 @@
 &lt;script src=&quot;https://unpkg.com/iconify-icon&quot;&gt;&lt;/script&gt;</pre>
                 </div>
                 <br>
-                <p class="text-sm">v0.0.16</p>
+                <p class="text-sm">
+                    v0.0.17
+                    <br>
+                    Still in development, some features may not work properly and still many breaking changes. <a href="https://github.com/LIGMATV/gmx.css/issues/1">#1</a>
+                </p>
                 <br>
                 <div class="container">
                     <h6>Select your favorite scheme 🎨</h6>
-                    <br><br>
-                    <nav class="segmented">
+                    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css/theme.css&quot;&gt;</pre>
+                
+                    <nav class="segmented scroll">
 
                         <input type="radio" name="theme" id="theme-0">
                         <label class="btn" for="theme-0" onclick="changeColor('red')">
@@ -231,7 +236,7 @@
                         </article>
                     </nav>
                     <br>
-                    <nav class="display-xxl justify-center">
+                    <nav class="text-xxxl justify-center">
                         <i>
                             <iconify-icon icon="mdi:lightning-bolt"></iconify-icon>
                         </i>
@@ -253,7 +258,7 @@
                         </article>
                     </nav>
                     <br>
-                    <nav class="display-xl space-around">
+                    <nav class="text-xxl space-around">
                         <i>
                             <iconify-icon icon="mdi:important-devices"></iconify-icon>
                         </i>
@@ -280,7 +285,7 @@
                         </article>
                     </nav>
                     <br>
-                    <nav class="display-xl space-around">
+                    <nav class="text-xxl space-around">
                         <i>
                             <iconify-icon icon="simple-icons:eleventy"></iconify-icon>
                         </i>
@@ -316,8 +321,8 @@
                                     <iconify-icon icon="mdi:file-document-check-outline"></iconify-icon>
                                 </i></span>
                             <div>
-                                <h5>6.5 KB</h5>
-                                <p class="text-sm no-margin">Minified</p>
+                                <h5><a href="https://bundlephobia.com/package/gmx.css">6kB</a></h5>
+                                <p class="text-sm">Minzipped</p>
                             </div>
                         </nav>
                     </div>
@@ -802,6 +807,67 @@
                                 <span>The longest item</span>
                             </label>
                         </div>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Blockquote</h3>
+                    </header>
+                    <footer>
+                        <blockquote>First line.
+                            <br>Second line.
+                            <br>Third line.
+                          </blockquote>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Typography</h3>
+                    </header>
+                    <footer>
+                        <p>
+                            <b>Lorem ipsum</b> <u>dolor sit</u> amet, consectetur <a href="https://github.com/KTibow/m3-svelte">adipiscing elit</a>. <s>Morbi posuere</s> viverra diam, <i>vel egestas</i> <span class="text-sm">sapien</span> tincidunt <span class="text-lg">vel</span>. Fusce a erat augue. Fusce vel lorem vestibulum, <code>luctus nisi at</code>, lobortis est.
+                        </p>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Tables</h3>
+                    </header>
+                    <footer>
+                        <table>
+                            <thead>
+                              <tr>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Cell</td>
+                                <td>Cell</td>
+                                <td>Cell</td>
+                              </tr>
+                              <tr>
+                                <td>Cell</td>
+                                <td>Cell</td>
+                                <td>Cell</td>
+                              </tr>
+                              <tr>
+                                <td>Cell</td>
+                                <td>Cell</td>
+                                <td>Cell</td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <th>Footer</th>
+                                <th>Footer</th>
+                                <th>Footer</th>
+                              </tr>
+                            </tfoot>
+                          </table>
                     </footer>
                 </div>
             </section>
