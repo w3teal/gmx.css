@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 @media (prefers-color-scheme: light) {
 
     :root,
@@ -59,7 +57,7 @@
     --m3-util-rounding-large: 1rem;
     --m3-util-rounding-extra-large: 1.75rem;
     --m3-util-rounding-full: 100rem;
-    --m3-font: Roboto, system-ui, sans-serif;
+    --m3-font: Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Noto Sans, Arial, sans-serif;
 }
 
 :root {
@@ -101,16 +99,28 @@
     pointer-events: none;
 }
 
+img[width][height] {
+    height: auto;
+}
+
 a {
     text-decoration: none;
 }
 
-a:has(*:not(span)) {
+a:not(.btn, :has(*:not(span))) {
     color: inherit;
+    background: linear-gradient(to top, var(--m3-scheme-primary) 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: 0 7.5%;
+    border-radius: var(--m3-util-rounding-extra-small);
+    background-repeat: no-repeat;
+    transition: .25s;
+    will-change: background-position;
 }
 
-a:not(:has(*:not(span))) {
-    color: var(--m3-scheme-primary);
+a:not(.btn, :has(*:not(span))):hover {
+    color: var(--m3-scheme-on-primary);
+    background-position: 0 100%;
 }
 
 code {
@@ -194,6 +204,11 @@ iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
 .error-container {
     background: var(--m3-scheme-error-container) !important;
     color: var(--m3-scheme-on-error-container) !important;
+}
+
+.accent-gradient {
+    background-image: linear-gradient(to bottom, var(--m3-scheme-primary-container), var(--m3-scheme-tertiary-container)) !important;
+    color: var(--m3-scheme-on-primary-container) !important;
 }
 
 .grid {
@@ -555,11 +570,6 @@ summary {
     cursor: pointer;
 }
 
-.accent-gradient {
-    background-image: linear-gradient(to bottom, var(--m3-scheme-primary-container), var(--m3-scheme-tertiary-container));
-    color: var(--m3-scheme-on-primary-container);
-}
-
 html,
 body {
     margin: 0;
@@ -672,6 +682,7 @@ main>aside li:has(*>i)>* {
     align-self: center;
     flex-direction: column;
     justify-content: center;
+    color: inherit;
 }
 
 main>aside li span {
@@ -1643,12 +1654,24 @@ blockquote {
     padding: .75rem 1rem;
 }
 
+pre {
+    background: var(--m3-scheme-surface-container-highest);
+    padding: .75rem;
+    border-radius: var(--m3-util-rounding-medium);
+    margin: 0;
+}
+
+pre>code {
+    padding: 0;
+    font-size: 1rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-table :is(th,td) {
+table :is(th, td) {
     padding: .35rem;
     text-align: left;
 }
