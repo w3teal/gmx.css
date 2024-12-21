@@ -1,64 +1,38 @@
-name: Minify Files and Commit
+name: Minify and Commit
 
 on:
   push:
     branches:
-      - main
+      - main  # Anda bisa mengganti dengan branch yang sesuai
 
 jobs:
-  build:
+  minify:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      # 2. Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+    - name: Install dependencies
+      run: |
+        # Instal cleancss menggunakan npm
+        npm install -g clean-css-cli
 
-      # 3. Install dependencies globally
-      - name: Install dependencies
-        run: npm install -g terser html-minifier clean-css-cli
+    - name: Minify CSS files
+      run: |
+        # Membuat direktori dist jika belum ada
+        mkdir -p dist
 
-      # 4. Prepare the dist directory
-      - name: Prepare dist directory
-        run: rm -rf dist && mkdir -p dist
+        # Menemukan semua file CSS di direktori src dan meminify ke dist
+        find src -name "*.css" | while read file; do
+          # Membuat direktori di dalam dist yang sesuai dengan struktur src
+          mkdir -p dist/$(dirname "${file#src/}")
+          # Meminify file CSS menggunakan cleancss (pastikan cleancss sudah terinstal)
+          cleancss -o "dist/${file#src/}" "$file"
+        done
 
-      # 5. Minify JavaScript files
-      - name: Minify JavaScript files
-        run: |
-          find src -name "*.js" | while read file; do
-            mkdir -p dist/$(dirname "${file#src/}")
-            terser "$file" -o "dist/${file#src/}"
-          done
-
-      # 6. Minify HTML files
-      - name: Minify HTML files
-        run: |
-          find src -name "*.html" | while read file; do
-            mkdir -p dist/$(dirname "${file#src/}")
-            html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o "dist/${file#src/}" "$file"
-          done
-
-      # 7. Minify CSS files
-      - name: Minify CSS files
-        run: |
-          find src -name "*.css" | while read file; do
-            mkdir -p dist/$(dirname "${file#src/}")
-            cleancss -o "dist/${file#src/}" "$file"
-          done
-
-      # 8. Commit and push changes
-      - name: Commit and Push
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add dist
-          git commit -m "Minify files and update dist" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
-        env:
-          github_token: ${{ secrets.GH_TOKEN }}
+    - name: Commit and Push changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Minify files and update dist"
+        branch: ${{ github.ref }}  # Menargetkan branch yang sama dengan tempat workflow dijalankan
