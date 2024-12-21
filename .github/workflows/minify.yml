@@ -1,4 +1,4 @@
-name: Minify and Commit Files
+name: Minify Files and Commit
 
 on:
   push:
@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Setup Node.js environment
+      # 2. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      # Install dependencies
+      # 3. Install dependencies globally
       - name: Install dependencies
-        run: npm install terser html-minifier clean-css-cli
+        run: npm install -g terser html-minifier clean-css-cli
 
-      # Prepare dist directory
+      # 4. Prepare the dist directory
       - name: Prepare dist directory
         run: rm -rf dist && mkdir -p dist
 
-      # Minify JavaScript files
+      # 5. Minify JavaScript files
       - name: Minify JavaScript files
         run: |
           find src -name "*.js" | while read file; do
@@ -36,7 +36,7 @@ jobs:
             terser "$file" -o "dist/${file#src/}"
           done
 
-      # Minify HTML files
+      # 6. Minify HTML files
       - name: Minify HTML files
         run: |
           find src -name "*.html" | while read file; do
@@ -44,7 +44,7 @@ jobs:
             html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o "dist/${file#src/}" "$file"
           done
 
-      # Minify CSS files
+      # 7. Minify CSS files
       - name: Minify CSS files
         run: |
           find src -name "*.css" | while read file; do
@@ -52,7 +52,7 @@ jobs:
             cleancss -o "dist/${file#src/}" "$file"
           done
 
-      # Commit and push changes
+      # 8. Commit and push changes
       - name: Commit and Push
         run: |
           git config --global user.name "GitHub Action"
