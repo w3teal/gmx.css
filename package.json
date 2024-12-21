@@ -1,8 +1,8 @@
 {
   "name": "gmx.css",
-  "version": "0.0.19",
+  "version": "0.0.19.1",
   "description": "GMX.css implements the Material 3 design system in Vanilla CSS/JS.",
-  "main": "gmx.css",
+  "main": "dist/gmx.min.css",
   "scripts": {
     "minify-css": "cleancss -o dist/gmx.min.css src/*.css"
   },
