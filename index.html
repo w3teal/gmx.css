@@ -7,7 +7,7 @@
     <title>GMX.css</title>
     <link rel="stylesheet" href="src/gmx.css">
     <link rel="stylesheet" href="src/theme.css">
-    <script src="https://unpkg.com/iconify-icon"></script>
+    <script src="https://ligmatv.is-a.dev/modules/iconify-icon.min.js"></script>
 </head>
 
 <body>
@@ -20,6 +20,14 @@
                         <iconify-icon icon="material-symbols:home"></iconify-icon>
                     </i>
                     <span>Home</span>
+                </li>
+                <li>
+                    <a href="https://11ty-gmx.vercel.app/">
+                        <i>
+                            <iconify-icon icon="simple-icons:eleventy"></iconify-icon>
+                        </i>
+                        <span>Template</span>
+                    </a>
                 </li>
                 <li>
                     <a href="https://dev.to/t/gmxcss">
@@ -41,8 +49,10 @@
         </aside>
         <article>
             <section class="text-center">
-                <div class="display-xxl in-block padding-lg accent-gradient round-full">GMX.css</div>
-                <h5 class="small">GMX.css implements the Material 3 design system in Vanilla CSS/JS, from the components
+                <div class="display-xxl inline-block padding-l accent-gradient round-full">GMX.css</div>
+                <br><br>
+                <h5 class="small margin-auto" style="max-width: 50rem;">GMX.css implements the Material 3 design system
+                    in Vanilla CSS/JS, from the components
                     to the animations to the theming.</h5>
                 <br><br>
                 <div class="container">
@@ -53,186 +63,30 @@
                     <h6>Getting started</h6>
                     <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css&quot;&gt;
 &lt;script src=&quot;https://unpkg.com/iconify-icon&quot;&gt;&lt;/script&gt;</pre>
+                    <p class="text-sm">Or install it</p>
+                    <pre>npm install gmx.css
+npm install iconify-icon</pre>
                 </div>
                 <br>
                 <p class="text-sm">
-                    v0.0.20
+                    v0.0.23
                     <br>
-                    Still in development, some features may not work properly and still many breaking changes. <a href="https://github.com/LIGMATV/gmx.css/issues/1">#1</a>
+                    Still in development, some features may not work properly and still many breaking changes. <a
+                        href="https://github.com/LIGMATV/gmx.css/issues/1">#1</a>
+                    <br>
+                    The stable version will be realeased in early/mid 2025. 👀
                 </p>
-                <br>
-                <div class="container">
-                    <h6>Select your favorite scheme 🎨</h6>
-                    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css/dist/theme.min.css&quot;&gt;</pre>
-                    <br>
-                
-                    <nav class="segmented scroll">
-
-                        <input type="radio" name="theme" id="theme-0">
-                        <label class="btn" for="theme-0" onclick="changeColor('red')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Red
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-1">
-                        <label class="btn" for="theme-1" onclick="changeColor('pink')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Pink
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-2" checked>
-                        <label class="btn" for="theme-2" onclick="changeColor('purple')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Purple
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-3">
-                        <label class="btn" for="theme-3" onclick="changeColor('indigo')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Indigo
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-4">
-                        <label class="btn" for="theme-4" onclick="changeColor('blue')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Blue
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-5">
-                        <label class="btn" for="theme-5" onclick="changeColor('cyan')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Cyan
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-6">
-                        <label class="btn" for="theme-6" onclick="changeColor('teal')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Teal
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-7">
-                        <label class="btn" for="theme-7" onclick="changeColor('green')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Green
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-8">
-                        <label class="btn" for="theme-8" onclick="changeColor('lime')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Lime
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-9">
-                        <label class="btn" for="theme-9" onclick="changeColor('yellow')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Yellow
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-10">
-                        <label class="btn" for="theme-10" onclick="changeColor('amber')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Amber
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-11">
-                        <label class="btn" for="theme-11" onclick="changeColor('orange')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Orange
-                        </label>
-
-                        <input type="radio" name="theme" id="theme-12">
-                        <label class="btn" for="theme-12" onclick="changeColor('monochrome')">
-                            <i class="checked">
-                                <iconify-icon icon="mdi:check"></iconify-icon>
-                            </i>
-                            Mono
-                        </label>
-
-                    </nav>
-                    <br><br>
-                    <details open>
-                        <summary class="text-sm">Color schemes</summary>
-                        <br>
-                        <div class="grid all-l3 all-m6 all-s12 gap-none overflow-hidden round-lg">
-                            <div class="padding-md primary">
-                                <h6>Primary</h6>
-                            </div>
-                            <div class="padding-md primary-container">
-                                <h6>Primary Container</h6>
-                            </div>
-                            <div class="padding-md secondary">
-                                <h6>Secondary</h6>
-                            </div>
-                            <div class="padding-md secondary-container">
-                                <h6>Secondary Container</h6>
-                            </div>
-                            <div class="padding-md tertiary">
-                                <h6>Tertiary</h6>
-                            </div>
-                            <div class="padding-md tertiary-container">
-                                <h6>Tertiary Container</h6>
-                            </div>
-                            <div class="padding-md background">
-                                <h6>Background</h6>
-                            </div>
-                            <div class="padding-md surface">
-                                <h6>Surface</h6>
-                            </div>
-                            <div class="padding-md inverse-surface">
-                                <h6>Inverse Surface</h6>
-                            </div>
-                            <div class="padding-md surface-variant">
-                                <h6>Surface Variant</h6>
-                            </div>
-                            <div class="padding-md error">
-                                <h6>Error</h6>
-                            </div>
-                            <div class="padding-md error-container">
-                                <h6>Error Container</h6>
-                            </div>
-                        </div>
-                    </details>
-                    <script>
-                        function changeColor(color) {
-                            document.body.className = ''; // Reset semua kelas
-                            document.body.classList.add(color); // Tambahkan kelas warna yang dipilih
-                        }
-                    </script>
-                </div>
             </section>
             <section class="grid all-m6 all-s12 gap-lg" id="features">
                 <div class="container primary-container">
                     <nav class="align-start">
-                        <button class="fab small right-margin"><i>
+                        <button class="fab small margin-right"><i>
                                 <iconify-icon icon="mdi:rocket-outline"></iconify-icon>
                             </i></button>
                         <article>
                             <h5>Fast</h5>
-                            <p class="no-margin">GMX.css is an rewritten Material Design-based CSS framework, with an
+                            <p class="margin-none">GMX.css is an rewritten Material Design-based CSS framework, with
+                                an
                                 smallest size and good code quality.</p>
                         </article>
                     </nav>
@@ -249,17 +103,18 @@
                 </div>
                 <div class="container primary-container">
                     <nav class="align-start">
-                        <button class="fab small right-margin"><i>
+                        <button class="fab small margin-right"><i>
                                 <iconify-icon icon="mdi:check-all"></iconify-icon>
                             </i></button>
                         <article>
                             <h5>Robust</h5>
-                            <p class="no-margin">Even in some edge cases like being printed, used in high contrast mode,
+                            <p class="margin-none">Even in some edge cases like being printed, used in high contrast
+                                mode,
                                 or with JS off, most of GMX.css is still usable.</p>
                         </article>
                     </nav>
                     <br>
-                    <nav class="text-xxl space-around">
+                    <nav class="text-xxl justify-around">
                         <i>
                             <iconify-icon icon="mdi:important-devices"></iconify-icon>
                         </i>
@@ -276,25 +131,25 @@
                 </div>
                 <div class="container primary-container">
                     <nav class="align-start">
-                        <button class="fab small right-margin"><i>
+                        <button class="fab small margin-right"><i>
                                 <iconify-icon icon="mdi:star-four-points-outline"></iconify-icon>
                             </i></button>
                         <article>
                             <h5>Pure</h5>
-                            <p class="no-margin">The code is written just with pure CSS and dont limited to one
+                            <p class="margin-none">The code is written just with pure CSS and dont limited to one
                                 framework, so you can reusable it with HTML5 or your favorite framework.</p>
                         </article>
                     </nav>
                     <br>
-                    <nav class="text-xxl space-around">
-                        <i>
-                            <iconify-icon icon="simple-icons:eleventy"></iconify-icon>
-                        </i>
+                    <nav class="text-xxl justify-around">
                         <i>
                             <iconify-icon icon="simple-icons:react"></iconify-icon>
                         </i>
-                        <i class="display-xxl">
+                        <i>
                             <iconify-icon icon="simple-icons:svelte"></iconify-icon>
+                        </i>
+                        <i>
+                            <iconify-icon icon="simple-icons:eleventy"></iconify-icon>
                         </i>
                         <i>
                             <iconify-icon icon="simple-icons:astro"></iconify-icon>
@@ -306,19 +161,21 @@
                 </div>
                 <div class="container primary-container">
                     <nav class="align-start">
-                        <button class="fab small right-margin"><i>
+                        <button class="fab small margin-right"><i>
                                 <iconify-icon icon="mdi:image-size-select-small"></iconify-icon>
                             </i></button>
                         <article>
                             <h5>Micro</h5>
-                            <p class="no-margin">Any Material Design-based framework was really heavy at size, GMX.css
-                                is built efficient and tiny as possible, makes it 10x smaller than any framework.</p>
+                            <p class="margin-none">Any Material Design-based framework was really heavy at size,
+                                GMX.css
+                                is built efficient and tiny as possible, makes it 10x smaller than any framework.
+                            </p>
                         </article>
                     </nav>
                     <br>
                     <div class="card">
                         <nav>
-                            <span class="btn icon tonal right-margin"><i>
+                            <span class="btn icon tonal margin-right"><i>
                                     <iconify-icon icon="mdi:file-document-check-outline"></iconify-icon>
                                 </i></span>
                             <div>
@@ -329,7 +186,257 @@
                     </div>
                 </div>
             </section>
+            <section class="container text-center">
+                <h6>Select your favorite scheme 🎨</h6>
+                <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css/dist/theme.min.css&quot;&gt;</pre>
+                <br>
+
+                <nav class="segmented scroll">
+
+                    <input type="radio" name="theme" id="theme-0">
+                    <label class="btn" for="theme-0" onclick="changeColor('red')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Red
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-1">
+                    <label class="btn" for="theme-1" onclick="changeColor('pink')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Pink
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-2" checked>
+                    <label class="btn" for="theme-2" onclick="changeColor('purple')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Purple
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-3">
+                    <label class="btn" for="theme-3" onclick="changeColor('indigo')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Indigo
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-4">
+                    <label class="btn" for="theme-4" onclick="changeColor('blue')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Blue
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-5">
+                    <label class="btn" for="theme-5" onclick="changeColor('cyan')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Cyan
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-6">
+                    <label class="btn" for="theme-6" onclick="changeColor('teal')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Teal
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-7">
+                    <label class="btn" for="theme-7" onclick="changeColor('green')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Green
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-8">
+                    <label class="btn" for="theme-8" onclick="changeColor('lime')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Lime
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-9">
+                    <label class="btn" for="theme-9" onclick="changeColor('yellow')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Yellow
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-10">
+                    <label class="btn" for="theme-10" onclick="changeColor('amber')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Amber
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-11">
+                    <label class="btn" for="theme-11" onclick="changeColor('orange')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Orange
+                    </label>
+
+                    <input type="radio" name="theme" id="theme-12">
+                    <label class="btn" for="theme-12" onclick="changeColor('monochrome')">
+                        <i class="checked">
+                            <iconify-icon icon="mdi:check"></iconify-icon>
+                        </i>
+                        Mono
+                    </label>
+
+                </nav>
+                <br><br>
+                <details open>
+                    <summary class="text-sm">Color schemes</summary>
+                    <br>
+                    <div class="grid all-l3 all-m6 all-s12 gap-none overflow-hidden round-lg">
+                        <div class="padding primary">
+                            <h6>Primary</h6>
+                        </div>
+                        <div class="padding primary-container">
+                            <h6>Primary Container</h6>
+                        </div>
+                        <div class="padding secondary">
+                            <h6>Secondary</h6>
+                        </div>
+                        <div class="padding secondary-container">
+                            <h6>Secondary Container</h6>
+                        </div>
+                        <div class="padding tertiary">
+                            <h6>Tertiary</h6>
+                        </div>
+                        <div class="padding tertiary-container">
+                            <h6>Tertiary Container</h6>
+                        </div>
+                        <div class="padding background">
+                            <h6>Background</h6>
+                        </div>
+                        <div class="padding surface">
+                            <h6>Surface</h6>
+                        </div>
+                        <div class="padding inverse-surface">
+                            <h6>Inverse Surface</h6>
+                        </div>
+                        <div class="padding surface-variant">
+                            <h6>Surface Variant</h6>
+                        </div>
+                        <div class="padding error">
+                            <h6>Error</h6>
+                        </div>
+                        <div class="padding error-container">
+                            <h6>Error Container</h6>
+                        </div>
+                    </div>
+                </details>
+                <script>
+                    function changeColor(color) {
+                        document.body.className = '';
+                        document.body.classList.add(color);
+                    }
+                </script>
+            </section>
             <section class="grid all-l6 all-s12" id="features">
+                <div class="container s12 m12 l12">
+                    <header>
+                        <h3>Utilities</h3>
+                    </header>
+                    <footer>
+                        <div class="grid all-s12 all-m6 all-l6 grid-outline">
+                            <div class="padding-s">
+                                Colors: <br>
+                                <code>.primary</code>, <code>.primary-container</code>, <code>.secondary</code>,
+                                <code>.secondary-container</code>, <code>.tertiary</code>,
+                                <code>.tertiary-container</code>, <code>.background</code>, <code>.surface</code>,
+                                <code>.inverse-surface</code>, <code>.surface-variant</code>, <code>.error</code>,
+                                <code>.error-container</code>, <code>.accent-gradient</code>
+                            </div>
+                            <div class="padding-s">
+                                Grid columns: <br>
+                                <code>.s1</code>...<code>.s12</code>, <code>.m1</code>...<code>.m12</code>,
+                                <code>.l1</code>...<code>.l12</code> <br>
+                                For all the colums in grid: <br>
+                                <code>.all-s1</code>...<code>.all-s12</code>,
+                                <code>.all-m1</code>...<code>.all-m12</code>,
+                                <code>.all-l1</code>...<code>.all-l12</code>
+                            </div>
+                            <div class="padding-s">
+                                Margins: <br>
+                                <code>.margin</code>, <code>.margin-none</code>, <code>.margin-auto</code>,
+                                <code>.margin-xs</code>, <code>.margin-s</code>, <code>.margin-l</code>,
+                                <code>.margin-xl</code>, <code>.margin-left</code>, <code>.margin-right</code>,
+                                <code>.margin-top</code>, <code>.margin-bottom</code>, <code>.margin-horiz</code>,
+                                <code>.margin-vert</code>
+                            </div>
+                            <div class="padding-s">
+                                Paddings: <br>
+                                <code>.padding</code>, <code>.padding-none</code>, <code>.padding-auto</code>,
+                                <code>.padding-xs</code>, <code>.padding-s</code>, <code>.padding-l</code>,
+                                <code>.padding-xl</code>, <code>.padding-left</code>, <code>.padding-right</code>,
+                                <code>.padding-top</code>, <code>.padding-bottom</code>,
+                                <code>.padding-horiz</code>, <code>.padding-vert</code>
+                            </div>
+                            <div class="padding-s">
+                                Gaps: <br>
+                                <code>.gap</code>, <code>.gap-none</code>, <code>.gap-auto</code>,
+                                <code>.gap-xs</code>, <code>.gap-s</code>, <code>.gap-l</code>, <code>.gap-xl</code>
+                            </div>
+                            <div class="padding-s">
+                                Border radius: <br>
+                                <code>.round</code>, <code>.round-none</code>, <code>.round-auto</code>,
+                                <code>.round-xs</code>, <code>.round-s</code>, <code>.round-l</code>,
+                                <code>.round-xl</code>
+                            </div>
+                            <div class="padding-s">
+                                Elevates: <br>
+                                <code>.elevate</code>, <code>.elevate-none</code>, <code>.elevate-auto</code>,
+                                <code>.elevate-s</code>, <code>.elevate-l</code>, <code>.elevate-xl</code>
+                            </div>
+                            <div class="padding-s">
+                                Display: <br>
+                                <code>.block</code>, <code>.inline-block</code>, <code>.flex</code>,
+                                <code>.inline-flex</code>
+                            </div>
+                            <div class="padding-s">
+                                Flex utilities: <br>
+                                <code>.flex-row</code>, <code>.flex-col</code>, <code>.flex-wrap</code>,
+                                <code>.flex-no-wrap</code>, <code>.flex-max</code>/<code>.all-max</code>
+                            </div>
+                            <div class="padding-s">
+                                Flex alignment: <br>
+                                <code>.align-start</code>, <code>.align-end</code>, <code>.align-center</code>,
+                                <code>.align-baseline</code>, <code>.align-stretch</code>,
+                                <code>.justify-left</code>, <code>.justify-center</code>,
+                                <code>.justify-right</code>, <code>.justify-between</code>,
+                                <code>.justify-around</code> <br>
+                                Text alignment: <br>
+                                <code>.text-left</code>, <code>.text-center</code>, <code>.text-right</code>
+                            </div>
+                            <div class="padding-s">
+                                Overflow: <br>
+                                <code>.overflow-auto</code>, <code>.overflow-hidden</code>,
+                                <code>.overflow-visible</code>, <code>.overflow-scroll</code>
+                            </div>
+                            <div class="padding-s">
+                                Width: <br>
+                                <code>.width-min</code>, <code>.width-max</code>, <code>.width-fit</code>,
+                                <code>.width-full</code>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
                 <div class="container">
                     <header>
                         <h3>Button</h3>
@@ -470,10 +577,11 @@
                         <br>
                         <div class="grid all-s6">
                             <div class="card padding-none">
-                                <img class="round-md" src="https://placehold.co/600x200?text=GMX.css&font=roboto">
-                                <div class="padding-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                <img class="round" src="https://placehold.co/600x200?text=GMX.css&font=roboto">
+                                <div class="padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
                             </div>
-                            <div class="card">
+                            <div class="card padding">
                                 <nav>
                                     <img class="btn icon padding-none"
                                         src="https://placehold.co/200?text=GMX.css&font=roboto">
@@ -482,7 +590,6 @@
                                         <p>Lorem ipsum.</p>
                                     </div>
                                 </nav>
-                                <br>
                                 <button>Button</button>
                             </div>
                         </div>
@@ -498,21 +605,40 @@
                                 </i></div>
                         </nav>
                     </header>
-                    <dialog id="dialog-demo">
-                        <i>
-                            <iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon>
-                        </i>
-                        <br>
-                        <h6>Permanently delete?</h6>
-                        <p class="text-sm">Deleting the selected messages will also remove them from all synced devices.
-                        </p>
-                        <form method="dialog">
-                            <button class="text">Cancel</button>
-                            <button class="tonal">Delete</button>
-                        </form>
-                    </dialog>
                     <footer>
+                        <dialog id="dialog-demo">
+                            <i>
+                                <iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon>
+                            </i>
+                            <br>
+                            <h6>Permanently delete?</h6>
+                            <p class="text-sm">Deleting the selected messages will also remove them from all synced
+                                devices.
+                            </p>
+                            <form method="dialog">
+                                <button class="text">Cancel</button>
+                                <button class="tonal">Delete</button>
+                            </form>
+                        </dialog>
                         <button class="tonal" onclick="document.getElementById('dialog-demo').showModal()">Open</button>
+                        <hr class="margin-vert">
+                        <p class="text-sm margin-xs">CSS-only Checkbox solution:</p>
+                        <label class="btn tonal dialog-trigger" for="dialog-checkbox-demo">Open</label>
+                        <input class="base" type="checkbox" id="dialog-checkbox-demo">
+                        <div class="dialog">
+                            <i>
+                                <iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon>
+                            </i>
+                            <br>
+                            <h6>Permanently delete?</h6>
+                            <p class="text-sm">Deleting the selected messages will also remove them from all synced
+                                devices.
+                            </p>
+                            <form method="dialog">
+                                <label class="btn text" for="dialog-checkbox-demo">Cancel</label>
+                                <button class="tonal">Delete</button>
+                            </form>
+                        </div>
                     </footer>
                 </div>
                 <div class="container">
@@ -525,26 +651,47 @@
                                 </i></div>
                         </nav>
                     </header>
-                    <dialog id="bottom-sheet-demo" class="bottom-sheet">
-                        <br>
-                        <div class="grid all-max">
-                            <div class="field s12 m6">
-                                <input type="date" placeholder="">
-                                <label><span>Start</span></label>
-                            </div>
-                            <div class="field s12 m6">
-                                <input type="date" placeholder="">
-                                <label><span>End</span></label>
-                            </div>
-                        </div>
-                        <br>
-                        <form method="dialog">
-                            <button class="full">Add event</button>
-                        </form>
-                    </dialog>
                     <footer>
+                        <dialog id="bottom-sheet-demo" class="bottom-sheet">
+                            <br>
+                            <div class="grid all-max">
+                                <div class="field s12 m6">
+                                    <input type="date" placeholder="">
+                                    <label><span>Start</span></label>
+                                </div>
+                                <div class="field s12 m6">
+                                    <input type="date" placeholder="">
+                                    <label><span>End</span></label>
+                                </div>
+                            </div>
+                            <br>
+                            <form method="dialog">
+                                <button class="full">Add event</button>
+                            </form>
+                        </dialog>
                         <button class="tonal"
                             onclick="document.getElementById('bottom-sheet-demo').showModal()">Open</button>
+                        <hr class="margin-vert">
+                        <p class="text-sm margin-xs">CSS-only Checkbox solution:</p>
+                        <label class="btn tonal dialog-trigger" for="bottom-sheet-checkbox-demo">Open</label>
+                        <input class="base" type="checkbox" id="bottom-sheet-checkbox-demo">
+                        <div class="dialog bottom-sheet">
+                            <br>
+                            <div class="grid all-max">
+                                <div class="field s12 m6">
+                                    <input type="date" placeholder="">
+                                    <label><span>Start</span></label>
+                                </div>
+                                <div class="field s12 m6">
+                                    <input type="date" placeholder="">
+                                    <label><span>End</span></label>
+                                </div>
+                            </div>
+                            <br>
+                            <form method="dialog">
+                                <label class="btn full" for="bottom-sheet-checkbox-demo">Add event</label>
+                            </form>
+                        </div>
                     </footer>
                 </div>
                 <div class="container">
@@ -568,7 +715,8 @@
                                 </i>
                                 <article>
                                     <h5 class="small">This is a headline</h5>
-                                    <p class="text-sm">This is an example of supporting text for a list item component
+                                    <p class="text-sm">This is an example of supporting text for a list item
+                                        component
                                         showcase.</p>
                                 </article>
                             </li>
@@ -584,7 +732,7 @@
                         <br>
                         <progress value="30" max="100"></progress>
                         <br><br>
-                        <nav class="gap-md">
+                        <nav class="gap">
                             <progress class="circle" value="30" max="100" style="--value: 30;"></progress>
                             <progress class="circle spin" style="--value: 30;"></progress>
                         </nav>
@@ -709,15 +857,6 @@
                             <span class="thumb"></span>
                             <span class="tooltip">53</span>
                         </label>
-                        <script>
-                            function updateSlider(slider) {
-                                const value = slider.value;
-                                const percent = value + '%';
-                                slider.parentElement.style.setProperty('--percent', percent);
-                                const tooltip = slider.parentElement.querySelector('.tooltip');
-                                tooltip.textContent = value;
-                            }
-                        </script>
                     </footer>
                 </div>
                 <div class="container">
@@ -743,7 +882,7 @@
                         <h3>Chip</h3>
                     </header>
                     <footer>
-                        <nav class="gap-sm">
+                        <nav class="gap-s">
                             <label class="btn chip">
                                 <input type="checkbox">
                                 <span>Chip</span>
@@ -818,8 +957,8 @@
                         <blockquote>First line.
                             <br>Second line.
                             <br>Third line.
-                          </blockquote>
-                          <br>
+                        </blockquote>
+                        <br>
                         <pre>First line
 Second line
 Third line</pre>
@@ -830,9 +969,14 @@ Third line</pre>
                         <h3>Typography</h3>
                     </header>
                     <footer>
-                        <p>
-                            <b>Lorem ipsum</b> <u>dolor sit</u> amet, consectetur <a href="https://github.com/KTibow/m3-svelte">adipiscing elit</a>. <s>Morbi posuere</s> viverra diam, <i>vel egestas</i> <span class="text-sm">sapien</span> tincidunt <span class="text-lg">vel</span>. Fusce a erat augue. Fusce vel lorem vestibulum, <code>luctus nisi at</code>, lobortis est.
-                        </p>
+                        <div>
+                            <b>Lorem ipsum</b> <u>dolor sit</u> amet, consectetur <a href="https://github.com/KTibow/m3-svelte">adipiscing elit</a>. 
+                            <hr>
+                                <s>Morbi posuere</s>
+                            viverra diam, <i>vel egestas</i> <span class="text-sm">sapien</span> tincidunt <span
+                                class="text-lg">vel</span>. Fusce a erat augue. Fusce vel lorem vestibulum,
+                            <code>luctus nisi at</code>, lobortis est.
+                        </div>
                     </footer>
                 </div>
                 <div class="container">
@@ -842,42 +986,74 @@ Third line</pre>
                     <footer>
                         <table>
                             <thead>
-                              <tr>
-                                <th>Header</th>
-                                <th>Header</th>
-                                <th>Header</th>
-                              </tr>
+                                <tr>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                              </tr>
-                              <tr>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                              </tr>
-                              <tr>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                              </tr>
+                                <tr>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
+                                <tr>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                    <td>Cell</td>
+                                </tr>
                             </tbody>
                             <tfoot>
-                              <tr>
-                                <th>Footer</th>
-                                <th>Footer</th>
-                                <th>Footer</th>
-                              </tr>
+                                <tr>
+                                    <th>Footer</th>
+                                    <th>Footer</th>
+                                    <th>Footer</th>
+                                </tr>
                             </tfoot>
-                          </table>
+                        </table>
+                    </footer>
+                </div>
+                <div class="container">
+                    <header>
+                        <h3>Tooltips</h3>
+                    </header>
+                    <footer>
+                       <nav class="gap-s">
+                        <button class="chip tooltipped" aria-label="Plain tooltip">Plain tooltip</button>
+                        <button class="chip tooltipped rich" aria-label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Rich tooltip</button>
+                       <button class="chip icon tooltipped-left" aria-label="Left tooltip"><i><iconify-icon icon="mdi:arrow-left"></iconify-icon></i></button>
+                       <button class="chip icon tooltipped" aria-label="Top tooltip"><i><iconify-icon icon="mdi:arrow-up"></iconify-icon></i></button>
+                       <button class="chip icon tooltipped-bottom" aria-label="Bottom tooltip"><i><iconify-icon icon="mdi:arrow-down"></iconify-icon></i></button>
+                       <button class="chip icon tooltipped-right" aria-label="Right tooltip"><i><iconify-icon icon="mdi:arrow-right"></iconify-icon></i></button>
+                       </nav>
                     </footer>
                 </div>
             </section>
         </article>
     </main>
+    <script>
+        function updateSlider(slider) {
+            const value = slider.value;
+            const percent = value + '%';
+            slider.parentElement.style.setProperty('--percent', percent);
+            const tooltip = slider.parentElement.querySelector('.tooltip');
+            tooltip.textContent = value;
+        }
+        document.onkeydown = function (e) {
+            if (e.keyCode == 27) {
+                var mods = document.querySelectorAll('.dialog-trigger+[type=checkbox]');
+                [].forEach.call(mods, function (mod) {
+                    mod.checked = false;
+                });
+            }
+        }
+    </script>
 
 </body>
 
