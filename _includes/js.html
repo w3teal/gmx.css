@@ -1,0 +1,40 @@
+<div class="container s12 m12 l12" id="js">
+    <header>
+        <h3>Extra JS</h3>
+    </header>
+    <footer>
+        <div class="grid all-s12 all-m6 all-l6 grid-outline">
+            <div class="padding-s">
+                <b>Slider:</b>
+                <pre>
+function updateSlider(slider) {
+    const value = slider.value;
+    const percent = value + '%';
+    slider.parentElement.style.setProperty('--percent', percent);
+    const tooltip = slider.parentElement.querySelector('.tooltip');
+    tooltip.textContent = value;
+}</pre>
+                Example usage:  
+                <pre>
+&lt;label class=&quot;slider&quot; style=&quot;--percent: 53%&quot;&gt;
+    &lt;input type=&quot;range&quot; value=&quot;53&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; oninput=&quot;updateSlider(this)&quot;&gt;
+    &lt;span class=&quot;track&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;thumb&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tooltip&quot;&gt;53&lt;/span&gt;
+&lt;/label&gt;</pre>
+            </div>
+            <div class="padding-s">
+                <b>Closing CSS-only dialog with <kbd>ESC</kbd>:</b>
+                <pre>
+document.onkeydown = function (e) {
+    if (e.keyCode == 27) {
+        var mods = document.querySelectorAll('.dialog-trigger+[type=checkbox]');
+        [].forEach.call(mods, function (mod) {
+            mod.checked = false;
+        });
+    }
+}</pre>
+            </div>
+        </div>
+    </footer>
+</div>

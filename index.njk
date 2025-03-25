@@ -1,0 +1,100 @@
+---
+permalink: "index.html"
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMX.css</title>
+    <link rel="stylesheet" href="https://unpkg.com/gmx.css">
+    <!-- dev
+    <link rel="stylesheet" href="./src/gmx.css">
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/gmx.css/dist/theme.min.css">
+    <script src="https://unpkg.com/iconify-icon@2.3.0/dist/iconify-icon.min.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <aside>
+            <menu>
+                <li class="active">
+                    <i>
+                        <iconify-icon icon="material-symbols:home"></iconify-icon>
+                    </i>
+                    <span>Home</span>
+                </li>
+                <li>
+                    <a href="https://github.com/w3teal/gmx.css">
+                        <i>
+                            <iconify-icon icon="mdi:github"></iconify-icon>
+                        </i>
+                        <span>GitHub</span>
+                    </a>
+                </li>
+            </menu>
+        </aside>
+        <article>
+            <section class="text-center">
+                <div class="display-xxl inline-block padding-l accent-gradient round-full">GMX.css</div>
+                <br><br>
+                <h5 class="small margin-auto" style="max-width: 50rem;">GMX.css implements the Material 3 design system
+                    in Vanilla CSS/JS, from the components
+                    to the animations to the theming.</h5>
+                <br><br>
+                <div class="container">
+                    <i class="text-lg">
+                        <iconify-icon icon="mdi:code-tags"></iconify-icon>
+                    </i>
+                    <br>
+                    <h6>Getting started</h6>
+                    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css&quot;&gt;
+&lt;script src=&quot;https://unpkg.com/iconify-icon&quot;&gt;&lt;/script&gt;</pre>
+                    <p class="text-sm">Or install it</p>
+                    <pre>npm install gmx.css
+npm install iconify-icon</pre>
+                </div>
+                <br>
+                <p class="text-sm">
+                    <img alt="NPM License" src="https://img.shields.io/npm/l/gmx.css">
+                    <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/gmx.css">
+                    <a href="https://www.npmjs.com/package/gmx.css"><img alt="NPM Version" src="https://img.shields.io/npm/v/gmx.css"></a>
+                    <br>
+                    Still in development, some features may not work properly and still many breaking changes. Nothing is guaranteed.
+                </p>
+            </section>
+            {% include "_includes/features.html" %}
+            {% include "_includes/themes.html" %}
+            <section class="grid all-l6 all-s12" id="components">
+                {% include "_includes/util.html" %}
+                {% include "_includes/button.html" %}
+                {% include "_includes/segmented.html" %}
+                {% include "_includes/fab.html" %}
+                {% include "_includes/card.html" %}
+                {% include "_includes/dialog.html" %}
+                {% include "_includes/bottom-sheet.html" %}
+                {% include "_includes/list.html" %}
+                {% include "_includes/progress.html" %}
+                {% include "_includes/menu.html" %}
+                {% include "_includes/radio.html" %}
+                {% include "_includes/checkbox.html" %}
+                {% include "_includes/switch.html" %}
+                {% include "_includes/slider.html" %}
+                {% include "_includes/field.html" %}
+                {% include "_includes/chip.html" %}
+                {% include "_includes/tabs.html" %}
+                {% include "_includes/block.html" %}
+                {% include "_includes/typography.html" %}
+                {% include "_includes/table.html" %}
+                {% include "_includes/tooltip.html" %}
+                {% include "_includes/js.html" %}
+            </section>
+
+        </article>
+    </main>
+</body>
+
+</html>

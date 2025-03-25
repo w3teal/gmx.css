@@ -54,7 +54,7 @@ main>article {
     }
 }
 
-:is(nav, .row),
+:is(nav, .row):not(.segmented),
 .list-box>*,
 .menu>*,
 label.checkbox *,

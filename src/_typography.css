@@ -111,12 +111,18 @@ a:not(.btn, :has(*:not(span))):hover {
     background-position: 0 100%;
 }
 
-code {
+code,
+kbd {
     background: var(--m3-scheme-surface-variant);
     font-size: .9rem;
     border-radius: .25rem;
     letter-spacing: 0;
     padding: 0 .25rem;
+}
+
+kbd {
+    border: 1px solid var(--m3-scheme-outline);
+    border-bottom: 3px solid var(--m3-scheme-outline);
 }
 
 pre {

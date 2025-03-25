@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GMX.css</title>
-    <link rel="stylesheet" href="src/gmx.css">
-    <link rel="stylesheet" href="src/theme.css">
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.3.0/dist/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/gmx.css">
+    <!-- dev
+    <link rel="stylesheet" href="./src/gmx.css">
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/gmx.css/dist/theme.min.css">
+    <script src="https://unpkg.com/iconify-icon@2.3.0/dist/iconify-icon.min.js"></script>
 </head>
 
 <body>
@@ -22,23 +25,7 @@
                     <span>Home</span>
                 </li>
                 <li>
-                    <a href="https://11ty-gmx.vercel.app/">
-                        <i>
-                            <iconify-icon icon="simple-icons:eleventy"></iconify-icon>
-                        </i>
-                        <span>Template</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://dev.to/t/gmxcss">
-                        <i>
-                            <iconify-icon icon="mdi:dev-to"></iconify-icon>
-                        </i>
-                        <span>Posts</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/LIGMATV/gmx.css">
+                    <a href="https://github.com/w3teal/gmx.css">
                         <i>
                             <iconify-icon icon="mdi:github"></iconify-icon>
                         </i>
@@ -69,992 +56,1005 @@ npm install iconify-icon</pre>
                 </div>
                 <br>
                 <p class="text-sm">
-                    v0.0.23
+                    <img alt="NPM License" src="https://img.shields.io/npm/l/gmx.css">
+                    <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/gmx.css">
+                    <a href="https://www.npmjs.com/package/gmx.css"><img alt="NPM Version" src="https://img.shields.io/npm/v/gmx.css"></a>
                     <br>
-                    Still in development, some features may not work properly and still many breaking changes. <a
-                        href="https://github.com/LIGMATV/gmx.css/issues/1">#1</a>
-                    <br>
-                    The stable version will be realeased in early/mid 2025. 👀
+                    Still in development, some features may not work properly and still many breaking changes. Nothing is guaranteed.
                 </p>
             </section>
             <section class="grid all-m6 all-s12 gap-lg" id="features">
-                <div class="container primary-container">
-                    <nav class="align-start">
-                        <button class="fab small margin-right"><i>
-                                <iconify-icon icon="mdi:rocket-outline"></iconify-icon>
-                            </i></button>
-                        <article>
-                            <h5>Fast</h5>
-                            <p class="margin-none">GMX.css is an rewritten Material Design-based CSS framework, with
-                                an
-                                smallest size and good code quality.</p>
-                        </article>
-                    </nav>
-                    <br>
-                    <nav class="text-xxxl justify-center">
-                        <i>
-                            <iconify-icon icon="mdi:lightning-bolt"></iconify-icon>
-                        </i>
-                        <i>...</i>
-                        <i>
-                            <iconify-icon icon="mdi:checkbox-multiple-marked-circle-outline"></iconify-icon>
-                        </i>
-                    </nav>
+    <div class="container primary-container">
+        <nav class="align-start">
+            <button class="fab small margin-right"><i>
+                    <iconify-icon icon="mdi:rocket-outline"></iconify-icon>
+                </i></button>
+            <article>
+                <h5>Fast</h5>
+                <p class="margin-none">GMX.css is an rewritten Material Design-based CSS framework, with
+                    an
+                    smallest size and good code quality.</p>
+            </article>
+        </nav>
+        <br>
+        <nav class="text-xxxl justify-center">
+            <i>
+                <iconify-icon icon="mdi:lightning-bolt"></iconify-icon>
+            </i>
+            <i>...</i>
+            <i>
+                <iconify-icon icon="mdi:checkbox-multiple-marked-circle-outline"></iconify-icon>
+            </i>
+        </nav>
+    </div>
+    <div class="container primary-container">
+        <nav class="align-start">
+            <button class="fab small margin-right"><i>
+                    <iconify-icon icon="mdi:check-all"></iconify-icon>
+                </i></button>
+            <article>
+                <h5>Robust</h5>
+                <p class="margin-none">Even in some edge cases like being printed, used in high contrast
+                    mode,
+                    or with JS off, most of GMX.css is still usable.</p>
+            </article>
+        </nav>
+        <br>
+        <nav class="text-xxl justify-around">
+            <i>
+                <iconify-icon icon="mdi:important-devices"></iconify-icon>
+            </i>
+            <i>
+                <iconify-icon icon="mdi:printer-check"></iconify-icon>
+            </i>
+            <i>
+                <iconify-icon icon="mdi:contrast-circle"></iconify-icon>
+            </i>
+            <i>
+                <iconify-icon icon="mdi:toggle-switch-off-outline"></iconify-icon>
+            </i>
+        </nav>
+    </div>
+    <div class="container primary-container">
+        <nav class="align-start">
+            <button class="fab small margin-right"><i>
+                    <iconify-icon icon="mdi:star-four-points-outline"></iconify-icon>
+                </i></button>
+            <article>
+                <h5>Pure</h5>
+                <p class="margin-none">The code is written just with pure CSS and dont limited to one
+                    framework, so you can reusable it with HTML5 or your favorite framework.</p>
+            </article>
+        </nav>
+        <br>
+        <nav class="text-xxl justify-around">
+            <i>
+                <iconify-icon icon="simple-icons:react"></iconify-icon>
+            </i>
+            <i>
+                <iconify-icon icon="simple-icons:svelte"></iconify-icon>
+            </i>
+            <i>
+                <iconify-icon icon="simple-icons:eleventy"></iconify-icon>
+            </i>
+            <i>
+                <iconify-icon icon="simple-icons:astro"></iconify-icon>
+            </i>
+            <i>
+                <iconify-icon icon="simple-icons:vuedotjs"></iconify-icon>
+            </i>
+        </nav>
+    </div>
+    <div class="container primary-container">
+        <nav class="align-start">
+            <button class="fab small margin-right"><i>
+                    <iconify-icon icon="mdi:image-size-select-small"></iconify-icon>
+                </i></button>
+            <article>
+                <h5>Micro</h5>
+                <p class="margin-none">Any Material Design-based framework was really heavy at size,
+                    GMX.css
+                    is built efficient and tiny as possible, makes it 10x smaller than any framework.
+                </p>
+            </article>
+        </nav>
+        <br>
+        <div class="card">
+            <nav>
+                <span class="btn icon tonal margin-right"><i>
+                        <iconify-icon icon="mdi:file-document-check-outline"></iconify-icon>
+                    </i></span>
+                <div>
+                    <h5><a href="https://bundlephobia.com/package/gmx.css">6kB</a></h5>
+                    <p class="text-sm">Minzipped</p>
                 </div>
-                <div class="container primary-container">
-                    <nav class="align-start">
-                        <button class="fab small margin-right"><i>
-                                <iconify-icon icon="mdi:check-all"></iconify-icon>
-                            </i></button>
-                        <article>
-                            <h5>Robust</h5>
-                            <p class="margin-none">Even in some edge cases like being printed, used in high contrast
-                                mode,
-                                or with JS off, most of GMX.css is still usable.</p>
-                        </article>
-                    </nav>
-                    <br>
-                    <nav class="text-xxl justify-around">
-                        <i>
-                            <iconify-icon icon="mdi:important-devices"></iconify-icon>
-                        </i>
-                        <i>
-                            <iconify-icon icon="mdi:printer-check"></iconify-icon>
-                        </i>
-                        <i>
-                            <iconify-icon icon="mdi:contrast-circle"></iconify-icon>
-                        </i>
-                        <i>
-                            <iconify-icon icon="mdi:toggle-switch-off-outline"></iconify-icon>
-                        </i>
-                    </nav>
-                </div>
-                <div class="container primary-container">
-                    <nav class="align-start">
-                        <button class="fab small margin-right"><i>
-                                <iconify-icon icon="mdi:star-four-points-outline"></iconify-icon>
-                            </i></button>
-                        <article>
-                            <h5>Pure</h5>
-                            <p class="margin-none">The code is written just with pure CSS and dont limited to one
-                                framework, so you can reusable it with HTML5 or your favorite framework.</p>
-                        </article>
-                    </nav>
-                    <br>
-                    <nav class="text-xxl justify-around">
-                        <i>
-                            <iconify-icon icon="simple-icons:react"></iconify-icon>
-                        </i>
-                        <i>
-                            <iconify-icon icon="simple-icons:svelte"></iconify-icon>
-                        </i>
-                        <i>
-                            <iconify-icon icon="simple-icons:eleventy"></iconify-icon>
-                        </i>
-                        <i>
-                            <iconify-icon icon="simple-icons:astro"></iconify-icon>
-                        </i>
-                        <i>
-                            <iconify-icon icon="simple-icons:vuedotjs"></iconify-icon>
-                        </i>
-                    </nav>
-                </div>
-                <div class="container primary-container">
-                    <nav class="align-start">
-                        <button class="fab small margin-right"><i>
-                                <iconify-icon icon="mdi:image-size-select-small"></iconify-icon>
-                            </i></button>
-                        <article>
-                            <h5>Micro</h5>
-                            <p class="margin-none">Any Material Design-based framework was really heavy at size,
-                                GMX.css
-                                is built efficient and tiny as possible, makes it 10x smaller than any framework.
-                            </p>
-                        </article>
-                    </nav>
-                    <br>
-                    <div class="card">
-                        <nav>
-                            <span class="btn icon tonal margin-right"><i>
-                                    <iconify-icon icon="mdi:file-document-check-outline"></iconify-icon>
-                                </i></span>
-                            <div>
-                                <h5><a href="https://bundlephobia.com/package/gmx.css">6kB</a></h5>
-                                <p class="text-sm">Minzipped</p>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-            <section class="container text-center">
-                <h6>Select your favorite scheme 🎨</h6>
-                <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css/dist/theme.min.css&quot;&gt;</pre>
-                <br>
+            </nav>
+        </div>
+    </div>
+</section>
+            <section class="container text-center" id="themes">
+    <h6>Select your favorite scheme 🎨</h6>
+    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css/dist/theme.min.css&quot;&gt;</pre>
+    <br>
 
-                <nav class="segmented scroll">
+    <nav class="segmented scroll">
 
-                    <input type="radio" name="theme" id="theme-0">
-                    <label class="btn" for="theme-0" onclick="changeColor('red')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Red
-                    </label>
+        <input type="radio" name="theme" id="theme-0">
+        <label class="btn" for="theme-0" onclick="changeColor('red')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Red
+        </label>
 
-                    <input type="radio" name="theme" id="theme-1">
-                    <label class="btn" for="theme-1" onclick="changeColor('pink')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Pink
-                    </label>
+        <input type="radio" name="theme" id="theme-1">
+        <label class="btn" for="theme-1" onclick="changeColor('pink')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Pink
+        </label>
 
-                    <input type="radio" name="theme" id="theme-2" checked>
-                    <label class="btn" for="theme-2" onclick="changeColor('purple')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Purple
-                    </label>
+        <input type="radio" name="theme" id="theme-2" checked>
+        <label class="btn" for="theme-2" onclick="changeColor('purple')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Purple
+        </label>
 
-                    <input type="radio" name="theme" id="theme-3">
-                    <label class="btn" for="theme-3" onclick="changeColor('indigo')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Indigo
-                    </label>
+        <input type="radio" name="theme" id="theme-3">
+        <label class="btn" for="theme-3" onclick="changeColor('indigo')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Indigo
+        </label>
 
-                    <input type="radio" name="theme" id="theme-4">
-                    <label class="btn" for="theme-4" onclick="changeColor('blue')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Blue
-                    </label>
+        <input type="radio" name="theme" id="theme-4">
+        <label class="btn" for="theme-4" onclick="changeColor('blue')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Blue
+        </label>
 
-                    <input type="radio" name="theme" id="theme-5">
-                    <label class="btn" for="theme-5" onclick="changeColor('cyan')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Cyan
-                    </label>
+        <input type="radio" name="theme" id="theme-5">
+        <label class="btn" for="theme-5" onclick="changeColor('cyan')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Cyan
+        </label>
 
-                    <input type="radio" name="theme" id="theme-6">
-                    <label class="btn" for="theme-6" onclick="changeColor('teal')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Teal
-                    </label>
+        <input type="radio" name="theme" id="theme-6">
+        <label class="btn" for="theme-6" onclick="changeColor('teal')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Teal
+        </label>
 
-                    <input type="radio" name="theme" id="theme-7">
-                    <label class="btn" for="theme-7" onclick="changeColor('green')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Green
-                    </label>
+        <input type="radio" name="theme" id="theme-7">
+        <label class="btn" for="theme-7" onclick="changeColor('green')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Green
+        </label>
 
-                    <input type="radio" name="theme" id="theme-8">
-                    <label class="btn" for="theme-8" onclick="changeColor('lime')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Lime
-                    </label>
+        <input type="radio" name="theme" id="theme-8">
+        <label class="btn" for="theme-8" onclick="changeColor('lime')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Lime
+        </label>
 
-                    <input type="radio" name="theme" id="theme-9">
-                    <label class="btn" for="theme-9" onclick="changeColor('yellow')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Yellow
-                    </label>
+        <input type="radio" name="theme" id="theme-9">
+        <label class="btn" for="theme-9" onclick="changeColor('yellow')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Yellow
+        </label>
 
-                    <input type="radio" name="theme" id="theme-10">
-                    <label class="btn" for="theme-10" onclick="changeColor('amber')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Amber
-                    </label>
+        <input type="radio" name="theme" id="theme-10">
+        <label class="btn" for="theme-10" onclick="changeColor('amber')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Amber
+        </label>
 
-                    <input type="radio" name="theme" id="theme-11">
-                    <label class="btn" for="theme-11" onclick="changeColor('orange')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Orange
-                    </label>
+        <input type="radio" name="theme" id="theme-11">
+        <label class="btn" for="theme-11" onclick="changeColor('orange')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Orange
+        </label>
 
-                    <input type="radio" name="theme" id="theme-12">
-                    <label class="btn" for="theme-12" onclick="changeColor('monochrome')">
-                        <i class="checked">
-                            <iconify-icon icon="mdi:check"></iconify-icon>
-                        </i>
-                        Mono
-                    </label>
+        <input type="radio" name="theme" id="theme-12">
+        <label class="btn" for="theme-12" onclick="changeColor('monochrome')">
+            <i class="checked">
+                <iconify-icon icon="mdi:check"></iconify-icon>
+            </i>
+            Mono
+        </label>
 
-                </nav>
-                <br><br>
-                <details open>
-                    <summary class="text-sm">Color schemes</summary>
-                    <br>
-                    <div class="grid all-l3 all-m6 all-s12 gap-none overflow-hidden round-lg">
-                        <div class="padding primary">
-                            <h6>Primary</h6>
-                        </div>
-                        <div class="padding primary-container">
-                            <h6>Primary Container</h6>
-                        </div>
-                        <div class="padding secondary">
-                            <h6>Secondary</h6>
-                        </div>
-                        <div class="padding secondary-container">
-                            <h6>Secondary Container</h6>
-                        </div>
-                        <div class="padding tertiary">
-                            <h6>Tertiary</h6>
-                        </div>
-                        <div class="padding tertiary-container">
-                            <h6>Tertiary Container</h6>
-                        </div>
-                        <div class="padding background">
-                            <h6>Background</h6>
-                        </div>
-                        <div class="padding surface">
-                            <h6>Surface</h6>
-                        </div>
-                        <div class="padding inverse-surface">
-                            <h6>Inverse Surface</h6>
-                        </div>
-                        <div class="padding surface-variant">
-                            <h6>Surface Variant</h6>
-                        </div>
-                        <div class="padding error">
-                            <h6>Error</h6>
-                        </div>
-                        <div class="padding error-container">
-                            <h6>Error Container</h6>
-                        </div>
-                    </div>
-                </details>
-                <script>
-                    function changeColor(color) {
-                        document.body.className = '';
-                        document.body.classList.add(color);
-                    }
-                </script>
-            </section>
-            <section class="grid all-l6 all-s12" id="features">
-                <div class="container s12 m12 l12">
-                    <header>
-                        <h3>Utilities</h3>
-                    </header>
-                    <footer>
-                        <div class="grid all-s12 all-m6 all-l6 grid-outline">
-                            <div class="padding-s">
-                                Colors: <br>
-                                <code>.primary</code>, <code>.primary-container</code>, <code>.secondary</code>,
-                                <code>.secondary-container</code>, <code>.tertiary</code>,
-                                <code>.tertiary-container</code>, <code>.background</code>, <code>.surface</code>,
-                                <code>.inverse-surface</code>, <code>.surface-variant</code>, <code>.error</code>,
-                                <code>.error-container</code>, <code>.accent-gradient</code>
-                            </div>
-                            <div class="padding-s">
-                                Grid columns: <br>
-                                <code>.s1</code>...<code>.s12</code>, <code>.m1</code>...<code>.m12</code>,
-                                <code>.l1</code>...<code>.l12</code> <br>
-                                For all the colums in grid: <br>
-                                <code>.all-s1</code>...<code>.all-s12</code>,
-                                <code>.all-m1</code>...<code>.all-m12</code>,
-                                <code>.all-l1</code>...<code>.all-l12</code>
-                            </div>
-                            <div class="padding-s">
-                                Margins: <br>
-                                <code>.margin</code>, <code>.margin-none</code>, <code>.margin-auto</code>,
-                                <code>.margin-xs</code>, <code>.margin-s</code>, <code>.margin-l</code>,
-                                <code>.margin-xl</code>, <code>.margin-left</code>, <code>.margin-right</code>,
-                                <code>.margin-top</code>, <code>.margin-bottom</code>, <code>.margin-horiz</code>,
-                                <code>.margin-vert</code>
-                            </div>
-                            <div class="padding-s">
-                                Paddings: <br>
-                                <code>.padding</code>, <code>.padding-none</code>, <code>.padding-auto</code>,
-                                <code>.padding-xs</code>, <code>.padding-s</code>, <code>.padding-l</code>,
-                                <code>.padding-xl</code>, <code>.padding-left</code>, <code>.padding-right</code>,
-                                <code>.padding-top</code>, <code>.padding-bottom</code>,
-                                <code>.padding-horiz</code>, <code>.padding-vert</code>
-                            </div>
-                            <div class="padding-s">
-                                Gaps: <br>
-                                <code>.gap</code>, <code>.gap-none</code>, <code>.gap-auto</code>,
-                                <code>.gap-xs</code>, <code>.gap-s</code>, <code>.gap-l</code>, <code>.gap-xl</code>
-                            </div>
-                            <div class="padding-s">
-                                Border radius: <br>
-                                <code>.round</code>, <code>.round-none</code>, <code>.round-auto</code>,
-                                <code>.round-xs</code>, <code>.round-s</code>, <code>.round-l</code>,
-                                <code>.round-xl</code>
-                            </div>
-                            <div class="padding-s">
-                                Elevates: <br>
-                                <code>.elevate</code>, <code>.elevate-none</code>, <code>.elevate-auto</code>,
-                                <code>.elevate-s</code>, <code>.elevate-l</code>, <code>.elevate-xl</code>
-                            </div>
-                            <div class="padding-s">
-                                Display: <br>
-                                <code>.block</code>, <code>.inline-block</code>, <code>.flex</code>,
-                                <code>.inline-flex</code>
-                            </div>
-                            <div class="padding-s">
-                                Flex utilities: <br>
-                                <code>.flex-row</code>, <code>.flex-col</code>, <code>.flex-wrap</code>,
-                                <code>.flex-no-wrap</code>, <code>.flex-max</code>/<code>.all-max</code>
-                            </div>
-                            <div class="padding-s">
-                                Flex alignment: <br>
-                                <code>.align-start</code>, <code>.align-end</code>, <code>.align-center</code>,
-                                <code>.align-baseline</code>, <code>.align-stretch</code>,
-                                <code>.justify-left</code>, <code>.justify-center</code>,
-                                <code>.justify-right</code>, <code>.justify-between</code>,
-                                <code>.justify-around</code> <br>
-                                Text alignment: <br>
-                                <code>.text-left</code>, <code>.text-center</code>, <code>.text-right</code>
-                            </div>
-                            <div class="padding-s">
-                                Overflow: <br>
-                                <code>.overflow-auto</code>, <code>.overflow-hidden</code>,
-                                <code>.overflow-visible</code>, <code>.overflow-scroll</code>
-                            </div>
-                            <div class="padding-s">
-                                Width: <br>
-                                <code>.width-min</code>, <code>.width-max</code>, <code>.width-fit</code>,
-                                <code>.width-full</code>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Button</h3>
-                    </header>
-                    <footer>
-                        <button>Button</button>
-                        <button class="tonal">Button</button>
-                        <button class="outline">Button</button>
-                        <button class="text">Button</button>
-                        <button class="elevated">Button</button>
-                        <br><br>
-                        <button><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i>Button</button>
-                        <button class="tonal"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i>Button</button>
-                        <button class="outline"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i>Button</button>
-                        <button class="text"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i>Button</button>
-                        <button class="elevated"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i>Button</button>
-                        <br><br>
-                        <button class="icon"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                        <button class="icon tonal"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                        <button class="icon outline"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                        <button class="icon text"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                        <button class="icon elevated"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Segmented button</h3>
-                    </header>
-                    <footer>
-                        <nav class="segmented">
-
-                            <input type="radio" name="segmented-b" id="segmented-b-0" checked>
-                            <label class="btn" for="segmented-b-0">
-                                <i>
-                                    <iconify-icon icon="mdi:triangle-outline"></iconify-icon>
-                                </i>
-                                <i class="checked">
-                                    <iconify-icon icon="mdi:check"></iconify-icon>
-                                </i>
-                                Tab A
-                            </label>
-
-                            <input type="radio" name="segmented-b" id="segmented-b-1">
-                            <label class="btn" for="segmented-b-1">
-                                <i>
-                                    <iconify-icon icon="mdi:square-outline"></iconify-icon>
-                                </i>
-                                <i class="checked">
-                                    <iconify-icon icon="mdi:check"></iconify-icon>
-                                </i>
-                                Tab B
-                            </label>
-
-                            <input type="radio" name="segmented-b" id="segmented-b-2" disabled>
-                            <label class="btn" for="segmented-b-2"><i>
-                                    <iconify-icon icon="mdi:circle-outline"></iconify-icon>
-                                </i>Tab C</label>
-
-                        </nav>
-                        <br><br>
-                        <nav class="segmented">
-
-                            <input type="checkbox" name="segmented-a" id="segmented-a-0" checked>
-                            <label class="btn" for="segmented-a-0">
-                                <i>
-                                    <iconify-icon icon="mdi:triangle-outline"></iconify-icon>
-                                </i>
-                                <i class="checked">
-                                    <iconify-icon icon="mdi:check"></iconify-icon>
-                                </i>
-                                Tab A
-                            </label>
-
-                            <input type="checkbox" name="segmented-a" id="segmented-a-1">
-                            <label class="btn" for="segmented-a-1">
-                                <i>
-                                    <iconify-icon icon="mdi:square-outline"></iconify-icon>
-                                </i>
-                                <i class="checked">
-                                    <iconify-icon icon="mdi:check"></iconify-icon>
-                                </i>
-                                Tab B
-                            </label>
-
-                            <input type="checkbox" name="segmented-a" id="segmented-a-2" disabled>
-                            <label class="btn" for="segmented-a-2"><i>
-                                    <iconify-icon icon="mdi:circle-outline"></iconify-icon>
-                                </i>Tab C</label>
-
-                        </nav>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>FAB</h3>
-                    </header>
-                    <footer>
-                        <button class="fab small tonal"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                        <button class="fab tonal"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                        <button class="fab large tonal"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i></button>
-                        <button class="fab extended tonal"><i>
-                                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
-                            </i>Hello</button>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Card</h3>
-                    </header>
-                    <footer>
-                        <div class="card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                        <br>
-                        <div class="grid all-s6">
-                            <div class="card padding-none">
-                                <img class="round" src="https://placehold.co/600x200?text=GMX.css&font=roboto">
-                                <div class="padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                            </div>
-                            <div class="card padding">
-                                <nav>
-                                    <img class="btn icon padding-none"
-                                        src="https://placehold.co/200?text=GMX.css&font=roboto">
-                                    <div class="left-margin">
-                                        <h6>Title</h6>
-                                        <p>Lorem ipsum.</p>
-                                    </div>
-                                </nav>
-                                <button>Button</button>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <nav>
-                            <h3>Dialog</h3>
-                            <div class="flex-max"></div>
-                            <div class="btn icon tonal"><i>
-                                    <iconify-icon icon="mdi:language-javascript"></iconify-icon>
-                                </i></div>
-                        </nav>
-                    </header>
-                    <footer>
-                        <dialog id="dialog-demo">
-                            <i>
-                                <iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon>
-                            </i>
-                            <br>
-                            <h6>Permanently delete?</h6>
-                            <p class="text-sm">Deleting the selected messages will also remove them from all synced
-                                devices.
-                            </p>
-                            <form method="dialog">
-                                <button class="text">Cancel</button>
-                                <button class="tonal">Delete</button>
-                            </form>
-                        </dialog>
-                        <button class="tonal" onclick="document.getElementById('dialog-demo').showModal()">Open</button>
-                        <hr class="margin-vert">
-                        <p class="text-sm margin-xs">CSS-only Checkbox solution:</p>
-                        <label class="btn tonal dialog-trigger" for="dialog-checkbox-demo">Open</label>
-                        <input class="base" type="checkbox" id="dialog-checkbox-demo">
-                        <div class="dialog">
-                            <i>
-                                <iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon>
-                            </i>
-                            <br>
-                            <h6>Permanently delete?</h6>
-                            <p class="text-sm">Deleting the selected messages will also remove them from all synced
-                                devices.
-                            </p>
-                            <form method="dialog">
-                                <label class="btn text" for="dialog-checkbox-demo">Cancel</label>
-                                <button class="tonal">Delete</button>
-                            </form>
-                        </div>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <nav>
-                            <h3>Bottom sheet</h3>
-                            <div class="flex-max"></div>
-                            <div class="btn icon tonal"><i>
-                                    <iconify-icon icon="mdi:language-javascript"></iconify-icon>
-                                </i></div>
-                        </nav>
-                    </header>
-                    <footer>
-                        <dialog id="bottom-sheet-demo" class="bottom-sheet">
-                            <br>
-                            <div class="grid all-max">
-                                <div class="field s12 m6">
-                                    <input type="date" placeholder="">
-                                    <label><span>Start</span></label>
-                                </div>
-                                <div class="field s12 m6">
-                                    <input type="date" placeholder="">
-                                    <label><span>End</span></label>
-                                </div>
-                            </div>
-                            <br>
-                            <form method="dialog">
-                                <button class="full">Add event</button>
-                            </form>
-                        </dialog>
-                        <button class="tonal"
-                            onclick="document.getElementById('bottom-sheet-demo').showModal()">Open</button>
-                        <hr class="margin-vert">
-                        <p class="text-sm margin-xs">CSS-only Checkbox solution:</p>
-                        <label class="btn tonal dialog-trigger" for="bottom-sheet-checkbox-demo">Open</label>
-                        <input class="base" type="checkbox" id="bottom-sheet-checkbox-demo">
-                        <div class="dialog bottom-sheet">
-                            <br>
-                            <div class="grid all-max">
-                                <div class="field s12 m6">
-                                    <input type="date" placeholder="">
-                                    <label><span>Start</span></label>
-                                </div>
-                                <div class="field s12 m6">
-                                    <input type="date" placeholder="">
-                                    <label><span>End</span></label>
-                                </div>
-                            </div>
-                            <br>
-                            <form method="dialog">
-                                <label class="btn full" for="bottom-sheet-checkbox-demo">Add event</label>
-                            </form>
-                        </div>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>List</h3>
-                    </header>
-                    <footer>
-                        <ul class="list-box">
-                            <li>
-                                <i>
-                                    <iconify-icon icon="mdi:person-outline"></iconify-icon>
-                                </i>
-                                <article>
-                                    <h5 class="small">This is a headline</h5>
-                                    <p class="text-sm">This is supporting text</p>
-                                </article>
-                            </li>
-                            <li>
-                                <i>
-                                    <iconify-icon icon="mdi:person-outline"></iconify-icon>
-                                </i>
-                                <article>
-                                    <h5 class="small">This is a headline</h5>
-                                    <p class="text-sm">This is an example of supporting text for a list item
-                                        component
-                                        showcase.</p>
-                                </article>
-                            </li>
-                        </ul>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Progress</h3>
-                    </header>
-                    <footer>
-                        <progress></progress>
-                        <br>
-                        <progress value="30" max="100"></progress>
-                        <br><br>
-                        <nav class="gap">
-                            <progress class="circle" value="30" max="100" style="--value: 30;"></progress>
-                            <progress class="circle spin" style="--value: 30;"></progress>
-                        </nav>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Menu</h3>
-                    </header>
-                    <footer>
-                        <ul class="menu">
-                            <li>
-                                <i>
-                                    <iconify-icon icon="mdi:arrow-u-left-top"></iconify-icon>
-                                </i>
-                                <span>Undo</span>
-                            </li>
-                            <li disabled>
-                                <i>
-                                    <iconify-icon icon="mdi:arrow-u-right-top"></iconify-icon>
-                                </i>
-                                <span>Redo</span>
-                            </li>
-                            <li disabled>
-                                <i>
-                                    <iconify-icon icon="mdi:content-cut"></iconify-icon>
-                                </i>
-                                <span>Cut</span>
-                            </li>
-                        </ul>
-                        <br>
-                        <details>
-                            <summary class="btn fab extended elevate-none text"><i>
-                                    <iconify-icon icon="mdi:more-vert"></iconify-icon>
-                                </i>Dropdown</summary>
-                            <ul class="menu">
-                                <li>
-                                    <i>
-                                        <iconify-icon icon="mdi:arrow-u-left-top"></iconify-icon>
-                                    </i>
-                                    <span>Undo</span>
-                                </li>
-                                <li disabled>
-                                    <i>
-                                        <iconify-icon icon="mdi:arrow-u-right-top"></iconify-icon>
-                                    </i>
-                                    <span>Redo</span>
-                                </li>
-                                <li disabled>
-                                    <i>
-                                        <iconify-icon icon="mdi:content-cut"></iconify-icon>
-                                    </i>
-                                    <span>Cut</span>
-                                </li>
-                            </ul>
-                        </details>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Radio</h3>
-                    </header>
-                    <footer>
-                        <form>
-                            <label class="radio">
-                                <input type="radio" name="radio-demo" id="radio-checked" checked>
-                                <span>Checked</span>
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="radio-demo" id="radio-unchecked">
-                                <span>Not checked</span>
-                            </label>
-                        </form>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Checkbox</h3>
-                    </header>
-                    <footer>
-                        <form>
-                            <label class="checkbox">
-                                <input type="checkbox" checked>
-                                <span>Checked</span>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span>Not checked</span>
-                            </label>
-                        </form>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Switch</h3>
-                    </header>
-                    <footer>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span></span>
-                        </label>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <nav>
-                            <h3>Slider</h3>
-                            <div class="flex-max"></div>
-                            <div class="btn icon tonal"><i>
-                                    <iconify-icon icon="mdi:language-javascript"></iconify-icon>
-                                </i></div>
-                        </nav>
-                    </header>
-                    <footer>
-                        <label class="slider" style="--percent: 53%">
-                            <input type="range" value="53" min="0" max="100" step="1" oninput="updateSlider(this)">
-                            <span class="track"></span>
-                            <span class="thumb"></span>
-                            <span class="tooltip">53</span>
-                        </label>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Text field</h3>
-                    </header>
-                    <footer>
-                        <div class="field">
-                            <input type="text" placeholder="">
-                            <label><span>Field</span></label>
-                        </div>
-                        <div class="field">
-                            <i>
-                                <iconify-icon icon="mdi:edit"></iconify-icon>
-                            </i>
-                            <textarea placeholder=""></textarea>
-                            <label><span>Field</span></label>
-                        </div>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Chip</h3>
-                    </header>
-                    <footer>
-                        <nav class="gap-s">
-                            <label class="btn chip">
-                                <input type="checkbox">
-                                <span>Chip</span>
-                            </label>
-                            <label class="btn chip">
-                                <i>
-                                    <iconify-icon icon="mdi:edit"></iconify-icon>
-                                </i>
-                                <input type="checkbox">
-                                <span>Chip</span>
-                            </label>
-                            <label class="btn chip">
-                                <input type="checkbox">
-                                <span>Chip</span>
-                                <i>
-                                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
-                                </i>
-                            </label>
-                        </nav>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Tabs</h3>
-                    </header>
-                    <footer>
-                        <div class="tabs">
-                            <label>
-                                <input type="radio" name="tabs-demo" id="tabs-checked" checked="">
-                                <span>Hello</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="tabs-demo" id="tabs-unchecked">
-                                <span>World</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="tabs-demo" id="tabs-other">
-                                <span>The longest item</span>
-                            </label>
-                        </div>
-                        <br>
-                        <div class="tabs variable">
-                            <label>
-                                <i>
-                                    <iconify-icon icon="mdi:square-outline"></iconify-icon>
-                                </i>
-                                <input type="radio" name="tabs-variable-demo" id="tabs-variable-checked" checked="">
-                                <span>Hello</span>
-                            </label>
-                            <label>
-                                <i>
-                                    <iconify-icon icon="mdi:circle-outline"></iconify-icon>
-                                </i>
-                                <input type="radio" name="tabs-variable-demo" id="tabs-variable-unchecked">
-                                <span>World</span>
-                            </label>
-                            <label>
-                                <i>
-                                    <iconify-icon icon="mdi:emoji-outline"></iconify-icon>
-                                </i>
-                                <input type="radio" name="tabs-variable-demo" id="tabs-variable-other">
-                                <span>The longest item</span>
-                            </label>
-                        </div>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Blockquote & Pre</h3>
-                    </header>
-                    <footer>
-                        <blockquote>First line.
-                            <br>Second line.
-                            <br>Third line.
-                        </blockquote>
-                        <br>
-                        <pre>First line
-Second line
-Third line</pre>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Typography</h3>
-                    </header>
-                    <footer>
-                        <div>
-                            <b>Lorem ipsum</b> <u>dolor sit</u> amet, consectetur <a href="https://github.com/KTibow/m3-svelte">adipiscing elit</a>. 
-                            <hr>
-                                <s>Morbi posuere</s>
-                            viverra diam, <i>vel egestas</i> <span class="text-sm">sapien</span> tincidunt <span
-                                class="text-lg">vel</span>. Fusce a erat augue. Fusce vel lorem vestibulum,
-                            <code>luctus nisi at</code>, lobortis est.
-                        </div>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Tables</h3>
-                    </header>
-                    <footer>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Header</th>
-                                    <th>Header</th>
-                                    <th>Header</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cell</td>
-                                    <td>Cell</td>
-                                    <td>Cell</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell</td>
-                                    <td>Cell</td>
-                                    <td>Cell</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell</td>
-                                    <td>Cell</td>
-                                    <td>Cell</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Footer</th>
-                                    <th>Footer</th>
-                                    <th>Footer</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </footer>
-                </div>
-                <div class="container">
-                    <header>
-                        <h3>Tooltips</h3>
-                    </header>
-                    <footer>
-                       <nav class="gap-s">
-                        <button class="chip tooltipped" aria-label="Plain tooltip">Plain tooltip</button>
-                        <button class="chip tooltipped rich" aria-label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Rich tooltip</button>
-                       <button class="chip icon tooltipped-left" aria-label="Left tooltip"><i><iconify-icon icon="mdi:arrow-left"></iconify-icon></i></button>
-                       <button class="chip icon tooltipped" aria-label="Top tooltip"><i><iconify-icon icon="mdi:arrow-up"></iconify-icon></i></button>
-                       <button class="chip icon tooltipped-bottom" aria-label="Bottom tooltip"><i><iconify-icon icon="mdi:arrow-down"></iconify-icon></i></button>
-                       <button class="chip icon tooltipped-right" aria-label="Right tooltip"><i><iconify-icon icon="mdi:arrow-right"></iconify-icon></i></button>
-                       </nav>
-                    </footer>
-                </div>
-            </section>
-        </article>
-    </main>
+    </nav>
+    <br><br>
+    <details open>
+        <summary class="text-sm">Color schemes</summary>
+        <br>
+        <div class="grid all-l3 all-m6 all-s12 gap-none overflow-hidden round-lg">
+            <div class="padding primary">
+                <h6>Primary</h6>
+            </div>
+            <div class="padding primary-container">
+                <h6>Primary Container</h6>
+            </div>
+            <div class="padding secondary">
+                <h6>Secondary</h6>
+            </div>
+            <div class="padding secondary-container">
+                <h6>Secondary Container</h6>
+            </div>
+            <div class="padding tertiary">
+                <h6>Tertiary</h6>
+            </div>
+            <div class="padding tertiary-container">
+                <h6>Tertiary Container</h6>
+            </div>
+            <div class="padding background">
+                <h6>Background</h6>
+            </div>
+            <div class="padding surface">
+                <h6>Surface</h6>
+            </div>
+            <div class="padding inverse-surface">
+                <h6>Inverse Surface</h6>
+            </div>
+            <div class="padding surface-variant">
+                <h6>Surface Variant</h6>
+            </div>
+            <div class="padding error">
+                <h6>Error</h6>
+            </div>
+            <div class="padding error-container">
+                <h6>Error Container</h6>
+            </div>
+        </div>
+    </details>
     <script>
-        function updateSlider(slider) {
-            const value = slider.value;
-            const percent = value + '%';
-            slider.parentElement.style.setProperty('--percent', percent);
-            const tooltip = slider.parentElement.querySelector('.tooltip');
-            tooltip.textContent = value;
-        }
-        document.onkeydown = function (e) {
-            if (e.keyCode == 27) {
-                var mods = document.querySelectorAll('.dialog-trigger+[type=checkbox]');
-                [].forEach.call(mods, function (mod) {
-                    mod.checked = false;
-                });
-            }
+        function changeColor(color) {
+            document.body.className = '';
+            document.body.classList.add(color);
         }
     </script>
+</section>
+            <section class="grid all-l6 all-s12" id="components">
+                <div class="container s12 m12 l12" id="utilities">
+    <header>
+        <h3>Utilities</h3>
+    </header>
+    <footer>
+        <div class="grid all-s12 all-m6 all-l6 grid-outline">
+            <div class="padding-s">
+                Colors: <br>
+                <code>.primary</code>, <code>.primary-container</code>, <code>.secondary</code>,
+                <code>.secondary-container</code>, <code>.tertiary</code>,
+                <code>.tertiary-container</code>, <code>.background</code>, <code>.surface</code>,
+                <code>.inverse-surface</code>, <code>.surface-variant</code>, <code>.error</code>,
+                <code>.error-container</code>, <code>.accent-gradient</code>
+            </div>
+            <div class="padding-s">
+                Grid columns: <br>
+                <code>.s1</code>...<code>.s12</code>, <code>.m1</code>...<code>.m12</code>,
+                <code>.l1</code>...<code>.l12</code> <br>
+                For all the colums in grid: <br>
+                <code>.all-s1</code>...<code>.all-s12</code>,
+                <code>.all-m1</code>...<code>.all-m12</code>,
+                <code>.all-l1</code>...<code>.all-l12</code>
+            </div>
+            <div class="padding-s">
+                Margins: <br>
+                <code>.margin</code>, <code>.margin-none</code>, <code>.margin-auto</code>,
+                <code>.margin-xs</code>, <code>.margin-s</code>, <code>.margin-l</code>,
+                <code>.margin-xl</code>, <code>.margin-left</code>, <code>.margin-right</code>,
+                <code>.margin-top</code>, <code>.margin-bottom</code>, <code>.margin-horiz</code>,
+                <code>.margin-vert</code>
+            </div>
+            <div class="padding-s">
+                Paddings: <br>
+                <code>.padding</code>, <code>.padding-none</code>, <code>.padding-auto</code>,
+                <code>.padding-xs</code>, <code>.padding-s</code>, <code>.padding-l</code>,
+                <code>.padding-xl</code>, <code>.padding-left</code>, <code>.padding-right</code>,
+                <code>.padding-top</code>, <code>.padding-bottom</code>,
+                <code>.padding-horiz</code>, <code>.padding-vert</code>
+            </div>
+            <div class="padding-s">
+                Gaps: <br>
+                <code>.gap</code>, <code>.gap-none</code>, <code>.gap-auto</code>,
+                <code>.gap-xs</code>, <code>.gap-s</code>, <code>.gap-l</code>, <code>.gap-xl</code>
+            </div>
+            <div class="padding-s">
+                Border radius: <br>
+                <code>.round</code>, <code>.round-none</code>, <code>.round-auto</code>,
+                <code>.round-xs</code>, <code>.round-s</code>, <code>.round-l</code>,
+                <code>.round-xl</code>
+            </div>
+            <div class="padding-s">
+                Elevates: <br>
+                <code>.elevate</code>, <code>.elevate-none</code>, <code>.elevate-auto</code>,
+                <code>.elevate-s</code>, <code>.elevate-l</code>, <code>.elevate-xl</code>
+            </div>
+            <div class="padding-s">
+                Display: <br>
+                <code>.block</code>, <code>.inline-block</code>, <code>.flex</code>,
+                <code>.inline-flex</code>
+            </div>
+            <div class="padding-s">
+                Flex utilities: <br>
+                <code>.flex-row</code>, <code>.flex-col</code>, <code>.flex-wrap</code>,
+                <code>.flex-no-wrap</code>, <code>.flex-max</code>/<code>.all-max</code>
+            </div>
+            <div class="padding-s">
+                Flex alignment: <br>
+                <code>.align-start</code>, <code>.align-end</code>, <code>.align-center</code>,
+                <code>.align-baseline</code>, <code>.align-stretch</code>,
+                <code>.justify-left</code>, <code>.justify-center</code>,
+                <code>.justify-right</code>, <code>.justify-between</code>,
+                <code>.justify-around</code> <br>
+                Text alignment: <br>
+                <code>.text-left</code>, <code>.text-center</code>, <code>.text-right</code>
+            </div>
+            <div class="padding-s">
+                Overflow: <br>
+                <code>.overflow-auto</code>, <code>.overflow-hidden</code>,
+                <code>.overflow-visible</code>, <code>.overflow-scroll</code>
+            </div>
+            <div class="padding-s">
+                Width: <br>
+                <code>.width-min</code>, <code>.width-max</code>, <code>.width-fit</code>,
+                <code>.width-full</code>
+            </div>
+        </div>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Button</h3>
+    </header>
+    <footer>
+        <button>Button</button>
+        <button class="tonal">Button</button>
+        <button class="outline">Button</button>
+        <button class="text">Button</button>
+        <button class="elevated">Button</button>
+        <br><br>
+        <button><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i>Button</button>
+        <button class="tonal"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i>Button</button>
+        <button class="outline"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i>Button</button>
+        <button class="text"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i>Button</button>
+        <button class="elevated"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i>Button</button>
+        <br><br>
+        <button class="icon"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+        <button class="icon tonal"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+        <button class="icon outline"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+        <button class="icon text"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+        <button class="icon elevated"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Segmented button</h3>
+    </header>
+    <footer>
+        <nav class="segmented">
 
+            <input type="radio" name="segmented-b" id="segmented-b-0" checked="">
+            <label class="btn" for="segmented-b-0">
+                <i>
+                    <iconify-icon icon="mdi:triangle-outline"></iconify-icon>
+                </i>
+                <i class="checked">
+                    <iconify-icon icon="mdi:check"></iconify-icon>
+                </i>
+                Tab A
+            </label>
+
+            <input type="radio" name="segmented-b" id="segmented-b-1">
+            <label class="btn" for="segmented-b-1">
+                <i>
+                    <iconify-icon icon="mdi:square-outline"></iconify-icon>
+                </i>
+                <i class="checked">
+                    <iconify-icon icon="mdi:check"></iconify-icon>
+                </i>
+                Tab B
+            </label>
+
+            <input type="radio" name="segmented-b" id="segmented-b-2" disabled="">
+            <label class="btn" for="segmented-b-2"><i>
+                    <iconify-icon icon="mdi:circle-outline"></iconify-icon>
+                </i>Tab C</label>
+
+        </nav>
+        <br><br>
+        <nav class="segmented">
+
+            <input type="checkbox" name="segmented-a" id="segmented-a-0" checked="">
+            <label class="btn" for="segmented-a-0">
+                <i>
+                    <iconify-icon icon="mdi:triangle-outline"></iconify-icon>
+                </i>
+                <i class="checked">
+                    <iconify-icon icon="mdi:check"></iconify-icon>
+                </i>
+                Tab A
+            </label>
+
+            <input type="checkbox" name="segmented-a" id="segmented-a-1">
+            <label class="btn" for="segmented-a-1">
+                <i>
+                    <iconify-icon icon="mdi:square-outline"></iconify-icon>
+                </i>
+                <i class="checked">
+                    <iconify-icon icon="mdi:check"></iconify-icon>
+                </i>
+                Tab B
+            </label>
+
+            <input type="checkbox" name="segmented-a" id="segmented-a-2" disabled="">
+            <label class="btn" for="segmented-a-2"><i>
+                    <iconify-icon icon="mdi:circle-outline"></iconify-icon>
+                </i>Tab C</label>
+
+        </nav>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>FAB</h3>
+    </header>
+    <footer>
+        <button class="fab small tonal"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+        <button class="fab tonal"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+        <button class="fab large tonal"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i></button>
+        <button class="fab extended tonal"><i>
+                <iconify-icon icon="mdi:edit-outline"></iconify-icon>
+            </i>Hello</button>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Card</h3>
+    </header>
+    <footer>
+        <div class="card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <br>
+        <div class="grid all-s6">
+            <div class="card padding-none">
+                <img class="round" src="https://placehold.co/600x200?text=GMX.css&amp;font=roboto">
+                <div class="padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+            <div class="card padding">
+                <nav>
+                    <img class="btn icon padding-none" src="https://placehold.co/200?text=GMX.css&amp;font=roboto">
+                    <div class="left-margin">
+                        <h6>Title</h6>
+                        <p>Lorem ipsum.</p>
+                    </div>
+                </nav>
+                <button>Button</button>
+            </div>
+        </div>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <nav>
+            <h3>Dialog</h3>
+            <div class="flex-max"></div>
+            <a class="btn icon tonal" href="#js"><i><iconify-icon icon="mdi:language-javascript"></iconify-icon></i></a>
+        </nav>
+    </header>
+    <footer>
+        <dialog id="dialog-demo">
+            <i>
+                <iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon>
+            </i>
+            <br>
+            <h6>Permanently delete?</h6>
+            <p class="text-sm">Deleting the selected messages will also remove them from all synced
+                devices.
+            </p>
+            <form method="dialog">
+                <button class="text">Cancel</button>
+                <button class="tonal">Delete</button>
+            </form>
+        </dialog>
+        <button class="tonal" onclick="document.getElementById('dialog-demo').showModal()">Open</button>
+        <hr class="margin-vert">
+        <p class="text-sm margin-xs">CSS-only Checkbox solution:</p>
+        <label class="btn tonal dialog-trigger" for="dialog-checkbox-demo">Open</label>
+        <input class="base" type="checkbox" id="dialog-checkbox-demo">
+        <div class="dialog">
+            <i>
+                <iconify-icon icon="mdi:delete-outline" width="28" height="28"></iconify-icon>
+            </i>
+            <br>
+            <h6>Permanently delete?</h6>
+            <p class="text-sm">Deleting the selected messages will also remove them from all synced
+                devices.
+            </p>
+            <form method="dialog">
+                <label class="btn text" for="dialog-checkbox-demo">Cancel</label>
+                <button class="tonal">Delete</button>
+            </form>
+        </div>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <nav>
+            <h3>Bottom sheet</h3>
+            <div class="flex-max"></div>
+            <a class="btn icon tonal" href="#js"><i><iconify-icon icon="mdi:language-javascript"></iconify-icon></i></a>
+        </nav>
+    </header>
+    <footer>
+        <dialog id="bottom-sheet-demo" class="bottom-sheet">
+            <br>
+            <div class="grid all-max">
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>Start</span></label>
+                </div>
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>End</span></label>
+                </div>
+            </div>
+            <br>
+            <form method="dialog">
+                <button class="full">Add event</button>
+            </form>
+        </dialog>
+        <button class="tonal" onclick="document.getElementById('bottom-sheet-demo').showModal()">Open</button>
+        <hr class="margin-vert">
+        <p class="text-sm margin-xs">CSS-only Checkbox solution:</p>
+        <label class="btn tonal dialog-trigger" for="bottom-sheet-checkbox-demo">Open</label>
+        <input class="base" type="checkbox" id="bottom-sheet-checkbox-demo">
+        <div class="dialog bottom-sheet">
+            <br>
+            <div class="grid all-max">
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>Start</span></label>
+                </div>
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>End</span></label>
+                </div>
+            </div>
+            <br>
+            <form method="dialog">
+                <label class="btn full" for="bottom-sheet-checkbox-demo">Add event</label>
+            </form>
+        </div>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>List</h3>
+    </header>
+    <footer>
+        <ul class="list-box">
+            <li>
+                <i>
+                    <iconify-icon icon="mdi:person-outline"></iconify-icon>
+                </i>
+                <article>
+                    <h5 class="small">This is a headline</h5>
+                    <p class="text-sm">This is supporting text</p>
+                </article>
+            </li>
+            <li>
+                <i>
+                    <iconify-icon icon="mdi:person-outline"></iconify-icon>
+                </i>
+                <article>
+                    <h5 class="small">This is a headline</h5>
+                    <p class="text-sm">This is an example of supporting text for a list item
+                        component
+                        showcase.</p>
+                </article>
+            </li>
+        </ul>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Progress</h3>
+    </header>
+    <footer>
+        <progress></progress>
+        <br>
+        <progress value="30" max="100"></progress>
+        <br><br>
+        <nav class="gap">
+            <progress class="circle" value="30" max="100" style="--value: 30;"></progress>
+            <progress class="circle spin" style="--value: 30;"></progress>
+        </nav>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Menu</h3>
+    </header>
+    <footer>
+        <ul class="menu">
+            <li>
+                <i>
+                    <iconify-icon icon="mdi:arrow-u-left-top"></iconify-icon>
+                </i>
+                <span>Undo</span>
+            </li>
+            <li disabled="">
+                <i>
+                    <iconify-icon icon="mdi:arrow-u-right-top"></iconify-icon>
+                </i>
+                <span>Redo</span>
+            </li>
+            <li disabled="">
+                <i>
+                    <iconify-icon icon="mdi:content-cut"></iconify-icon>
+                </i>
+                <span>Cut</span>
+            </li>
+        </ul>
+        <br>
+        <details>
+            <summary class="btn fab extended elevate-none text"><i>
+                    <iconify-icon icon="mdi:more-vert"></iconify-icon>
+                </i>Dropdown</summary>
+            <ul class="menu">
+                <li>
+                    <i>
+                        <iconify-icon icon="mdi:arrow-u-left-top"></iconify-icon>
+                    </i>
+                    <span>Undo</span>
+                </li>
+                <li disabled="">
+                    <i>
+                        <iconify-icon icon="mdi:arrow-u-right-top"></iconify-icon>
+                    </i>
+                    <span>Redo</span>
+                </li>
+                <li disabled="">
+                    <i>
+                        <iconify-icon icon="mdi:content-cut"></iconify-icon>
+                    </i>
+                    <span>Cut</span>
+                </li>
+            </ul>
+        </details>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Radio</h3>
+    </header>
+    <footer>
+        <form>
+            <label class="radio">
+                <input type="radio" name="radio-demo" id="radio-checked" checked="">
+                <span>Checked</span>
+            </label>
+            <label class="radio">
+                <input type="radio" name="radio-demo" id="radio-unchecked">
+                <span>Not checked</span>
+            </label>
+        </form>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Checkbox</h3>
+    </header>
+    <footer>
+        <form>
+            <label class="checkbox">
+                <input type="checkbox" checked="">
+                <span>Checked</span>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span>Not checked</span>
+            </label>
+        </form>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Switch</h3>
+    </header>
+    <footer>
+        <label class="switch">
+            <input type="checkbox">
+            <span></span>
+        </label>
+        <label class="switch">
+            <input type="checkbox" checked="">
+            <span></span>
+        </label>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <nav>
+            <h3>Slider</h3>
+            <div class="flex-max"></div>
+            <a class="btn icon tonal" href="#js"><i><iconify-icon icon="mdi:language-javascript"></iconify-icon></i></a>
+        </nav>
+    </header>
+    <footer>
+        <label class="slider" style="--percent: 53%">
+            <input type="range" value="53" min="0" max="100" step="1">
+            <span class="track"></span>
+            <span class="thumb"></span>
+            <span class="tooltip">53</span>
+        </label>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Text field</h3>
+    </header>
+    <footer>
+        <div class="field">
+            <input type="text" placeholder="">
+            <label><span>Field</span></label>
+        </div>
+        <div class="field">
+            <i>
+                <iconify-icon icon="mdi:edit"></iconify-icon>
+            </i>
+            <textarea placeholder=""></textarea>
+            <label><span>Field</span></label>
+        </div>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Chip</h3>
+    </header>
+    <footer>
+        <nav class="gap-s">
+            <label class="btn chip">
+                <input type="checkbox">
+                <span>Chip</span>
+            </label>
+            <label class="btn chip">
+                <i>
+                    <iconify-icon icon="mdi:edit"></iconify-icon>
+                </i>
+                <input type="checkbox">
+                <span>Chip</span>
+            </label>
+            <label class="btn chip">
+                <input type="checkbox">
+                <span>Chip</span>
+                <i>
+                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                </i>
+            </label>
+        </nav>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Tabs</h3>
+    </header>
+    <footer>
+        <div class="tabs">
+            <label>
+                <input type="radio" name="tabs-demo" id="tabs-checked" checked="">
+                <span>Hello</span>
+            </label>
+            <label>
+                <input type="radio" name="tabs-demo" id="tabs-unchecked">
+                <span>World</span>
+            </label>
+            <label>
+                <input type="radio" name="tabs-demo" id="tabs-other">
+                <span>The longest item</span>
+            </label>
+        </div>
+        <br>
+        <div class="tabs variable">
+            <label>
+                <i>
+                    <iconify-icon icon="mdi:square-outline"></iconify-icon>
+                </i>
+                <input type="radio" name="tabs-variable-demo" id="tabs-variable-checked" checked="">
+                <span>Hello</span>
+            </label>
+            <label>
+                <i>
+                    <iconify-icon icon="mdi:circle-outline"></iconify-icon>
+                </i>
+                <input type="radio" name="tabs-variable-demo" id="tabs-variable-unchecked">
+                <span>World</span>
+            </label>
+            <label>
+                <i>
+                    <iconify-icon icon="mdi:emoji-outline"></iconify-icon>
+                </i>
+                <input type="radio" name="tabs-variable-demo" id="tabs-variable-other">
+                <span>The longest item</span>
+            </label>
+        </div>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Blockquote &amp; Pre</h3>
+    </header>
+    <footer>
+        <blockquote>First line.
+            <br>Second line.
+            <br>Third line.
+        </blockquote>
+        <br>
+        <pre>First line
+Second line
+Third line</pre>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Typography</h3>
+    </header>
+    <footer>
+        <div>
+            <b>Lorem ipsum</b> <u>dolor sit</u> amet, consectetur <a href="https://github.com/KTibow/m3-svelte">adipiscing elit</a>. 
+            <hr>
+                <s>Morbi posuere</s>
+            viverra diam, <i>vel egestas</i> <span class="text-sm">sapien</span> tincidunt <span class="text-lg">vel</span>. Fusce a erat augue. Fusce vel lorem vestibulum,
+            <code>luctus nisi at</code>, lobortis <kbd>est</kbd>.
+        </div>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Tables</h3>
+    </header>
+    <footer>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Footer</th>
+                    <th>Footer</th>
+                    <th>Footer</th>
+                </tr>
+            </tfoot>
+        </table>
+    </footer>
+</div>
+                <div class="container">
+    <header>
+        <h3>Tooltips</h3>
+    </header>
+    <footer>
+       <nav class="gap-s">
+        <button class="chip tooltipped" aria-label="Plain tooltip">Plain tooltip</button>
+        <button class="chip tooltipped rich" aria-label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Rich tooltip</button>
+       <button class="chip icon tooltipped-left" aria-label="Left tooltip"><i><iconify-icon icon="mdi:arrow-left"></iconify-icon></i></button>
+       <button class="chip icon tooltipped" aria-label="Top tooltip"><i><iconify-icon icon="mdi:arrow-up"></iconify-icon></i></button>
+       <button class="chip icon tooltipped-bottom" aria-label="Bottom tooltip"><i><iconify-icon icon="mdi:arrow-down"></iconify-icon></i></button>
+       <button class="chip icon tooltipped-right" aria-label="Right tooltip"><i><iconify-icon icon="mdi:arrow-right"></iconify-icon></i></button>
+       </nav>
+    </footer>
+</div>
+                <div class="container s12 m12 l12" id="js">
+    <header>
+        <h3>Extra JS</h3>
+    </header>
+    <footer>
+        <div class="grid all-s12 all-m6 all-l6 grid-outline">
+            <div class="padding-s">
+                <b>Slider:</b>
+                <pre>
+function updateSlider(slider) {
+    const value = slider.value;
+    const percent = value + '%';
+    slider.parentElement.style.setProperty('--percent', percent);
+    const tooltip = slider.parentElement.querySelector('.tooltip');
+    tooltip.textContent = value;
+}</pre>
+                Example usage:  
+                <pre>
+&lt;label class=&quot;slider&quot; style=&quot;--percent: 53%&quot;&gt;
+    &lt;input type=&quot;range&quot; value=&quot;53&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; oninput=&quot;updateSlider(this)&quot;&gt;
+    &lt;span class=&quot;track&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;thumb&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tooltip&quot;&gt;53&lt;/span&gt;
+&lt;/label&gt;</pre>
+            </div>
+            <div class="padding-s">
+                <b>Closing CSS-only dialog with <kbd>ESC</kbd>:</b>
+                <pre>
+document.onkeydown = function (e) {
+    if (e.keyCode == 27) {
+        var mods = document.querySelectorAll('.dialog-trigger+[type=checkbox]');
+        [].forEach.call(mods, function (mod) {
+            mod.checked = false;
+        });
+    }
+}</pre>
+            </div>
+        </div>
+    </footer>
+</div>
+            </section>
+
+        </article>
+    </main>
 </body>
 
 </html>
