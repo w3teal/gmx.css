@@ -1,0 +1,85 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.25rem;
+    height: 2rem;
+}
+
+.switch>span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--m3-scheme-surface-container-highest);
+    border: solid .125rem var(--m3-scheme-outline);
+    transition: .2s;
+    border-radius: 2rem;
+}
+
+.switch>span:before {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    left: .4rem;
+    bottom: .4rem;
+    background: var(--m3-scheme-outline);
+    transition: .2s;
+    border-radius: var(--m3-switch-handle-shape);
+}
+
+.switch>input:not(:checked):active+span::before {
+    width: 1.7rem;
+    height: 1.7rem;
+    bottom: 1px;
+    left: 1px;
+}
+
+.switch>input:hover+span {
+    border-color: var(--m3-scheme-on-surface-variant);
+}
+
+.switch>input:hover+span:before {
+    background: var(--m3-scheme-on-surface-variant);
+    box-shadow: 0 0 0 .95rem rgb(from var(--m3-scheme-outline) r g b / 20%);
+}
+
+.switch>input:checked+span {
+    background: var(--m3-scheme-primary);
+    border-color: var(--m3-scheme-primary);
+}
+
+.switch>input:checked+span:before {
+    width: 1.55rem;
+    height: 1.55rem;
+    background: #ffffff;
+    transform: translateX(1rem);
+    bottom: 1.5px;
+}
+
+.switch>input:checked:hover+span:before {
+    background: var(--m3-scheme-secondary-container);
+    box-shadow: 0 0 0 .75rem rgb(from var(--m3-scheme-outline) r g b / 20%);
+}
+
+.switch>input:checked:active+span::before {
+    width: 1.8rem;
+    height: 1.8rem;
+    bottom: 0px;
+    left: 4px;
+}
+
+.switch>input:checked+span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .45rem;
+    right: .65rem;
+    width: .3rem;
+    height: 11px;
+    border: solid var(--m3-scheme-primary);
+    border-width: 0 .15em .15em 0;
+    transform: rotate(45deg);
+}

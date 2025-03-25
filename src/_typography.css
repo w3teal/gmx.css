@@ -1,0 +1,173 @@
+:is(h1, h2, h3, h4, h5, h6),
+[class^="display"] {
+    display: block;
+    font-weight: 400;
+    margin: .75rem 0;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 3.5625rem
+}
+
+h2 {
+    font-size: 2.8125rem
+}
+
+h3 {
+    font-size: 2.25rem
+}
+
+h4 {
+    font-size: 2rem
+}
+
+h5 {
+    font-size: 1.75rem
+}
+
+h6 {
+    font-size: 1.5rem
+}
+
+h1.small {
+    font-size: 3.0625rem
+}
+
+h2.small {
+    font-size: 2.3125rem
+}
+
+h3.small {
+    font-size: 1.75rem
+}
+
+h4.small {
+    font-size: 1.5rem
+}
+
+h5.small {
+    font-size: 1.25rem
+}
+
+h6.small {
+    font-size: 1rem
+}
+
+h1.display,
+.display-xxxl {
+    font-size: 4.25rem;
+}
+
+h2.display,
+.display-xxl,
+.text-xxxl {
+    font-size: 3.75rem;
+}
+
+h3.display,
+.display-xl,
+.text-xxl {
+    font-size: 3rem;
+}
+
+h4.display,
+.display-l,
+.text-xl {
+    font-size: 2.125rem;
+}
+
+h5.display,
+.display-base,
+.text-lg {
+    font-size: 1.25rem;
+}
+
+h6.display,
+.display-sm,
+.text-base {
+    font-size: 1rem;
+}
+
+.text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    letter-spacing: .015625rem;
+}
+
+a:not(.btn, :has(*:not(span))) {
+    color: inherit;
+    background: linear-gradient(to top, var(--m3-scheme-primary) 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: 0 7.5%;
+    border-radius: var(--m3-util-rounding-extra-small);
+    background-repeat: no-repeat;
+    transition: .25s;
+    will-change: background-position;
+}
+
+a:not(.btn, :has(*:not(span))):hover {
+    color: var(--m3-scheme-on-primary);
+    background-position: 0 100%;
+}
+
+code {
+    background: var(--m3-scheme-surface-variant);
+    font-size: .9rem;
+    border-radius: .25rem;
+    letter-spacing: 0;
+    padding: 0 .25rem;
+}
+
+pre {
+    letter-spacing: 0;
+    overflow-x: auto;
+}
+
+i {
+    line-height: 0;
+}
+
+hr {
+    border: none;
+    height: .025rem;
+    background: var(--m3-scheme-outline-variant);
+}
+
+blockquote {
+    background: var(--m3-scheme-surface-container-highest);
+    border-radius: var(--m3-util-rounding-medium);
+    border-left: .25rem dotted var(--m3-scheme-primary);
+    margin: 0;
+    padding: .75rem 1rem;
+}
+
+pre {
+    background: var(--m3-scheme-surface-container-highest);
+    padding: .75rem;
+    border-radius: var(--m3-util-rounding-medium);
+    margin: 0;
+}
+
+pre>code {
+    padding: 0;
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table :is(th, td) {
+    padding: .35rem;
+    text-align: left;
+}
+
+table th:not(tfoot th) {
+    border-bottom: 1px solid var(--m3-scheme-outline);
+}
+
+table tfoot th {
+    border-top: 1px solid var(--m3-scheme-outline);
+}

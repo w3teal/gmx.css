@@ -1,0 +1,207 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.grid>* {
+    margin: 0;
+    grid-column: span var(--num);
+}
+
+.grid>.s1,
+.grid.all-s1>* {
+    --num: 1;
+}
+
+.grid>.s2,
+.grid.all-s2>* {
+    --num: 2;
+}
+
+.grid>.s3,
+.grid.all-s3>* {
+    --num: 3;
+}
+
+.grid>.s4,
+.grid.all-s4>* {
+    --num: 4;
+}
+
+.grid>.s5,
+.grid.all-s5>* {
+    --num: 5;
+}
+
+.grid>.s6,
+.grid.all-s6>* {
+    --num: 6;
+}
+
+.grid>.s7,
+.grid.all-s7>* {
+    --num: 7;
+}
+
+.grid>.s8,
+.grid.all-s8>* {
+    --num: 8;
+}
+
+.grid>.s9,
+.grid.all-s9>* {
+    --num: 9;
+}
+
+.grid>.s10,
+.grid.all-s10>* {
+    --num: 10;
+}
+
+.grid>.s11,
+.grid.all-s11>* {
+    --num: 11;
+}
+
+.grid>.s12,
+.grid.all-s12>* {
+    --num: 12;
+}
+
+@media screen and (min-width: 48em) {
+
+    .grid>.m1,
+    .grid.all-m1>* {
+        --num: 1;
+    }
+
+    .grid>.m2,
+    .grid.all-m2>* {
+        --num: 2;
+    }
+
+    .grid>.m3,
+    .grid.all-m3>* {
+        --num: 3;
+    }
+
+    .grid>.m4,
+    .grid.all-m4>* {
+        --num: 4;
+    }
+
+    .grid>.m5,
+    .grid.all-m5>* {
+        --num: 5;
+    }
+
+    .grid>.m6,
+    .grid.all-m6>* {
+        --num: 6;
+    }
+
+    .grid>.m7,
+    .grid.all-m7>* {
+        --num: 7;
+    }
+
+    .grid>.m8,
+    .grid.all-m8>* {
+        --num: 8;
+    }
+
+    .grid>.m9,
+    .grid.all-m9>* {
+        --num: 9;
+    }
+
+    .grid>.m10,
+    .grid.all-m10>* {
+        --num: 10;
+    }
+
+    .grid>.m11,
+    .grid.all-m11>* {
+        --num: 11;
+    }
+
+    .grid>.m12,
+    .grid.all-m12>* {
+        --num: 12;
+    }
+}
+
+@media screen and (min-width: 64em) {
+
+    .grid>.l1,
+    .grid.all-l1>* {
+        --num: 1;
+    }
+
+    .grid>.l2,
+    .grid.all-l2>* {
+        --num: 2;
+    }
+
+    .grid>.l3,
+    .grid.all-l3>* {
+        --num: 3;
+    }
+
+    .grid>.l4,
+    .grid.all-l4>* {
+        --num: 4;
+    }
+
+    .grid>.l5,
+    .grid.all-l5>* {
+        --num: 5;
+    }
+
+    .grid>.l6,
+    .grid.all-l6>* {
+        --num: 6;
+    }
+
+    .grid>.l7,
+    .grid.all-l7>* {
+        --num: 7;
+    }
+
+    .grid>.l8,
+    .grid.all-l8>* {
+        --num: 8;
+    }
+
+    .grid>.l9,
+    .grid.all-l9>* {
+        --num: 9;
+    }
+
+    .grid>.l10,
+    .grid.all-l10>* {
+        --num: 10;
+    }
+
+    .grid>.l11,
+    .grid.all-l11>* {
+        --num: 11;
+    }
+
+    .grid>.l12,
+    .grid.all-l12>* {
+        --num: 12;
+    }
+}
+
+.grid-outline {
+    border-bottom: 1px solid var(--m3-scheme-outline-variant);
+    border-left: 1px solid var(--m3-scheme-outline-variant);
+    gap: 0;
+}
+
+.grid-outline>* {
+    border-top: 1px solid var(--m3-scheme-outline-variant);
+    border-right: 1px solid var(--m3-scheme-outline-variant);
+}

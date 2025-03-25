@@ -1,0 +1,78 @@
+progress:not(.circle, [value]):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background: var(--m3-scheme-primary);
+    animation: 1.2s to-linear linear infinite;
+}
+
+@keyframes to-linear {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+progress {
+    appearance: none;
+}
+
+progress:not(.circle) {
+    position: relative;
+    height: .25rem;
+    border-radius: var(--m3-linear-progress-shape);
+    overflow: hidden;
+}
+
+::-webkit-progress-value {
+    background: var(--m3-scheme-primary);
+}
+
+::-webkit-progress-bar {
+    background: var(--m3-scheme-primary-container);
+}
+
+progress.circle::-webkit-progress-value {
+    background: transparent;
+}
+
+progress.circle::-webkit-progress-bar {
+    background: transparent;
+}
+
+progress.circle {
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background: conic-gradient(var(--m3-scheme-primary) calc(var(--value) * 1%), transparent 0);
+    border-radius: 50%;
+}
+
+progress.circle::after {
+    content: "";
+    position: absolute;
+    inset: 10%;
+    background: var(--m3-scheme-surface-container);
+    border-radius: 50%;
+}
+
+progress.circle.spin {
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

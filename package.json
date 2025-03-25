@@ -1,11 +1,19 @@
 {
   "name": "gmx.css",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "GMX.css implements the Material 3 design system in Vanilla CSS/JS.",
   "main": "dist/gmx.min.css",
   "scripts": {
-    "build": "cleancss -o dist/gmx.min.css src/gmx.css && cleancss -o dist/theme.min.css src/theme.css"
+    "build:gmx": "esbuild src/gmx.css --outfile=dist/gmx.css --bundle",
+    "build:gmx:min": "esbuild src/gmx.css --outfile=dist/gmx.min.css --bundle --minify",
+    "build:theme": "esbuild src/theme.css --outfile=dist/theme.css --bundle",
+    "build:theme:min": "esbuild src/theme.css --outfile=dist/theme.min.css --bundle --minify",
+    "build": "npm run build:gmx && npm run build:gmx:min && npm run build:theme && npm run build:theme:min"
   },
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LIGMATV/gmx.css.git"
@@ -24,6 +32,6 @@
   },
   "homepage": "https://github.com/LIGMATV/gmx.css#readme",
   "devDependencies": {
-    "clean-css-cli": "^5.6.3"
+    "esbuild": "^0.25.1"
   }
 }

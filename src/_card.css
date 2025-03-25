@@ -1,0 +1,31 @@
+.card {
+    padding: inherit;
+    background: var(--m3-scheme-surface-container-low);
+    color: var(--m3-scheme-on-surface);
+    box-shadow: var(--m3-util-elevation-1);
+    border-radius: var(--m3-card-shape);
+}
+
+.container:not(:has(>header, >footer)),
+.container>header,
+.container>footer {
+    padding: 1rem;
+    border-radius: var(--m3-util-rounding-extra-large);
+    background: var(--m3-scheme-surface-container);
+    color: var(--m3-scheme-on-surface);
+}
+
+.container:has(>header, >footer) {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.container>header {
+    border-radius: var(--m3-util-rounding-extra-large) var(--m3-util-rounding-extra-large) var(--m3-util-rounding-small) var(--m3-util-rounding-small);
+    flex-grow: 1;
+}
+
+.container>footer {
+    border-radius: var(--m3-util-rounding-small) var(--m3-util-rounding-small) var(--m3-util-rounding-extra-large) var(--m3-util-rounding-extra-large);
+}
