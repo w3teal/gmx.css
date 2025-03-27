@@ -4,36 +4,30 @@ name: build 11ty site
 
 on:
   push:
-    branches: ["main"]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - main
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - name: Install dependencies & build
-        run: |
-          npm install
-          npx @11ty/eleventy
-      - uses: actions/upload-pages-artifact@v2
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v2
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2  # Updated version
+        with:
+          name: site
+          path: _site
