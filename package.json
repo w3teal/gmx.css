@@ -1,15 +1,14 @@
 {
   "name": "gmx.css",
-  "version": "0.0.25",
-  "description": "GMX.css implements the Material 3 design system in Vanilla CSS/JS.",
+  "version": "0.0.26",
+  "description": "A micro Material Design 3 based CSS-only framework.",
   "main": "dist/gmx.min.css",
   "scripts": {
     "build:gmx": "esbuild src/gmx.css --outfile=dist/gmx.css --bundle",
     "build:gmx:min": "esbuild src/gmx.css --outfile=dist/gmx.min.css --bundle --minify",
     "build:theme": "esbuild src/theme.css --outfile=dist/theme.css --bundle",
     "build:theme:min": "esbuild src/theme.css --outfile=dist/theme.min.css --bundle --minify",
-    "build": "npm run build:gmx && npm run build:gmx:min && npm run build:theme && npm run build:theme:min",
-    "build:site": "npx eleventy"
+    "build": "npm run build:gmx && npm run build:gmx:min && npm run build:theme && npm run build:theme:min"
   },
   "files": [
     "dist/",
@@ -17,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LIGMATV/gmx.css.git"
+    "url": "git+https://github.com/w3teal/gmx.css.git"
   },
   "keywords": [
     "css",
@@ -26,14 +25,13 @@
     "material-you",
     "material-3"
   ],
-  "author": "LIGMATV",
+  "author": "w3teal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LIGMATV/gmx.css/issues"
+    "url": "https://github.com/w3teal/gmx.css/issues"
   },
-  "homepage": "https://github.com/LIGMATV/gmx.css#readme",
+  "homepage": "https://github.com/w3teal/gmx.css#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
     "esbuild": "^0.25.1"
   }
 }
