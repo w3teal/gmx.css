@@ -4,15 +4,12 @@
   "description": "A micro Material Design 3 based CSS-only framework.",
   "main": "dist/gmx.min.css",
   "scripts": {
-    "build:gmx": "esbuild src/gmx.css --outfile=dist/gmx.css --bundle",
-    "build:gmx:min": "esbuild src/gmx.css --outfile=dist/gmx.min.css --bundle --minify",
-    "build:theme": "esbuild src/theme.css --outfile=dist/theme.css --bundle",
-    "build:theme:min": "esbuild src/theme.css --outfile=dist/theme.min.css --bundle --minify",
-    "build": "npm run build:gmx && npm run build:gmx:min && npm run build:theme && npm run build:theme:min"
+    "build": "gulp build",
+    "dev": "gulp watch"
   },
   "files": [
-    "dist/",
-    "src/"
+    "dist/*.css",
+    "LICENSE.md"
   ],
   "repository": {
     "type": "git",
@@ -26,12 +23,37 @@
     "material-3"
   ],
   "author": "w3teal",
-  "license": "MIT",
+  "license": "MIT OR Apache-2.0-only",
   "bugs": {
     "url": "https://github.com/w3teal/gmx.css/issues"
   },
   "homepage": "https://github.com/w3teal/gmx.css#readme",
   "devDependencies": {
-    "esbuild": "^0.25.1"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@changesets/cli": "^2.7.2",
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "chalk": "^2.4.2",
+    "cssnano": "^7.0.7",
+    "gulp": "^5.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-bytediff": "^1.0.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sizereport": "^1.2.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "htmlnano": "^0.2.3",
+    "husky": "^4.2.5",
+    "pa11y": "^5.3.0",
+    "postcss-color-mod-function": "^4.1.1",
+    "postcss-import": "^16.1.1",
+    "postcss-inline-svg": "^6.0.0",
+    "posthtml-include": "^2.0.1",
+    "puppeteer": "^3.2.0"
   }
 }

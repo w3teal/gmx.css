@@ -1,0 +1,51 @@
+.tabs {
+  display: flex;
+  background: var(--m3-scheme-surface);
+  border-bottom: 1px solid var(--m3-scheme-outline-variant);
+}
+
+.tabs.variable {
+  padding: 0 1rem;
+}
+
+.tabs.variable > * {
+  width: max-content;
+  padding: 0.65rem 1rem;
+}
+
+.tabs > * {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.65rem 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+  transition: 0.1s;
+}
+
+.tabs i {
+  display: block;
+}
+
+.tabs i * {
+  font-size: 1.5rem;
+}
+
+.tabs > label:has(input:checked) {
+  color: var(--m3-scheme-primary);
+}
+
+.tabs > label:has(input:checked)::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.15rem;
+  width: 3rem;
+  margin: 0 auto;
+  background: var(--m3-scheme-primary);
+}

@@ -1,0 +1,47 @@
+details .menu {
+  position: absolute;
+  z-index: 2;
+}
+
+.list-box,
+.menu {
+  background: var(--m3-scheme-surface-container);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-box > * {
+  padding: 1.15rem 1rem 0.75rem;
+}
+
+.list-box > * > article * {
+  margin: 0;
+}
+
+.list-box > * i *,
+.menu > * i * {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.list-box > * + * {
+  border-top: 1px solid var(--m3-scheme-outline-variant);
+}
+
+.menu {
+  background: var(--m3-scheme-surface-container);
+  box-shadow: var(--m3-util-elevation-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--m3-menu-shape);
+  padding: 0.5rem 0;
+  min-width: 7rem;
+  max-width: 17.5rem;
+}
+
+.menu > * {
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: 0.1s;
+}

@@ -1,0 +1,443 @@
+.primary {
+  background: var(--m3-scheme-primary) !important;
+  color: var(--m3-scheme-on-primary) !important;
+}
+
+.primary-container {
+  background: var(--m3-scheme-primary-container) !important;
+  color: var(--m3-scheme-on-primary-container) !important;
+}
+
+.secondary {
+  background: var(--m3-scheme-secondary) !important;
+  color: var(--m3-scheme-on-secondary) !important;
+}
+
+.secondary-container {
+  background: var(--m3-scheme-secondary-container) !important;
+  color: var(--m3-scheme-on-secondary-container) !important;
+}
+
+.tertiary {
+  background: var(--m3-scheme-tertiary) !important;
+  color: var(--m3-scheme-on-tertiary) !important;
+}
+
+.tertiary-container,
+::selection {
+  background: var(--m3-scheme-tertiary-container) !important;
+  color: var(--m3-scheme-on-tertiary-container) !important;
+}
+
+.background {
+  background: var(--m3-scheme-background) !important;
+  color: var(--m3-scheme-on-background) !important;
+}
+
+.surface {
+  background: var(--m3-scheme-surface) !important;
+  color: var(--m3-scheme-on-surface) !important;
+}
+
+.inverse-surface {
+  background: var(--m3-scheme-inverse-surface) !important;
+  color: var(--m3-scheme-inverse-on-surface) !important;
+}
+
+.surface-variant {
+  background: var(--m3-scheme-surface-variant) !important;
+  color: var(--m3-scheme-on-surface-variant) !important;
+}
+
+.error {
+  background: var(--m3-scheme-error) !important;
+  color: var(--m3-scheme-on-error) !important;
+}
+
+.error-container {
+  background: var(--m3-scheme-error-container) !important;
+  color: var(--m3-scheme-on-error-container) !important;
+}
+
+.accent-gradient {
+  background-image: linear-gradient(to bottom, var(--m3-scheme-primary-container), var(--m3-scheme-tertiary-container)) !important;
+  color: var(--m3-scheme-on-primary-container) !important;
+}
+
+:where([class*=shadow]) {
+  box-shadow: var(--shadow-size) !important;
+
+  --shadow-size: var(--m3-util-elevation-2);
+}
+
+.shadow-none {
+  --shadow-size: 0;
+}
+
+.shadow-auto {
+  --shadow-size: auto;
+}
+
+.shadow-s {
+  --shadow-size: var(--m3-util-elevation-1);
+}
+
+.shadow-l {
+  --shadow-size: var(--m3-util-elevation-3);
+}
+
+.shadow-xl {
+  --shadow-size: var(--m3-util-elevation-4);
+}
+
+.shadow-xxl {
+  --shadow-size: var(--m3-util-elevation-5);
+}
+
+:where([class*=margin]):not(.margin-left, .margin-right, .margin-top, .margin-bottom, .margin-horiz, .margin-vert) {
+  margin: var(--margin-size) !important;
+}
+
+:where([class*=margin]) {
+  --margin-size: 1rem;
+}
+
+.margin-none {
+  --margin-size: 0;
+}
+
+.margin-auto {
+  --margin-size: auto;
+}
+
+.margin-xs {
+  --margin-size: 0.25rem;
+}
+
+.margin-s {
+  --margin-size: 0.5rem;
+}
+
+.margin-l {
+  --margin-size: 1.5rem;
+}
+
+.margin-xl {
+  --margin-size: 2rem;
+}
+
+.margin-left,
+.margin-horiz {
+  margin-inline-start: var(--margin-size) !important;
+}
+
+.margin-right,
+.margin-horiz {
+  margin-inline-end: var(--margin-size) !important;
+}
+
+.margin-top,
+.margin-vert {
+  margin-block-start: var(--margin-size) !important;
+}
+
+.margin-bottom,
+.margin-vert {
+  margin-block-end: var(--margin-size) !important;
+}
+
+:where([class*=br]) {
+  display: block;
+}
+
+:where([class*=padding]):not(.padding-left, .padding-right, .padding-top, .padding-bottom, .padding-horiz, .padding-vert),
+:where([class*=br]) {
+  padding: var(--padding-size) !important;
+}
+
+:where([class*=padding]) {
+  --padding-size: 1rem;
+}
+
+.padding-none {
+  --padding-size: 0;
+}
+
+.padding-auto {
+  --padding-size: auto;
+}
+
+.padding-xs,
+.br {
+  --padding-size: 0.25rem;
+}
+
+.padding-s,
+.br-l {
+  --padding-size: 0.5rem;
+}
+
+.padding-l,
+.br-xl {
+  --padding-size: 1.5rem;
+}
+
+.padding-xl {
+  --padding-size: 2rem;
+}
+
+.padding-left,
+.padding-horiz {
+  padding-inline-start: var(--padding-size) !important;
+}
+
+.padding-right,
+.padding-horiz {
+  padding-inline-end: var(--padding-size) !important;
+}
+
+.padding-top,
+.padding-vert {
+  padding-block-start: var(--padding-size) !important;
+}
+
+.padding-bottom,
+.padding-vert {
+  padding-block-end: var(--padding-size) !important;
+}
+
+:where([class*=gap]) {
+  gap: var(--gap-size) !important;
+
+  --gap-size: 1rem;
+}
+
+.gap-none {
+  --gap-size: 0;
+}
+
+.gap-auto {
+  --gap-size: auto;
+}
+
+.gap-xs {
+  --gap-size: 0.25rem;
+}
+
+.gap-s {
+  --gap-size: 0.5rem;
+}
+
+.gap-l {
+  --gap-size: 1.5rem;
+}
+
+.gap-xl {
+  --gap-size: 2rem;
+}
+
+:where([class*=round]) {
+  border-radius: var(--round-size) !important;
+
+  --round-size: var(--m3-util-rounding-medium);
+}
+
+.round-none {
+  --round-size: var(--m3-util-rounding-none);
+}
+
+.round-xs {
+  --round-size: var(--m3-util-rounding-extra-small);
+}
+
+.round-s {
+  --round-size: var(--m3-util-rounding-small);
+}
+
+.round-l {
+  --round-size: var(--m3-util-rounding-large);
+}
+
+.round-xl {
+  --round-size: var(--m3-util-rounding-extra-large);
+}
+
+.round-full {
+  --round-size: var(--m3-util-rounding-full);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.inline-flex {
+  display: inline-flex !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-col {
+  flex-direction: column !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-max,
+.all-max * {
+  display: flex !important;
+  flex: 1 !important;
+  flex-grow: 1 !important;
+}
+
+:where([class*=align]) {
+  align-content: var(--alignment) !important;
+  align-items: var(--alignment) !important;
+  align-self: var(--alignment) !important;
+}
+
+.align-start {
+  --alignment: start;
+}
+
+.align-end {
+  --alignment: end;
+}
+
+.align-center {
+  --alignment: center;
+}
+
+.align-baseline {
+  --alignment: baseline;
+}
+
+.align-stretch {
+  --alignment: stretch;
+}
+
+:where([class*=justify]) {
+  justify-content: var(--justification) !important;
+  justify-items: var(--justification) !important;
+  justify-self: var(--justification) !important;
+}
+
+.justify-left {
+  --justification: left;
+}
+
+.justify-center {
+  --justification: center;
+}
+
+.justify-right {
+  --justification: right;
+}
+
+.justify-between {
+  --justification: space-between;
+}
+
+.justify-around {
+  --justification: space-around;
+}
+
+:where([class*=text]) {
+  text-align: var(--text) !important;
+}
+
+.text-left {
+  --text: left;
+}
+
+.text-center {
+  --text: center;
+}
+
+.text-right {
+  --text: right;
+}
+
+:where([class*=overflow]) {
+  overflow: var(--overflow) !important;
+}
+
+.overflow-auto {
+  --overflow: auto;
+}
+
+.overflow-hidden {
+  --overflow: hidden;
+}
+
+.overflow-visible {
+  --overflow: visible;
+}
+
+.overflow-scroll {
+  --overflow: scroll;
+}
+
+:where([class*=width]) {
+  width: var(--width) !important;
+}
+
+.width-min {
+  --width: min-content;
+}
+
+.width-max {
+  --width: max-content;
+}
+
+.width-fit {
+  --width: fit-content;
+}
+
+.width-full {
+  --width: 100%;
+}
+
+.scroll {
+  overflow-x: auto !important;
+}
+
+.scroll > * {
+  min-width: max-content;
+}
+
+input.ex {
+  appearance: none;
+  position: absolute;
+}
+
+button.ex {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+}

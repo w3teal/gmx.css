@@ -1,0 +1,122 @@
+<dialog id="themes">
+
+    <h6>Theme</h6>
+    
+    <nav class="segmented scroll">
+
+        <label class="btn" onclick="changeColor('red')">
+            <input type="radio" name="theme" id="theme-0">
+            Red
+        </label>
+
+        <label class="btn" onclick="changeColor('pink')">
+            <input type="radio" name="theme" id="theme-1">
+            Pink
+        </label>
+
+        <label class="btn" onclick="changeColor('purple')">
+            <input type="radio" name="theme" id="theme-2" checked>
+            Purple
+        </label>
+
+        <label class="btn" onclick="changeColor('indigo')">
+            <input type="radio" name="theme" id="theme-3">
+            Indigo
+        </label>
+
+        <label class="btn" onclick="changeColor('blue')">
+            <input type="radio" name="theme" id="theme-4">
+            Blue
+        </label>
+
+        <label class="btn" onclick="changeColor('cyan')">
+            <input type="radio" name="theme" id="theme-5">
+            Cyan
+        </label>
+
+        <label class="btn" onclick="changeColor('teal')">
+            <input type="radio" name="theme" id="theme-6">
+            Teal
+        </label>
+
+        <label class="btn" onclick="changeColor('green')">
+            <input type="radio" name="theme" id="theme-7">
+            Green
+        </label>
+
+        <label class="btn" onclick="changeColor('lime')">
+            <input type="radio" name="theme" id="theme-8">
+            Lime
+        </label>
+
+        <label class="btn" onclick="changeColor('yellow')">
+            <input type="radio" name="theme" id="theme-9">
+            Yellow
+        </label>
+
+        <label class="btn" onclick="changeColor('amber')">
+            <input type="radio" name="theme" id="theme-10">
+            Amber
+        </label>
+
+        <label class="btn" onclick="changeColor('orange')">
+            <input type="radio" name="theme" id="theme-11">
+            Orange
+        </label>
+
+        <label class="btn" onclick="changeColor('monochrome')">
+            <input type="radio" name="theme" id="theme-12">
+            Mono
+        </label>
+
+    </nav>
+
+    <div class="br-l"></div>
+
+        <div class="grid all-l3 all-m6 all-s12 gap-none overflow-hidden round-lg">
+            <div class="padding primary">
+                <h6>Primary</h6>
+            </div>
+            <div class="padding primary-container">
+                <h6>Primary Container</h6>
+            </div>
+            <div class="padding secondary">
+                <h6>Secondary</h6>
+            </div>
+            <div class="padding secondary-container">
+                <h6>Secondary Container</h6>
+            </div>
+            <div class="padding tertiary">
+                <h6>Tertiary</h6>
+            </div>
+            <div class="padding tertiary-container">
+                <h6>Tertiary Container</h6>
+            </div>
+            <div class="padding background">
+                <h6>Background</h6>
+            </div>
+            <div class="padding surface">
+                <h6>Surface</h6>
+            </div>
+            <div class="padding inverse-surface">
+                <h6>Inverse Surface</h6>
+            </div>
+            <div class="padding surface-variant">
+                <h6>Surface Variant</h6>
+            </div>
+            <div class="padding error">
+                <h6>Error</h6>
+            </div>
+            <div class="padding error-container">
+                <h6>Error Container</h6>
+            </div>
+        </div>
+
+    <script>
+        function changeColor(color) {
+            document.body.className = '';
+            document.body.classList.add(color);
+        }
+    </script>
+
+</dialog>

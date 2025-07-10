@@ -1,0 +1,72 @@
+.field {
+  position: relative;
+}
+
+.field:not(:last-child, :is(nav, .row) .field, .grid>.field) {
+  margin-bottom: 1rem;
+}
+
+.field :is(input, textarea) {
+  display: block !important;
+  border: none;
+  outline: none;
+  min-width: 15.5rem;
+  border-bottom: 1px solid var(--m3-scheme-outline);
+  background: var(--m3-scheme-surface-container-highest);
+  border-radius: var(--m3-textfield-filled-shape) var(--m3-textfield-filled-shape) 0 0;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+.field :is(input, textarea):hover {
+  background: rgb(from var(--m3-scheme-on-surface) r g b / 15%);
+}
+
+.field label {
+  position: absolute;
+  top: 1rem;
+  bottom: 0;
+  left: 1rem;
+  display: flex;
+  align-items: self-start;
+  pointer-events: none;
+}
+
+.field label span {
+  transition: all 0.15s ease-out;
+}
+
+.field :is(input, textarea):focus {
+  outline: none;
+  border-bottom: 2px solid var(--m3-scheme-primary);
+  margin-bottom: -1px;
+}
+
+.field :is(input, textarea):focus + label span,
+.field :not(:is(input, textarea):placeholder-shown) + label span {
+  font-size: 0.75rem;
+  transform: translate(0, -50%);
+}
+
+.field :is(input, textarea):focus + label span {
+  color: var(--m3-scheme-primary);
+}
+
+.field:has(i) :is(input, textarea) {
+  padding: 1.5rem 1rem 0.5rem 2.85rem;
+}
+
+.field:has(i) label {
+  left: 2.85rem;
+}
+
+.field i {
+  position: absolute;
+  pointer-events: none;
+  left: 0.65rem;
+}
+
+.field i * {
+  font-size: 1.5rem;
+}

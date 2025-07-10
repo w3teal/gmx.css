@@ -1,0 +1,43 @@
+<div class="container min">
+    <header>
+        <nav>
+            <h3>Dialog</h3>
+            <div class="flex-max"></div>
+            <button class="icon tonal" onclick="document.getElementById('dialog-jscode').showModal()"><i><iconify-icon icon="mdi:language-javascript"></iconify-icon></i></button>
+        </nav>
+    </header>
+    <footer>
+        
+        <nav class="segmented tonal">
+            <button onclick="document.getElementById('dialog-demo').showModal()">JS Dialog</button>
+            <label class="btn" for="dialog-checkbox-demo">CSS Checkbox</label>
+        </nav>
+
+
+        <dialog id="dialog-demo">
+            <i>
+                <iconify-icon icon="mdi:circle-outline" width="24" height="24"></iconify-icon>
+            </i>
+            <h6>The Requiem</h6>
+            <p class="text-sm">God save us, everyone Will we burn inside the fires of a thousand suns? For the sins of our hand, sins of our tongue The sins of our father, the sins of our young</p>
+            <form method="dialog">
+                <button class="text">Cancel</button>
+                <button class="tonal">OK</button>
+            </form>
+        </dialog>
+
+        <input class="dialog-trigger" type="checkbox" id="dialog-checkbox-demo">
+        <div class="dialog">
+            <i>
+                <iconify-icon icon="mdi:circle-outline" width="24" height="24"></iconify-icon>
+            </i>
+            <h6>The Requiem</h6>
+            <p class="text-sm">God save us, everyone Will we burn inside the fires of a thousand suns? For the sins of our hand, sins of our tongue The sins of our father, the sins of our young</p>
+            <form method="dialog">
+                <label class="btn text" for="dialog-checkbox-demo">Cancel</label>
+                <label class="btn tonal" for="dialog-checkbox-demo">OK</label>
+            </form>
+        </div>
+        
+    </footer>
+</div>

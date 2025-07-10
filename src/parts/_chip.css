@@ -1,0 +1,27 @@
+.chip {
+  display: inline-flex;
+  padding: 0.35rem 1rem;
+  border-radius: var(--m3-chip-shape);
+  background: var(--m3-scheme-surface);
+  color: var(--m3-scheme-on-surface-variant);
+  border: solid 0.0625rem var(--m3-scheme-outline);
+}
+
+.chip:not(.icon) i * {
+  margin-left: -0.25rem;
+}
+
+.chip:not(.icon) i:last-child {
+  margin-left: 0.65rem;
+  margin-right: -0.75rem;
+}
+
+.chip:has(input:not(:checked)):hover {
+  box-shadow: none;
+}
+
+.chip:has(input:checked) {
+  border-color: transparent;
+  background: var(--m3-scheme-secondary-container);
+  color: var(--m3-scheme-on-secondary-container);
+}

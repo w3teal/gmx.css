@@ -1,0 +1,53 @@
+<dialog id="dialog-jscode" class="s">
+    <b>1. Closing CSS-only dialog with <kbd>ESC</kbd></b>
+    <pre>
+document.onkeydown = ({ key }) => {
+    if (key === 'Escape')
+    document.body
+        .querySelectorAll('.dialog-trigger')
+        .forEach(e => e.checked = false)
+}</pre>
+    <b>2. Closing JS dialog with clicking outside/backdrop</b>
+    <pre>
+document.querySelectorAll('dialog').forEach(element => 
+    element.addEventListener('mousedown', 
+        event => (event.button === 0) && (event.target === event.currentTarget) && event.currentTarget.close()
+    )
+)</pre>
+    <form method="dialog">
+        <a href="https://github.com/beercss/beercss/discussions/404#discussioncomment-11689566" class="btn text">Source 1</a>
+        <a href="https://stackoverflow.com/questions/25864259/how-to-close-the-new-html-dialog-tag-by-clicking-on-its-backdrop" class="btn text">Source 2</a>
+        <button class="text">Close</button>
+    </form>
+</dialog>
+
+<dialog id="slider-jscode" class="s">
+    <b>Update slider</b>
+    <pre>
+function updateSlider(slider) {
+    const value = slider.value;
+    const percent = value + '%';
+    slider.parentElement.style.setProperty('--percent', percent);
+    const tooltip = slider.parentElement.querySelector('.tooltip');
+    tooltip.textContent = value;
+}</pre>
+Example usage:  
+<pre>
+&lt;label class=&quot;slider&quot; style=&quot;--percent: 53%&quot;&gt;
+    &lt;input type=&quot;range&quot; value=&quot;53&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; oninput=&quot;updateSlider(this)&quot;&gt;
+    &lt;span class=&quot;track&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;thumb&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;tooltip&quot;&gt;53&lt;/span&gt;
+&lt;/label&gt;</pre>
+    <form method="dialog">
+        <button class="text">Close</button>
+    </form>
+</dialog>
+
+<script>
+document.querySelectorAll('dialog').forEach(element => 
+    element.addEventListener('mousedown', 
+        event => (event.button === 0) && (event.target === event.currentTarget) && event.currentTarget.close()
+    )
+)
+</script>

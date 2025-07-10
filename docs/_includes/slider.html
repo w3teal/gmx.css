@@ -1,0 +1,26 @@
+<div class="container min">
+    <header>
+        <nav>
+            <h3>Slider</h3>
+            <div class="flex-max"></div>
+            <button class="icon tonal" onclick="document.getElementById('slider-jscode').showModal()"><i><iconify-icon icon="mdi:language-javascript"></iconify-icon></i></button>
+        </nav>
+    </header>
+    <footer>
+        <label class="slider" style="--percent: 0%">
+            <input type="range" value="0" min="0" max="100" step="1" oninput="updateSlider(this)">
+            <span class="track"></span>
+            <span class="thumb"></span>
+            <span class="tooltip">0</span>
+        </label>
+        <script>
+            function updateSlider(slider) {
+                const value = slider.value;
+                const percent = value + '%';
+                slider.parentElement.style.setProperty('--percent', percent);
+                const tooltip = slider.parentElement.querySelector('.tooltip');
+                tooltip.textContent = value;
+            }
+        </script>
+    </footer>
+</div>

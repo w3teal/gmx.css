@@ -1,0 +1,51 @@
+<div class="container min">
+    <header>
+        <nav>
+            <h3>Bottom sheet</h3>
+            <div class="flex-max"></div>
+            <button class="icon tonal" onclick="document.getElementById('dialog-jscode').showModal()"><i><iconify-icon icon="mdi:language-javascript"></iconify-icon></i></button>
+        </nav>
+    </header>
+    <footer>
+        
+        <nav class="segmented tonal">
+            <button onclick="document.getElementById('bottom-sheet-demo').showModal()">JS Dialog</button>
+            <label class="btn" for="bottom-sheet-checkbox-demo">CSS Checkbox</label>
+        </nav>
+
+        <dialog id="bottom-sheet-demo" class="bottom-sheet">
+            <p>God save us, everyone Will we burn inside the fires of a thousand suns? For the sins of our hand, sins of our tongue The sins of our father, the sins of our young</p>
+            <div class="grid all-max">
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>Start</span></label>
+                </div>
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>End</span></label>
+                </div>
+            </div>
+            <form method="dialog">
+                <button class="full">Add event</button>
+            </form>
+        </dialog>
+        
+        <input class="dialog-trigger" type="checkbox" id="bottom-sheet-checkbox-demo">
+        <div class="dialog bottom-sheet">
+            <p>God save us, everyone Will we burn inside the fires of a thousand suns? For the sins of our hand, sins of our tongue The sins of our father, the sins of our young</p>
+            <div class="grid all-max">
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>Start</span></label>
+                </div>
+                <div class="field s12 m6">
+                    <input type="date" placeholder="">
+                    <label><span>End</span></label>
+                </div>
+            </div>
+            <form method="dialog">
+                <label class="btn full" for="bottom-sheet-checkbox-demo">Add event</label>
+            </form>
+        </div>
+    </footer>
+</div>

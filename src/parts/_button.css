@@ -1,0 +1,200 @@
+img.btn {
+  object-fit: cover;
+  object-position: center;
+  border: none;
+}
+
+:where(button, .btn):not(.ex) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--m3-scheme-primary);
+  border: 1px solid transparent;
+  border-radius: var(--m3-button-shape);
+  color: var(--m3-scheme-on-primary);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  outline: 1px solid transparent;
+  transition: border-radius var(--m3-util-easing-fast-spatial), box-shadow var(--m3-util-easing-fast), background-color var(--m3-util-easing-fast), color var(--m3-util-easing-fast);
+}
+
+:where(button, .btn):not(.ex):hover {
+  background: rgb(from var(--m3-scheme-primary) r g b / 90%);
+  box-shadow: var(--m3-util-elevation-1);
+}
+
+:is(button, .btn):active {
+  border-radius: var(--m3-util-rounding-small) !important;
+}
+
+:where(button, .btn):not(.ex) i {
+  max-width: none;
+}
+
+:where(button, .btn):not(.ex) i * {
+  font-size: 1.125rem;
+  margin: 0 0.5rem 0 0;
+}
+
+:where(button, .btn):not(.ex).tonal,
+:is(.segmented, .split).tonal :where(button, .btn):not(.ex) {
+  background: var(--m3-scheme-secondary-container);
+  color: var(--m3-scheme-on-secondary-container);
+}
+
+:where(button, .btn):not(.ex).tonal:hover,
+.chip:has(input:checked):hover,
+:is(.segmented, .split).tonal :where(button, .btn):not(.ex):hover {
+  background: rgb(from var(--m3-scheme-primary) r g b / 20%);
+}
+
+:where(button, .btn):not(.ex).text,
+:where(button, .btn):not(.ex).outline,
+:is(.split).outline :where(button, .btn):not(.ex) {
+  box-shadow: none;
+  background: transparent;
+  color: var(--m3-scheme-primary);
+}
+
+:where(button, .btn):not(.ex).text:hover,
+:where(button, .btn):not(.ex).outline:hover,
+:is(.split).outline :where(button, .btn):not(.ex):hover,
+.tabs > label:has(input:checked):hover {
+  box-shadow: none;
+  background: rgb(from var(--m3-scheme-primary) r g b / 10%);
+}
+
+:where(button, .btn):not(.ex).outline,
+:is(.split).outline :where(button, .btn):not(.ex) {
+  border: 0.0625rem solid var(--m3-scheme-outline);
+}
+
+:where(button, .btn):not(.ex).text {
+  padding: 0.8rem 0.8rem;
+}
+
+:where(button, .btn):not(.ex).elevated,
+:is(.split).elevated :where(button, .btn):not(.ex) {
+  background: var(--m3-scheme-surface-container-low);
+  color: var(--m3-scheme-primary);
+  box-shadow: var(--m3-util-elevation-1) !important;
+}
+
+:where(button, .btn):not(.ex).elevated:hover,
+:is(.split).elevated :where(button, .btn):not(.ex):hover {
+  background: rgb(from var(--m3-scheme-primary) r g b / 5%);
+  box-shadow: var(--m3-util-elevation-2) !important;
+}
+
+main > aside li:not(.active):hover i,
+.menu > *:hover,
+.chip:hover,
+.tabs > *:hover {
+  background: var(--m3-scheme-surface-container-highest);
+}
+
+:where(button, .btn):not(.ex):is(.icon, .fab:not(.extended)) {
+  aspect-ratio: 1/1;
+  width: var(--size);
+  height: var(--size);
+}
+
+:where(button, .btn):not(.ex):is(.icon, .fab.small) {
+  --size: 2.5rem;
+}
+
+:where(button, .btn):not(.ex).chip.icon {
+  --size: 2rem;
+}
+
+:where(button, .btn):not(.ex):is(.icon, .fab) i * {
+  font-size: 1.5rem;
+  margin-right: 0;
+}
+
+:where(button, .btn):not(.ex).fab.small {
+  border-radius: var(--m3-fab-small-shape);
+}
+
+:where(button, .btn):not(.ex).fab {
+  box-shadow: var(--m3-util-elevation-2);
+
+  --size: 3.5rem;
+
+  border-radius: var(--m3-fab-normal-shape);
+}
+
+:where(button, .btn):not(.ex).fab.large {
+  --size: 5.5rem;
+
+  border-radius: var(--m3-fab-large-shape);
+}
+
+:where(button, .btn):not(.ex).fab.large i * {
+  font-size: 2.5rem;
+}
+
+:where(button, .btn):not(.ex).fab.extended {
+  width: auto;
+}
+
+:where(button, .btn):not(.ex).fab.extended i * {
+  margin-right: 0.5rem;
+}
+
+:is(.segmented, .split) {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.split > :where(button, .btn):first-child {
+  border-radius: var(--m3-button-shape) var(--m3-util-rounding-small) var(--m3-util-rounding-small) var(--m3-button-shape);
+}
+
+.split > :where(button, .btn):last-child {
+  border-radius: var(--m3-util-rounding-small) var(--m3-button-shape) var(--m3-button-shape) var(--m3-util-rounding-small);
+}
+
+.segmented > :where(button, .btn):not(.ex):first-child,
+.split > :where(button, .btn):first-child:hover {
+  border-radius: var(--m3-button-shape) var(--m3-util-rounding-large) var(--m3-util-rounding-large) var(--m3-button-shape);
+}
+
+.segmented > :where(button, .btn):not(.ex):last-child,
+.split > :where(button, .btn):last-child:hover {
+  border-radius: var(--m3-util-rounding-large) var(--m3-button-shape) var(--m3-button-shape) var(--m3-util-rounding-large);
+}
+
+.split > :where(button, .btn):active {
+  border-radius: var(--m3-button-shape) !important;
+}
+
+.segmented :where(button, .btn):not(.ex) {
+  background: var(--m3-scheme-surface-container);
+  color: var(--m3-scheme-on-surface-variant);
+  border-radius: var(--m3-util-rounding-medium);
+  width: 100%;
+}
+
+.segmented :where(button, .btn):not(.ex):hover {
+  box-shadow: none;
+  background: var(--m3-scheme-surface-container-highest);
+}
+
+.segmented :where(button, .btn):not(.ex):has(input:checked) {
+  border-radius: var(--m3-button-shape);
+  background: var(--m3-scheme-primary);
+  color: var(--m3-scheme-on-primary);
+}
+
+.segmented.tonal :where(button, .btn):not(.ex):has(input:checked) {
+  background: var(--m3-scheme-secondary);
+}

@@ -1,0 +1,38 @@
+.snackbar {
+  visibility: hidden;
+  top: 87.5%;
+  padding: 0.25rem 1rem;
+  min-width: 20rem;
+  max-width: 60rem;
+  border-radius: var(--m3-snackbar-shape);
+  box-shadow: var(--m3-util-elevation-3);
+  background-color: var(--m3-scheme-inverse-surface);
+  border: none;
+  color: var(--m3-scheme-inverse-on-surface);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  opacity: 0;
+}
+
+.snackbar:popover-open {
+  animation: snackbar-open var(--m3-util-curve-decel) 0.5s, opacity var(--m3-util-curve-decel) 0.1s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.snackbar :where(.btn, button).icon {
+  margin-right: -1rem;
+  border-radius: 0;
+  color: var(--m3-scheme-inverse-on-surface);
+}
+
+@keyframes snackbar-open {
+  0% {
+    clip-path: polygon(-100% 150%, -100% calc(100% + 0.25rem), 0% calc(100% + 0.25rem), 0.033rem calc(100% + 0.125rem), 0.125rem calc(100% + 0.033rem), 0.25rem 100%, calc(100% - 0.25rem) 100%, calc(100% - 0.125rem) calc(100% + 0.033rem), calc(100% - 0.033rem) calc(100% + 0.125rem), 100% calc(100% + 0.25rem), 200% calc(100% + 0.25rem), 200% 150%);
+  }
+
+  to {
+    clip-path: polygon(-100% 150%, -100% 0.25rem, 0% 0.25rem, 0.033rem 0.125rem, 0.125rem 0.033rem, 0.25rem 0%, calc(100% - 0.25rem) 0%, calc(100% - 0.125rem) 0.033rem, calc(100% - 0.033rem) 0.125rem, 100% 0.25rem, 200% 0.25rem, 200% 150%);
+  }
+}
