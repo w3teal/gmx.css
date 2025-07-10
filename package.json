@@ -1,6 +1,6 @@
 {
   "name": "gmx.css",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "A micro Material Design 3 based CSS-only framework.",
   "main": "dist/gmx.min.css",
   "scripts": {
