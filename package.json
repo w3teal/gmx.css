@@ -47,7 +47,7 @@
     "gulp-sizereport": "^1.2.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
-    "htmlnano": "^0.2.3",
+    "htmlnano": "^2.1.2",
     "husky": "^4.2.5",
     "pa11y": "^5.3.0",
     "postcss-color-mod-function": "^4.1.1",
