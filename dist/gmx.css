@@ -602,6 +602,14 @@ input.dialog-trigger:checked::after {
   background: rgb(from var(--m3-scheme-on-surface) r g b / 15%);
 }
 
+.field :is(input, textarea)::-moz-placeholder {
+  color: transparent;
+}
+
+.field :is(input, textarea)::placeholder {
+  color: transparent;
+}
+
 .field label {
   position: absolute;
   top: 1rem;
