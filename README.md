@@ -1,7 +1,7 @@
 # GMX.css
 
 [![NPM Version](https://img.shields.io/npm/v/gmx.css)](https://www.npmjs.com/package/gmx.css)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/gmx.css)
+![minzip size](https://img.badgesize.com/w3teal/gmx.css/main/dist/gmx.min.css?compression=gzip&label=minzip%20size)
 
 **G**allant **M**aterial e**X**perience
 
