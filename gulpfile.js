@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const debug = require('gulp-debug');
 const merge = require('merge-stream')
 const webpack = require('webpack-stream')
 const postcss = require('gulp-postcss')
@@ -135,7 +136,11 @@ const docs = () => {
   return (
     gulp
       // Exclude all HTML files but index.html
-      .src(paths.docs.src, { ignore: '**/!(index).html' })
+      .src(paths.docs.src, { ignore: '**/!(index).html', 
+        // https://stackoverflow.com/a/78450106
+        encoding: false })
+        
+      .pipe(debug({ title: 'Processing:' }))
 
       // * Process HTML *
       .pipe(htmlOnly)
