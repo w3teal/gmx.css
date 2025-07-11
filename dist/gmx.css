@@ -472,23 +472,13 @@ input.dialog-trigger:checked + .dialog {
   display: block;
 }
 
-input.dialog-trigger:checked::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
-
 :is(dialog, .dialog) {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  z-index: 20;
+  z-index: 200;
   background: var(--m3-scheme-surface-container-high);
   color: var(--m3-scheme-on-surface-variant);
   border: none;
@@ -528,6 +518,16 @@ input.dialog-trigger:checked + .dialog:not(.bottom-sheet) {
 dialog[open].bottom-sheet,
 input.dialog-trigger:checked + .dialog.bottom-sheet {
   animation: dialog-bottom var(--m3-util-curve-decel) 0.5s;
+}
+
+input.dialog-trigger:checked::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
 }
 
 dialog::backdrop,
@@ -1037,7 +1037,7 @@ main > article {
     bottom: 0;
     padding: 0.25rem 0;
     width: 100%;
-    z-index: 100;
+    z-index: 50;
     height: -moz-min-content;
     height: min-content;
   }
@@ -1218,9 +1218,7 @@ progress.circle.spin {
 
 .slider input {
   position: absolute;
-  left: -0.5rem;
-  right: -0.5rem;
-  width: calc(100% + 1rem);
+  width: calc(100%);
   height: 100%;
   opacity: 0;
   -webkit-appearance: none;
@@ -1228,10 +1226,6 @@ progress.circle.spin {
           appearance: none;
   margin: 0;
   cursor: pointer;
-}
-
-.slider input:active ~ .thumb {
-  width: 0.125rem;
 }
 
 .slider .track::before {
@@ -1280,25 +1274,28 @@ progress.circle.spin {
   transition: var(--m3-util-easing);
 }
 
-.slider .tooltip {
+.slider input:active ~ .thumb {
+  width: 0.125rem;
+}
+
+.slider .thumb::before {
+  content: attr(data-percent);
   position: absolute;
   background: var(--m3-scheme-inverse-surface);
   color: var(--m3-scheme-inverse-on-surface);
-  width: 3rem;
+  width: 2.3rem;
   text-align: center;
-  padding: 0.65rem 0;
-  font-weight: 500;
+  padding: 0.4rem 0;
   font-size: 0.875rem;
   border-radius: var(--m3-slider-thumb-shape);
-  left: var(--percent);
-  top: -3rem;
-  translate: -50% 0;
+  left: -1.15rem;
+  top: -2.65rem;
   opacity: 0;
   pointer-events: none;
   transition: var(--m3-util-easing);
 }
 
-.slider:hover .tooltip {
+.slider:hover .thumb::before {
   opacity: 1;
 }
 
@@ -1329,6 +1326,12 @@ progress.circle.spin {
   margin-right: -1rem;
   border-radius: 0;
   color: var(--m3-scheme-inverse-on-surface);
+}
+
+@media screen and (max-width: 64em) {
+  .snackbar {
+    top: 77.5%;
+  }
 }
 
 @keyframes snackbar-open {

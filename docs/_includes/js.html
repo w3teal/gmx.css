@@ -28,8 +28,8 @@ function updateSlider(slider) {
     const value = slider.value;
     const percent = value + '%';
     slider.parentElement.style.setProperty('--percent', percent);
-    const tooltip = slider.parentElement.querySelector('.tooltip');
-    tooltip.textContent = value;
+    const thumb = slider.parentElement.querySelector('.thumb');
+    thumb.textContent = value;
 }</pre>
 Example usage:  
 <pre>
@@ -37,7 +37,7 @@ Example usage:
     &lt;input type=&quot;range&quot; value=&quot;53&quot; min=&quot;0&quot; max=&quot;100&quot; step=&quot;1&quot; oninput=&quot;updateSlider(this)&quot;&gt;
     &lt;span class=&quot;track&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;thumb&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;tooltip&quot;&gt;53&lt;/span&gt;
+    &lt;span class=&quot;thumb&quot;&gt;53&lt;/span&gt;
 &lt;/label&gt;</pre>
     <form method="dialog">
         <button class="text">Close</button>
@@ -45,9 +45,36 @@ Example usage:
 </dialog>
 
 <script>
-document.querySelectorAll('dialog').forEach(element => 
-    element.addEventListener('mousedown', 
-        event => (event.button === 0) && (event.target === event.currentTarget) && event.currentTarget.close()
-    )
-)
+document.addEventListener('keydown', ({ key }) => {
+    if (key === 'Escape') {
+        document.querySelectorAll('.dialog-trigger')
+                .forEach(el => el.checked = false);
+    }
+});
+
+document.querySelectorAll('dialog').forEach(dialog => {
+    dialog.addEventListener('mousedown', (e) => {
+        if (e.button === 0 && e.target === dialog) {
+            dialog.close();
+        }
+    });
+});
+
+document.querySelectorAll('.slider input[type="range"]').forEach(slider => {
+    const update = () => {
+        const value = parseFloat(slider.value);
+        const min = parseFloat(slider.min || 0);
+        const max = parseFloat(slider.max || 100);
+        const percent = ((value - min) / (max - min)) * 100;
+
+        const container = slider.closest('.slider');
+        const thumb = container?.querySelector('.thumb');
+
+        container?.style.setProperty('--percent', `${percent}%`);
+        if (thumb) thumb.dataset.percent = value;
+    };
+
+    slider.addEventListener('input', update);
+    update();
+});
 </script>

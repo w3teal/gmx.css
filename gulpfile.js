@@ -1,4 +1,6 @@
 const gulp = require('gulp')
+const merge = require('merge-stream')
+const webpack = require('webpack-stream')
 const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
@@ -6,12 +8,15 @@ const sourcemaps = require('gulp-sourcemaps')
 const bytediff = require('gulp-bytediff')
 const browserSync = require('browser-sync').create()
 const chalk = require('chalk')
+const stream = require('stream');
+const named = require('vinyl-named')
 const rename = require('gulp-rename')
 const filter = require('gulp-filter')
 const flatten = require('gulp-flatten')
 const babel = require('gulp-babel')
 const terser = require('gulp-terser')
 const posthtml = require('gulp-posthtml')
+const posthtmlInclude = require('posthtml-include')
 const htmlnano = require('htmlnano')
 const sizereport = require('gulp-sizereport')
 const postcssImport = require('postcss-import')
@@ -20,11 +25,11 @@ const postcssColorModFunction = require('postcss-color-mod-function').bind(null,
   /* Use `.toRGBLegacy()` as other methods can result in lots of decimals */
   stringifier: (color) => color.toRGBLegacy()
 })
-const posthtmlInclude = require('posthtml-include')
 
 const paths = {
   docs: { src: 'docs/**', dest: '_site' },
-  styles: { src: 'src/builds/*.css', dest: 'dist', watch: 'src/**/*.css' }
+  styles: { src: 'src/builds/*.css', dest: 'dist', watch: 'src/**/*.css' },
+  scripts: { src: 'src/builds/*.js', dest: 'dist', watch: 'src/**/*.js' }
 }
 
 // https://stackoverflow.com/a/20732091
@@ -82,6 +87,46 @@ const style = () => {
   )
 }
 
+const scripts = (done) => {
+  const webpackConfig = {
+    mode: 'production',
+    module: {
+      rules: [{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: { presets: ['@babel/preset-env'] }
+        }
+      }]
+    },
+    devtool: false
+  };
+
+  const main = gulp.src('src/builds/gmx.js')
+    .pipe(named())
+    .pipe(webpack({
+      ...webpackConfig,
+      optimization: { minimize: false },
+      output: { filename: 'gmx.js' }
+    }))
+    .pipe(gulp.dest(paths.scripts.dest));
+
+  const minified = gulp.src('src/builds/gmx.js')
+    .pipe(named())
+    .pipe(webpack({
+      ...webpackConfig,
+      output: { filename: 'gmx.min.js' }
+    }))
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(gulp.dest(paths.docs.dest + '/gmx.css'))
+    
+    .pipe(sizereport({ gzip: true, total: false, title: 'SIZE REPORT (JS)' }))
+    .pipe(browserSync.stream());
+
+  return merge(main, minified).on('end', done);
+};
+
 const docs = () => {
   const htmlOnly = filter('**/*.html', { restore: true })
   const jsOnly = filter('**/*.js', { restore: true })
@@ -102,17 +147,13 @@ const docs = () => {
 
       // * Process JS *
       .pipe(jsOnly)
-      .pipe(sourcemaps.init())
       .pipe(babel({ presets: ['@babel/preset-env'] }))
       .pipe(terser({ toplevel: true }))
-      .pipe(sourcemaps.write('.'))
       .pipe(jsOnly.restore)
 
       // * Process CSS *
       .pipe(cssOnly)
-      .pipe(sourcemaps.init())
       .pipe(postcss([autoprefixer(), cssnano()]))
-      .pipe(sourcemaps.write('.'))
       .pipe(cssOnly.restore)
 
       .pipe(gulp.dest(paths.docs.dest))
@@ -128,10 +169,11 @@ const startDevServer = () => {
   browserSync.init({ server: { baseDir: './_site' } })
 
   gulp.watch(paths.styles.watch, gulp.series(style, browserReload))
+  gulp.watch(paths.scripts.watch, gulp.series(scripts, browserReload))
   gulp.watch(paths.docs.src, gulp.series(docs, browserReload))
 }
 
-const build = gulp.parallel(style, docs)
+const build = gulp.parallel(style, scripts, docs)
 const watch = gulp.series(build, startDevServer)
 
 module.exports.build = build

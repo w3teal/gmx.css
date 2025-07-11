@@ -27,6 +27,12 @@
   color: var(--m3-scheme-inverse-on-surface);
 }
 
+@media screen and (max-width: 64em) {
+  .snackbar {
+    top: 77.5%;
+  }
+}
+
 @keyframes snackbar-open {
   0% {
     clip-path: polygon(-100% 150%, -100% calc(100% + 0.25rem), 0% calc(100% + 0.25rem), 0.033rem calc(100% + 0.125rem), 0.125rem calc(100% + 0.033rem), 0.25rem 100%, calc(100% - 0.25rem) 100%, calc(100% - 0.125rem) calc(100% + 0.033rem), calc(100% - 0.033rem) calc(100% + 0.125rem), 100% calc(100% + 0.25rem), 200% calc(100% + 0.25rem), 200% 150%);
