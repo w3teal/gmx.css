@@ -1,6 +1,6 @@
 {
   "name": "gmx.css",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "A micro Material Design 3 based CSS-only framework.",
   "main": "dist/gmx.min.css",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "files": [
     "dist/*.css",
+    "dist/*.js",
     "LICENSE.md"
   ],
   "repository": {
