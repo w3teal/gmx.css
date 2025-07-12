@@ -650,6 +650,7 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   min-width: 15.5rem;
   border-bottom: 1px solid var(--outline);
   background: var(--surface-container-highest);
+  color: var(--on-surface);
   border-radius: var(--textfield-filled-shape) var(--textfield-filled-shape) 0 0;
   box-sizing: border-box;
   font: inherit;
@@ -662,10 +663,15 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
 
 .field :is(input, textarea)::-moz-placeholder {
   color: transparent;
+  -moz-user-select: none;
+       user-select: none;
 }
 
 .field :is(input, textarea)::placeholder {
   color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .field label {

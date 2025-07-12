@@ -13,6 +13,7 @@
   min-width: 15.5rem;
   border-bottom: 1px solid var(--outline);
   background: var(--surface-container-highest);
+  color: var(--on-surface);
   border-radius: var(--textfield-filled-shape) var(--textfield-filled-shape) 0 0;
   box-sizing: border-box;
   font: inherit;
@@ -25,6 +26,7 @@
 
 .field :is(input, textarea)::placeholder {
   color: transparent;
+  user-select: none;
 }
 
 .field label {
