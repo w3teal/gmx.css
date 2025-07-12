@@ -8,10 +8,10 @@ img.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--m3-scheme-primary);
+  background: var(--primary);
   border: 1px solid transparent;
-  border-radius: var(--m3-button-shape);
-  color: var(--m3-scheme-on-primary);
+  border-radius: var(--button-shape);
+  color: var(--on-primary);
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 500;
@@ -23,16 +23,16 @@ img.btn {
   text-decoration: none;
   user-select: none;
   outline: 1px solid transparent;
-  transition: border-radius var(--m3-util-easing-fast-spatial), box-shadow var(--m3-util-easing-fast), background-color var(--m3-util-easing-fast), color var(--m3-util-easing-fast);
+  transition: border-radius var(--easing-fast-spatial), box-shadow var(--easing-fast), background-color var(--easing-fast), color var(--easing-fast);
 }
 
 :where(button, .btn):not(.ex):hover {
-  background: rgb(from var(--m3-scheme-primary) r g b / 90%);
-  box-shadow: var(--m3-util-elevation-1);
+  background: rgb(from var(--primary) r g b / 90%);
+  box-shadow: var(--elevation-1);
 }
 
 :is(button, .btn):active {
-  border-radius: var(--m3-util-rounding-small) !important;
+  border-radius: var(--rounding-small) !important;
 }
 
 :where(button, .btn):not(.ex) i {
@@ -46,14 +46,14 @@ img.btn {
 
 :where(button, .btn):not(.ex).tonal,
 :is(.segmented, .split).tonal :where(button, .btn):not(.ex) {
-  background: var(--m3-scheme-secondary-container);
-  color: var(--m3-scheme-on-secondary-container);
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
 }
 
 :where(button, .btn):not(.ex).tonal:hover,
 .chip:has(input:checked):hover,
 :is(.segmented, .split).tonal :where(button, .btn):not(.ex):hover {
-  background: rgb(from var(--m3-scheme-primary) r g b / 20%);
+  background: rgb(from var(--primary) r g b / 20%);
 }
 
 :where(button, .btn):not(.ex).text,
@@ -61,7 +61,7 @@ img.btn {
 :is(.split).outline :where(button, .btn):not(.ex) {
   box-shadow: none;
   background: transparent;
-  color: var(--m3-scheme-primary);
+  color: var(--primary);
 }
 
 :where(button, .btn):not(.ex).text:hover,
@@ -69,12 +69,12 @@ img.btn {
 :is(.split).outline :where(button, .btn):not(.ex):hover,
 .tabs > label:has(input:checked):hover {
   box-shadow: none;
-  background: rgb(from var(--m3-scheme-primary) r g b / 10%);
+  background: rgb(from var(--primary) r g b / 10%);
 }
 
 :where(button, .btn):not(.ex).outline,
 :is(.split).outline :where(button, .btn):not(.ex) {
-  border: 0.0625rem solid var(--m3-scheme-outline);
+  border: 0.0625rem solid var(--outline);
 }
 
 :where(button, .btn):not(.ex).text {
@@ -83,22 +83,22 @@ img.btn {
 
 :where(button, .btn):not(.ex).elevated,
 :is(.split).elevated :where(button, .btn):not(.ex) {
-  background: var(--m3-scheme-surface-container-low);
-  color: var(--m3-scheme-primary);
-  box-shadow: var(--m3-util-elevation-1) !important;
+  background: var(--surface-container-low);
+  color: var(--primary);
+  box-shadow: var(--elevation-1) !important;
 }
 
 :where(button, .btn):not(.ex).elevated:hover,
 :is(.split).elevated :where(button, .btn):not(.ex):hover {
-  background: rgb(from var(--m3-scheme-primary) r g b / 5%);
-  box-shadow: var(--m3-util-elevation-2) !important;
+  background: rgb(from var(--primary) r g b / 15%);
+  box-shadow: var(--elevation-2) !important;
 }
 
 main > aside li:not(.active):hover i,
 .menu > *:hover,
 .chip:hover,
 .tabs > *:hover {
-  background: var(--m3-scheme-surface-container-highest);
+  background: var(--surface-container-highest);
 }
 
 :where(button, .btn):not(.ex):is(.icon, .fab:not(.extended)) {
@@ -121,21 +121,21 @@ main > aside li:not(.active):hover i,
 }
 
 :where(button, .btn):not(.ex).fab.small {
-  border-radius: var(--m3-fab-small-shape);
+  border-radius: var(--fab-small-shape);
 }
 
 :where(button, .btn):not(.ex).fab {
-  box-shadow: var(--m3-util-elevation-2);
+  box-shadow: var(--elevation-2);
 
   --size: 3.5rem;
 
-  border-radius: var(--m3-fab-normal-shape);
+  border-radius: var(--fab-normal-shape);
 }
 
 :where(button, .btn):not(.ex).fab.large {
   --size: 5.5rem;
 
-  border-radius: var(--m3-fab-large-shape);
+  border-radius: var(--fab-large-shape);
 }
 
 :where(button, .btn):not(.ex).fab.large i * {
@@ -156,45 +156,45 @@ main > aside li:not(.active):hover i,
 }
 
 .split > :where(button, .btn):first-child {
-  border-radius: var(--m3-button-shape) var(--m3-util-rounding-small) var(--m3-util-rounding-small) var(--m3-button-shape);
+  border-radius: var(--button-shape) var(--rounding-small) var(--rounding-small) var(--button-shape);
 }
 
 .split > :where(button, .btn):last-child {
-  border-radius: var(--m3-util-rounding-small) var(--m3-button-shape) var(--m3-button-shape) var(--m3-util-rounding-small);
+  border-radius: var(--rounding-small) var(--button-shape) var(--button-shape) var(--rounding-small);
 }
 
 .segmented > :where(button, .btn):not(.ex):first-child,
 .split > :where(button, .btn):first-child:hover {
-  border-radius: var(--m3-button-shape) var(--m3-util-rounding-large) var(--m3-util-rounding-large) var(--m3-button-shape);
+  border-radius: var(--button-shape) var(--rounding-large) var(--rounding-large) var(--button-shape);
 }
 
 .segmented > :where(button, .btn):not(.ex):last-child,
 .split > :where(button, .btn):last-child:hover {
-  border-radius: var(--m3-util-rounding-large) var(--m3-button-shape) var(--m3-button-shape) var(--m3-util-rounding-large);
+  border-radius: var(--rounding-large) var(--button-shape) var(--button-shape) var(--rounding-large);
 }
 
 .split > :where(button, .btn):active {
-  border-radius: var(--m3-button-shape) !important;
+  border-radius: var(--button-shape) !important;
 }
 
 .segmented :where(button, .btn):not(.ex) {
-  background: var(--m3-scheme-surface-container);
-  color: var(--m3-scheme-on-surface-variant);
-  border-radius: var(--m3-util-rounding-medium);
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+  border-radius: var(--rounding-medium);
   width: 100%;
 }
 
 .segmented :where(button, .btn):not(.ex):hover {
   box-shadow: none;
-  background: var(--m3-scheme-surface-container-highest);
+  background: var(--surface-container-highest);
 }
 
 .segmented :where(button, .btn):not(.ex):has(input:checked) {
-  border-radius: var(--m3-button-shape);
-  background: var(--m3-scheme-primary);
-  color: var(--m3-scheme-on-primary);
+  border-radius: var(--button-shape);
+  background: var(--primary);
+  color: var(--on-primary);
 }
 
 .segmented.tonal :where(button, .btn):not(.ex):has(input:checked) {
-  background: var(--m3-scheme-secondary);
+  background: var(--secondary);
 }

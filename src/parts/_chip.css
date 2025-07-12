@@ -1,10 +1,10 @@
 .chip {
   display: inline-flex;
   padding: 0.35rem 1rem;
-  border-radius: var(--m3-chip-shape);
-  background: var(--m3-scheme-surface);
-  color: var(--m3-scheme-on-surface-variant);
-  border: solid 0.0625rem var(--m3-scheme-outline);
+  border-radius: var(--chip-shape);
+  background: var(--surface);
+  color: var(--on-surface-variant);
+  border: solid 0.0625rem var(--outline);
 }
 
 .chip:not(.icon) i * {
@@ -22,6 +22,6 @@
 
 .chip:has(input:checked) {
   border-color: transparent;
-  background: var(--m3-scheme-secondary-container);
-  color: var(--m3-scheme-on-secondary-container);
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
 }

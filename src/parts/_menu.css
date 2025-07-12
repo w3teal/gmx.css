@@ -5,7 +5,7 @@ details .menu {
 
 .list-box,
 .menu {
-  background: var(--m3-scheme-surface-container);
+  background: var(--surface-container);
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -26,15 +26,15 @@ details .menu {
 }
 
 .list-box > * + * {
-  border-top: 1px solid var(--m3-scheme-outline-variant);
+  border-top: 1px solid var(--outline-variant);
 }
 
 .menu {
-  background: var(--m3-scheme-surface-container);
-  box-shadow: var(--m3-util-elevation-2);
+  background: var(--surface-container);
+  box-shadow: var(--elevation-2);
   font-size: 0.875rem;
   font-weight: 500;
-  border-radius: var(--m3-menu-shape);
+  border-radius: var(--menu-shape);
   padding: 0.5rem 0;
   min-width: 7rem;
   max-width: 17.5rem;

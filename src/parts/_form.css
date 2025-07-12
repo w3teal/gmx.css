@@ -16,7 +16,7 @@
   height: 2.25rem;
   position: absolute;
   margin: -0.35rem -0.45rem;
-  border-radius: var(--m3-util-rounding-full);
+  border-radius: var(--rounding-full);
   background: transparent;
   transition: 0.1s;
 }
@@ -27,7 +27,7 @@
 
 .checkbox:hover input,
 .radio:hover input {
-  background: rgb(from var(--m3-scheme-primary) r g b / 10%);
+  background: rgb(from var(--primary) r g b / 10%);
 }
 
 .checkbox span,
@@ -43,7 +43,7 @@
   appearance: none;
   background: transparent;
   border: 0.15rem solid currentColor;
-  border-radius: var(--m3-checkbox-shape);
+  border-radius: var(--checkbox-shape);
   padding: 0.45rem;
   display: inline-block;
   position: relative;
@@ -55,8 +55,8 @@
 
 .checkbox input:checked + span::before,
 .radio input:checked + span::before {
-  background: var(--m3-scheme-primary);
-  border-color: var(--m3-scheme-primary);
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .checkbox input:checked + span::after {
@@ -67,19 +67,19 @@
   left: 0.5rem;
   width: 4.75px;
   height: 0.7rem;
-  border: solid #fff;
+  border: solid var(--on-primary);
   border-width: 0 0.1em 0.1em 0;
   transform: rotate(45deg);
 }
 
 .radio span::before {
-  border-radius: var(--m3-radio-shape);
+  border-radius: var(--radio-shape);
   padding: 0.3rem;
   border: 4px solid transparent;
   outline: 0.15rem solid currentColor;
 }
 
 .radio input:checked + span::before {
-  border-color: var(--m3-scheme-surface-container);
-  outline-color: var(--m3-scheme-primary);
+  border-color: var(--surface-container);
+  outline-color: var(--primary);
 }

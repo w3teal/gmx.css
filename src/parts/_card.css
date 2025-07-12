@@ -1,18 +1,18 @@
 .card {
   padding: 1rem;
-  background: var(--m3-scheme-surface-container-low);
-  color: var(--m3-scheme-on-surface);
-  box-shadow: var(--m3-util-elevation-1);
-  border-radius: var(--m3-card-shape);
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  box-shadow: var(--elevation-1);
+  border-radius: var(--card-shape);
 }
 
 .container:not(:has(>header, >footer)),
 .container > header,
 .container:not(.min) > footer {
   padding: 1rem;
-  border-radius: var(--m3-util-rounding-extra-large);
-  background: var(--m3-scheme-surface-container-low);
-  color: var(--m3-scheme-on-surface);
+  border-radius: var(--rounding-extra-large);
+  background: var(--surface-container-low);
+  color: var(--on-surface);
 }
 
 .container.min > footer {
@@ -30,9 +30,9 @@
 }
 
 .container:not(.min) > header {
-  border-radius: var(--m3-util-rounding-extra-large) var(--m3-util-rounding-extra-large) var(--m3-util-rounding-small) var(--m3-util-rounding-small);
+  border-radius: var(--rounding-extra-large) var(--rounding-extra-large) var(--rounding-small) var(--rounding-small);
 }
 
 .container:not(.min) > footer {
-  border-radius: var(--m3-util-rounding-small) var(--m3-util-rounding-small) var(--m3-util-rounding-extra-large) var(--m3-util-rounding-extra-large);
+  border-radius: var(--rounding-small) var(--rounding-small) var(--rounding-extra-large) var(--rounding-extra-large);
 }

@@ -23,7 +23,7 @@ main > article {
 
 @media screen and (max-width: 64em) {
   main > aside {
-    background: var(--m3-scheme-surface);
+    background: var(--surface);
     top: auto;
     bottom: 0;
     padding: 0.25rem 0;
@@ -97,12 +97,12 @@ main > aside li i {
   flex-direction: column;
   justify-content: center;
   padding: 0.25rem;
-  border-radius: var(--m3-util-rounding-full);
+  border-radius: var(--rounding-full);
   transition: 0.1s;
 }
 
 main > aside li.active i {
-  background: var(--m3-scheme-secondary-container);
+  background: var(--secondary-container);
 }
 
 main > aside li i * {

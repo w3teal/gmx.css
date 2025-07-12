@@ -9,9 +9,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
-    <link rel="stylesheet" href="./gmx.css/theme.min.css" />
     <link rel="stylesheet" href="./gmx.css/gmx.min.css" />
-    <script src="https://unpkg.com/iconify-icon"></script>
+    <script type="module" src="./gmx.css/gmx.min.js"></script>
+
+    <!-- External libraries -->
+    <script type="module" src="https://unpkg.com/iconify-icon"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
 
   </head>
 
@@ -27,7 +30,7 @@
                     <span>Home</span>
                 </li>
                 <li>
-                    <button class="ex" onclick="document.getElementById('themes').showModal()">
+                    <button class="ex" data-ui="themes">
                         <i>
                             <iconify-icon icon="mdi:palette-outline"></iconify-icon>
                         </i>
@@ -35,7 +38,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="ex" onclick="document.getElementById('util').showModal()">
+                    <button class="ex" data-ui="util">
                         <i>
                             <iconify-icon icon="material-symbols:book-2-outline-rounded"></iconify-icon>
                         </i>
@@ -68,8 +71,8 @@
                     <footer class="padding-none padding-top">
                         <p class="text-sm">Install in HTML</p>
                         <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gmx.css&quot;&gt;
-&lt;script src=&quot;https://unpkg.com/gmx.css/dist/gmx.min.js&quot;&gt;&lt;/script&gt;<b>*</b>
-&lt;script src=&quot;https://unpkg.com/iconify-icon&quot;&gt;&lt;/script&gt;</pre>
+&lt;script type="module" src=&quot;https://unpkg.com/gmx.css/dist/gmx.min.js&quot;&gt;&lt;/script&gt;<b>*</b>
+&lt;script type="module" src=&quot;https://unpkg.com/iconify-icon&quot;&gt;&lt;/script&gt;</pre>
                     </footer>
                 </div>
             </section>
@@ -99,7 +102,7 @@
             </section>
 
             <footer class="text-sm">
-                <p>*JS file ONLY needed if you needed a component that <i><iconify-icon icon="mdi:language-javascript" width="18"></iconify-icon></i> -labeled.</p>
+                <p>*JS file is optional, except you needed a component that <i><iconify-icon icon="mdi:language-javascript" width="18"></iconify-icon></i> -labeled.</p>
             </footer>
             <div class="br"></div>
 
@@ -108,8 +111,6 @@
     
     <include src="themes.html"></include>
     <include src="util.html"></include>
+
 </body>
-
-    <script src="./gmx.css/gmx.min.js"></script>
-
 </html>

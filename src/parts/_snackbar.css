@@ -4,11 +4,11 @@
   padding: 0.25rem 1rem;
   min-width: 20rem;
   max-width: 60rem;
-  border-radius: var(--m3-snackbar-shape);
-  box-shadow: var(--m3-util-elevation-3);
-  background-color: var(--m3-scheme-inverse-surface);
+  border-radius: var(--snackbar-shape);
+  box-shadow: var(--elevation-3);
+  background-color: var(--inverse-surface);
   border: none;
-  color: var(--m3-scheme-inverse-on-surface);
+  color: var(--inverse-on-surface);
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 300;
@@ -16,7 +16,7 @@
 }
 
 .snackbar:popover-open {
-  animation: snackbar-open var(--m3-util-curve-decel) 0.5s, opacity var(--m3-util-curve-decel) 0.1s;
+  animation: snackbar-open var(--curve-decel) 0.5s, opacity var(--curve-decel) 0.1s;
   visibility: visible;
   opacity: 1;
 }
@@ -24,7 +24,7 @@
 .snackbar :where(.btn, button).icon {
   margin-right: -1rem;
   border-radius: 0;
-  color: var(--m3-scheme-inverse-on-surface);
+  color: var(--inverse-on-surface);
 }
 
 @media screen and (max-width: 64em) {

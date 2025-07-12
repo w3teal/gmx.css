@@ -5,7 +5,7 @@ progress:not(.circle, [value])::after {
   right: 0;
   bottom: 0;
   width: 50%;
-  background: var(--m3-scheme-primary);
+  background: var(--primary);
   animation: 1.2s to-linear linear infinite;
 }
 
@@ -26,16 +26,16 @@ progress {
 progress:not(.circle) {
   position: relative;
   height: 0.25rem;
-  border-radius: var(--m3-linear-progress-shape);
+  border-radius: var(--linear-progress-shape);
   overflow: hidden;
 }
 
 ::-webkit-progress-value {
-  background: var(--m3-scheme-primary);
+  background: var(--primary);
 }
 
 ::-webkit-progress-bar {
-  background: var(--m3-scheme-primary-container);
+  background: var(--primary-container);
 }
 
 progress.circle::-webkit-progress-value {
@@ -52,7 +52,7 @@ progress.circle {
   position: relative;
   width: 3rem;
   height: 3rem;
-  background: conic-gradient(var(--m3-scheme-primary) calc(var(--value) * 1%), var(--m3-scheme-primary-container) 0);
+  background: conic-gradient(var(--primary) calc(var(--value) * 1%), var(--primary-container) 0);
   border-radius: 50%;
 }
 
@@ -60,7 +60,7 @@ progress.circle::after {
   content: "";
   position: absolute;
   inset: 10%;
-  background: var(--m3-scheme-background);
+  background: var(--background);
   border-radius: 50%;
 }
 

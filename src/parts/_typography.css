@@ -97,23 +97,23 @@ h6.display,
 
 a:not(.btn, :has(*:not(span))) {
   color: inherit;
-  background: linear-gradient(to top, var(--m3-scheme-primary) 50%, transparent 50%);
+  background: linear-gradient(to top, var(--primary) 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: 0 7.5%;
-  border-radius: var(--m3-util-rounding-extra-small);
+  border-radius: var(--rounding-extra-small);
   background-repeat: no-repeat;
   transition: 0.25s;
   will-change: background-position;
 }
 
 a:not(.btn, :has(*:not(span))):hover {
-  color: var(--m3-scheme-on-primary);
+  color: var(--on-primary);
   background-position: 0 100%;
 }
 
 code,
 kbd {
-  background: var(--m3-scheme-surface-variant);
+  background: var(--surface-variant);
   font-size: 0.9rem;
   border-radius: 0.25rem;
   letter-spacing: 0;
@@ -121,8 +121,8 @@ kbd {
 }
 
 kbd {
-  border: 1px solid var(--m3-scheme-outline);
-  border-bottom: 3px solid var(--m3-scheme-outline);
+  border: 1px solid var(--outline);
+  border-bottom: 3px solid var(--outline);
 }
 
 pre {
@@ -137,21 +137,21 @@ i {
 hr {
   border: none;
   height: 0.025rem;
-  background: var(--m3-scheme-outline-variant);
+  background: var(--outline-variant);
 }
 
 blockquote {
-  background: var(--m3-scheme-surface-container-highest);
-  border-radius: var(--m3-util-rounding-medium);
-  border-left: 0.25rem dotted var(--m3-scheme-primary);
+  background: var(--surface-container-highest);
+  border-radius: var(--rounding-medium);
+  border-left: 0.25rem dotted var(--primary);
   margin: 0;
   padding: 0.75rem 1rem;
 }
 
 pre {
-  background: var(--m3-scheme-surface-container-highest);
+  background: var(--surface-container-highest);
   padding: 0.75rem;
-  border-radius: var(--m3-util-rounding-medium);
+  border-radius: var(--rounding-medium);
   margin: 0;
 }
 
@@ -171,9 +171,9 @@ table :is(th, td) {
 }
 
 table th:not(tfoot th) {
-  border-bottom: 1px solid var(--m3-scheme-outline);
+  border-bottom: 1px solid var(--outline);
 }
 
 table tfoot th {
-  border-top: 1px solid var(--m3-scheme-outline);
+  border-top: 1px solid var(--outline);
 }

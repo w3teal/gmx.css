@@ -24,12 +24,12 @@
   width: calc(var(--percent) - 0.375rem);
   height: 1rem;
   pointer-events: none;
-  background: var(--m3-scheme-primary);
-  border-start-start-radius: var(--m3-slider-track-out-shape);
-  border-end-start-radius: var(--m3-slider-track-out-shape);
-  border-start-end-radius: var(--m3-slider-track-in-shape);
-  border-end-end-radius: var(--m3-slider-track-in-shape);
-  transition: var(--m3-util-easing);
+  background: var(--primary);
+  border-start-start-radius: var(--slider-track-out-shape);
+  border-end-start-radius: var(--slider-track-out-shape);
+  border-start-end-radius: var(--slider-track-in-shape);
+  border-end-end-radius: var(--slider-track-in-shape);
+  transition: var(--easing);
 }
 
 .slider .track::after {
@@ -41,12 +41,12 @@
   width: calc(100% - var(--percent) - 0.375rem);
   height: 1rem;
   pointer-events: none;
-  background: var(--m3-scheme-primary-container);
-  border-start-start-radius: var(--m3-slider-track-in-shape);
-  border-end-start-radius: var(--m3-slider-track-in-shape);
-  border-start-end-radius: var(--m3-slider-track-out-shape);
-  border-end-end-radius: var(--m3-slider-track-out-shape);
-  transition: var(--m3-util-easing);
+  background: var(--primary-container);
+  border-start-start-radius: var(--slider-track-in-shape);
+  border-end-start-radius: var(--slider-track-in-shape);
+  border-start-end-radius: var(--slider-track-out-shape);
+  border-end-end-radius: var(--slider-track-out-shape);
+  transition: var(--easing);
 }
 
 .slider .thumb {
@@ -56,9 +56,9 @@
   width: 0.25rem;
   height: 2.75rem;
   border-radius: 1.25rem;
-  background: var(--m3-scheme-primary);
+  background: var(--primary);
   pointer-events: none;
-  transition: var(--m3-util-easing);
+  transition: var(--easing);
 }
 
 .slider input:active ~ .thumb {
@@ -68,18 +68,18 @@
 .slider .thumb::before {
   content: attr(data-percent);
   position: absolute;
-  background: var(--m3-scheme-inverse-surface);
-  color: var(--m3-scheme-inverse-on-surface);
+  background: var(--inverse-surface);
+  color: var(--inverse-on-surface);
   width: 2.3rem;
   text-align: center;
   padding: 0.4rem 0;
   font-size: 0.875rem;
-  border-radius: var(--m3-slider-thumb-shape);
+  border-radius: var(--slider-thumb-shape);
   left: -1.15rem;
   top: -2.65rem;
   opacity: 0;
   pointer-events: none;
-  transition: var(--m3-util-easing);
+  transition: var(--easing);
 }
 
 .slider:hover .thumb::before {

@@ -15,13 +15,13 @@
   --space: 0.35rem;
 
   content: attr(aria-label);
-  background-color: var(--m3-scheme-inverse-surface);
-  color: var(--m3-scheme-inverse-on-surface);
+  background-color: var(--inverse-surface);
+  color: var(--inverse-on-surface);
   text-align: left;
   position: absolute;
   visibility: hidden;
   padding: 0.4rem 0.6rem;
-  border-radius: var(--m3-util-rounding-extra-small);
+  border-radius: var(--rounding-extra-small);
   font-size: 0.75rem;
   white-space: nowrap;
   opacity: 0;
@@ -35,8 +35,8 @@
   width: 14rem;
   padding: 1rem 0.85rem;
   font-size: 0.875rem;
-  border-radius: var(--m3-util-rounding-small);
-  box-shadow: var(--m3-util-elevation-3);
+  border-radius: var(--rounding-small);
+  box-shadow: var(--elevation-3);
 }
 
 .tooltipped::after {

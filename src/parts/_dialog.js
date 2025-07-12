@@ -1,16 +1,31 @@
 export function initDialog() {
-    document.addEventListener('keydown', ({ key }) => {
-        if (key === 'Escape') {
-            document.querySelectorAll('.dialog-trigger')
-                    .forEach(el => el.checked = false);
-        }
-    });
+  const get = id => document.getElementById(id);
 
-    document.querySelectorAll('dialog').forEach(dialog => {
-        dialog.addEventListener('mousedown', (e) => {
-            if (e.button === 0 && e.target === dialog) {
-                dialog.close();
-            }
-        });
+  function toggle(id) {
+    const el = get(id);
+    if (el?.showModal) el.open ? el.close() : el.showModal();
+  }
+
+  document.querySelectorAll('dialog').forEach(d => {
+    d.addEventListener('mousedown', e => {
+      if (e.target === d) d.close();
     });
+  });
+
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-ui]');
+    if (t) toggle(t.getAttribute('data-ui'));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('dialog[open]').forEach(d => d.close());
+    }
+  });
+
+  const old = window.ui || (() => {});
+  window.ui = id => {
+    if (get(id)?.showModal) return toggle(id);
+    return old(id);
+  };
 }

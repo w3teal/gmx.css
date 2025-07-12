@@ -12,8 +12,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--m3-scheme-surface-container-highest);
-  border: solid 0.125rem var(--m3-scheme-outline);
+  background: var(--surface-container-highest);
+  border: solid 0.125rem var(--outline);
   transition: 0.2s;
   border-radius: 2rem;
 }
@@ -25,9 +25,9 @@
   height: 1rem;
   left: 0.4rem;
   bottom: 0.4rem;
-  background: var(--m3-scheme-outline);
-  transition: var(--m3-util-easing-fast-spatial);
-  border-radius: var(--m3-switch-handle-shape);
+  background: var(--outline);
+  transition: var(--easing-fast-spatial);
+  border-radius: var(--switch-handle-shape);
 }
 
 .switch input {
@@ -36,7 +36,7 @@
   height: 3rem;
   position: absolute;
   margin: -0.5rem 0;
-  border-radius: var(--m3-util-rounding-full);
+  border-radius: var(--rounding-full);
   transform: translateX(-0.5rem);
   transition: 0.1s;
   z-index: 1;
@@ -44,7 +44,7 @@
 }
 
 .switch:hover input {
-  background: rgb(from var(--m3-scheme-primary) r g b / 10%);
+  background: rgb(from var(--primary) r g b / 10%);
 }
 
 .switch > input:checked {
@@ -59,28 +59,28 @@
 }
 
 .switch > input:hover + span {
-  border-color: var(--m3-scheme-on-surface-variant);
+  border-color: var(--on-surface-variant);
 }
 
 .switch > input:hover + span::before {
-  background: var(--m3-scheme-on-surface-variant);
+  background: var(--on-surface-variant);
 }
 
 .switch > input:checked + span {
-  background: var(--m3-scheme-primary);
-  border-color: var(--m3-scheme-primary);
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .switch > input:checked + span::before {
   width: 1.55rem;
   height: 1.55rem;
-  background: #fff;
+  background: var(--on-primary);
   transform: translateX(1rem);
   bottom: 1.5px;
 }
 
 .switch > input:checked:hover + span::before {
-  background: var(--m3-scheme-primary-container);
+  background: var(--primary-container);
 }
 
 .switch > input:checked:active + span::before {
@@ -101,10 +101,10 @@
   border: solid transparent;
   border-width: 0 0.15em 0.15em 0;
   transform: translateX(0) rotate(45deg);
-  transition: var(--m3-util-easing-fast-spatial);
+  transition: var(--easing-fast-spatial);
 }
 
 .switch > input:checked + span::after {
   transform: translateX(1.25rem) rotate(45deg);
-  border-color: var(--m3-scheme-primary);
+  border-color: var(--primary);
 }

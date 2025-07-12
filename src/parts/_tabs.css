@@ -1,7 +1,7 @@
 .tabs {
   display: flex;
-  background: var(--m3-scheme-surface);
-  border-bottom: 1px solid var(--m3-scheme-outline-variant);
+  background: var(--surface);
+  border-bottom: 1px solid var(--outline-variant);
 }
 
 .tabs.variable {
@@ -34,7 +34,7 @@
 }
 
 .tabs > label:has(input:checked) {
-  color: var(--m3-scheme-primary);
+  color: var(--primary);
 }
 
 .tabs > label:has(input:checked)::after {
@@ -47,5 +47,5 @@
   height: 0.15rem;
   width: 3rem;
   margin: 0 auto;
-  background: var(--m3-scheme-primary);
+  background: var(--primary);
 }

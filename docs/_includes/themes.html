@@ -2,73 +2,77 @@
 
     <h6>Theme</h6>
     
-    <nav class="segmented scroll">
+    <nav>
 
-        <label class="btn" onclick="changeColor('red')">
+        <nav class="segmented scroll">
+
+        <label class="btn" onclick="theme('#904B40')">
             <input type="radio" name="theme" id="theme-0">
             Red
         </label>
 
-        <label class="btn" onclick="changeColor('pink')">
+        <label class="btn" onclick="theme('#834C74')">
             <input type="radio" name="theme" id="theme-1">
             Pink
         </label>
 
-        <label class="btn" onclick="changeColor('purple')">
+        <label class="btn" onclick="theme('#65558F')">
             <input type="radio" name="theme" id="theme-2" checked>
             Purple
         </label>
 
-        <label class="btn" onclick="changeColor('indigo')">
+        <label class="btn" onclick="theme('#565992')">
             <input type="radio" name="theme" id="theme-3">
             Indigo
         </label>
 
-        <label class="btn" onclick="changeColor('blue')">
+        <label class="btn" onclick="theme('#3A608F')">
             <input type="radio" name="theme" id="theme-4">
             Blue
         </label>
 
-        <label class="btn" onclick="changeColor('cyan')">
+        <label class="btn" onclick="theme('#006971')">
             <input type="radio" name="theme" id="theme-5">
             Cyan
         </label>
 
-        <label class="btn" onclick="changeColor('teal')">
+        <label class="btn" onclick="theme('#146B55')">
             <input type="radio" name="theme" id="theme-6">
             Teal
         </label>
 
-        <label class="btn" onclick="changeColor('green')">
+        <label class="btn" onclick="theme('#3B6939')">
             <input type="radio" name="theme" id="theme-7">
             Green
         </label>
 
-        <label class="btn" onclick="changeColor('lime')">
+        <label class="btn" onclick="theme('#4D662B')">
             <input type="radio" name="theme" id="theme-8">
             Lime
         </label>
 
-        <label class="btn" onclick="changeColor('yellow')">
+        <label class="btn" onclick="theme('#646116')">
             <input type="radio" name="theme" id="theme-9">
             Yellow
         </label>
 
-        <label class="btn" onclick="changeColor('amber')">
+        <label class="btn" onclick="theme('#6F5D0D')">
             <input type="radio" name="theme" id="theme-10">
             Amber
         </label>
 
-        <label class="btn" onclick="changeColor('orange')">
+        <label class="btn" onclick="theme('#79590C')">
             <input type="radio" name="theme" id="theme-11">
             Orange
         </label>
 
-        <label class="btn" onclick="changeColor('monochrome')">
-            <input type="radio" name="theme" id="theme-12">
-            Mono
-        </label>
+    </nav>
 
+    <div class="br"></div>
+
+    <button class="icon" onclick="mode()">
+        <i><iconify-icon icon="material-symbols:dark-mode-outline-rounded"></iconify-icon></i>
+    </button>
     </nav>
 
     <div class="br-l"></div>
@@ -112,11 +116,27 @@
             </div>
         </div>
 
-    <script>
-        function changeColor(color) {
-            document.body.className = '';
-            document.body.classList.add(color);
-        }
-    </script>
-
 </dialog>
+
+<script>
+const mode = () => {
+    let newMode = ui("mode") === "dark" ? "light" : "dark";
+    ui("mode", newMode);
+};
+
+const getSystemMode = () => {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+};
+
+const theme = async (from) => {
+    await ui("theme", from);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    const systemMode = getSystemMode();
+    ui("mode", systemMode);
+
+    const defaultTheme = "{{ site.theme }}"; // Ganti sesuai tema default
+    ui("theme", defaultTheme);
+});
+</script>

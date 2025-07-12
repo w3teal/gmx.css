@@ -111,7 +111,8 @@ const scripts = (done) => {
       optimization: { minimize: false },
       output: { filename: 'gmx.js' }
     }))
-    .pipe(gulp.dest(paths.scripts.dest));
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(browserSync.stream());
 
   const minified = gulp.src('src/builds/gmx.js')
     .pipe(named())

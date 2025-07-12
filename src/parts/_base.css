@@ -15,12 +15,12 @@
 }
 
 :is(a,button,.btn,.chip):focus-visible {
-  outline: 0.125rem solid var(--m3-scheme-primary);
+  outline: 0.125rem solid var(--primary);
   outline-offset: 0.25rem;
 }
 
 [disabled] {
-  color: rgb(from var(--m3-scheme-on-surface) r g b / 38%);
+  color: rgb(from var(--on-surface) r g b / 38%);
   pointer-events: none;
 }
 
@@ -34,6 +34,19 @@ summary {
 
 a {
   text-decoration: none;
+}
+
+input.ex {
+  appearance: none;
+  position: absolute;
+}
+
+button.ex {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
 }
 
 iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
@@ -65,12 +78,12 @@ body {
 }
 
 body {
-  font-family: var(--m3-font);
+  font-family: var(--font);
   font-size: 1rem;
   letter-spacing: 0.03125rem;
   line-height: 1.5rem;
-  background: var(--m3-scheme-background);
-  color: var(--m3-scheme-on-background);
+  background: var(--background);
+  color: var(--on-background);
   min-height: 100vh;
 }
 

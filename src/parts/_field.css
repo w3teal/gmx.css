@@ -11,16 +11,16 @@
   border: none;
   outline: none;
   min-width: 15.5rem;
-  border-bottom: 1px solid var(--m3-scheme-outline);
-  background: var(--m3-scheme-surface-container-highest);
-  border-radius: var(--m3-textfield-filled-shape) var(--m3-textfield-filled-shape) 0 0;
+  border-bottom: 1px solid var(--outline);
+  background: var(--surface-container-highest);
+  border-radius: var(--textfield-filled-shape) var(--textfield-filled-shape) 0 0;
   box-sizing: border-box;
   font: inherit;
   padding: 1.5rem 1rem 0.5rem;
 }
 
 .field :is(input, textarea):hover {
-  background: rgb(from var(--m3-scheme-on-surface) r g b / 15%);
+  background: rgb(from var(--on-surface) r g b / 15%);
 }
 
 .field :is(input, textarea)::placeholder {
@@ -43,7 +43,7 @@
 
 .field :is(input, textarea):focus {
   outline: none;
-  border-bottom: 2px solid var(--m3-scheme-primary);
+  border-bottom: 2px solid var(--primary);
   margin-bottom: -1px;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .field :is(input, textarea):focus + label span {
-  color: var(--m3-scheme-primary);
+  color: var(--primary);
 }
 
 .field:has(i) :is(input, textarea) {

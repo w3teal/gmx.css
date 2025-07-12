@@ -18,10 +18,10 @@ input.dialog-trigger:checked + .dialog {
   transform: translate(-50%, -50%);
   margin: 0;
   z-index: 200;
-  background: var(--m3-scheme-surface-container-high);
-  color: var(--m3-scheme-on-surface-variant);
+  background: var(--surface-container-high);
+  color: var(--on-surface-variant);
   border: none;
-  border-radius: var(--m3-dialog-shape);
+  border-radius: var(--dialog-shape);
   min-width: 35rem;
   padding: 1.5rem 1.5rem;
 }
@@ -41,22 +41,22 @@ input.dialog-trigger:checked + .dialog {
 
 dialog:not(.bottom-sheet)[open],
 input.dialog-trigger:checked + .dialog:not(.bottom-sheet) {
-  animation: dialog-in var(--m3-util-curve-decel) 0.5s, opacity var(--m3-util-curve-decel) 0.1s both;
+  animation: dialog-in var(--curve-decel) 0.5s, opacity var(--curve-decel) 0.1s both;
 }
 
 :is(dialog, .dialog).bottom-sheet {
   top: 100%;
   transform: translate(-50%, -100%);
-  background: var(--m3-scheme-surface-container-low);
-  color: var(--m3-scheme-on-surface);
-  border-radius: var(--m3-bottom-sheet-shape) var(--m3-bottom-sheet-shape) 0 0;
+  background: var(--surface-container-low);
+  color: var(--on-surface);
+  border-radius: var(--bottom-sheet-shape) var(--bottom-sheet-shape) 0 0;
   padding: 2rem 1rem 1rem;
   border: none;
 }
 
 dialog[open].bottom-sheet,
 input.dialog-trigger:checked + .dialog.bottom-sheet {
-  animation: dialog-bottom var(--m3-util-curve-decel) 0.5s;
+  animation: dialog-bottom var(--curve-decel) 0.5s;
 }
 
 input.dialog-trigger:checked::after {
@@ -71,8 +71,14 @@ input.dialog-trigger:checked::after {
 
 dialog::backdrop,
 input.dialog-trigger:checked::after {
-  background: rgb(from var(--m3-scheme-scrim) r g b / 30%);
+  --backdrop-opacity: 30%;
+  background: rgb(from var(--scrim) r g b / var(--backdrop-opacity));
   animation: dialog-backdrop 0.4s;
+}
+
+dialog.bottom-sheet::backdrop,
+input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
+  --backdrop-opacity: 50%;
 }
 
 :is(dialog, .dialog) form {
@@ -100,18 +106,18 @@ input.dialog-trigger:checked::after {
   }
 
   100% {
-    background: rgb(from var(--m3-scheme-scrim) r g b / 30%);
+    background: rgb(from var(--scrim) r g b / var(--backdrop-opacity));
   }
 }
 
 @keyframes dialog-in {
   0% {
     transform: translate(-50%, -70%);
-    clip-path: inset(0 0 100% 0 round var(--m3-util-rounding-extra-large));
+    clip-path: inset(0 0 100% 0 round var(--rounding-extra-large));
   }
 
   100% {
     transform: translate(-50%, -50%);
-    clip-path: inset(0 0 0 0 round var(--m3-util-rounding-extra-large));
+    clip-path: inset(0 0 0 0 round var(--rounding-extra-large));
   }
 }
