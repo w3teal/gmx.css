@@ -8,20 +8,41 @@
 
 .field :is(input, textarea) {
   display: block !important;
+  background: none;
   border: none;
   outline: none;
-  min-width: 15.5rem;
-  border-bottom: 1px solid var(--outline);
-  background: var(--surface-container-highest);
+  width: 100%;
   color: var(--on-surface);
-  border-radius: var(--textfield-filled-shape) var(--textfield-filled-shape) 0 0;
   box-sizing: border-box;
   font: inherit;
+  padding: 1rem;
+}
+
+.field:not(.outline) :is(input, textarea) {
+  border-bottom: 1px solid var(--outline);
+  background: var(--surface-container-highest);
+  border-radius: var(--textfield-filled-shape) var(--textfield-filled-shape) 0 0;
   padding: 1.5rem 1rem 0.5rem;
 }
 
-.field :is(input, textarea):hover {
+.field:not(.outline) :is(input, textarea):hover {
   background: rgb(from var(--on-surface) r g b / 15%);
+}
+
+.field.outline :is(input, textarea) {
+  border: 1px solid var(--outline);
+  border-radius: var(--textfield-outlined-shape);
+}
+
+.field:not(.outline) :is(input, textarea):focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: -1px;
+}
+
+.field.outline :is(input, textarea):focus {
+  border: 2px solid var(--primary);
+  margin: -1px;
 }
 
 .field :is(input, textarea)::placeholder {
@@ -40,19 +61,26 @@
 }
 
 .field label span {
-  transition: all 0.15s ease-out;
+  transition: all 0.4s var(--curve-decel);
 }
 
-.field :is(input, textarea):focus {
-  outline: none;
-  border-bottom: 2px solid var(--primary);
-  margin-bottom: -1px;
+.field.outline label {
+  margin-left: -.35rem;
 }
 
-.field :is(input, textarea):focus + label span,
-.field :not(:is(input, textarea):placeholder-shown) + label span {
+.field.outline label span {
+  padding: 0 .35rem;
+  background: var(--background);
+}
+
+.field:not(.outline) :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label span {
   font-size: 0.75rem;
   transform: translate(0, -50%);
+}
+
+.field.outline :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label span {
+  font-size: 0.75rem;
+  transform: translate(0, -115%);
 }
 
 .field :is(input, textarea):focus + label span {
@@ -60,11 +88,15 @@
 }
 
 .field:has(i) :is(input, textarea) {
-  padding: 1.5rem 1rem 0.5rem 2.85rem;
+  padding-left: 2.85rem !important;
 }
 
 .field:has(i) label {
   left: 2.85rem;
+}
+
+.field.outline:has(i) :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label {
+  left: 1rem;
 }
 
 .field i {

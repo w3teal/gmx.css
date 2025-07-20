@@ -13,7 +13,6 @@
 
 [class*=tooltipped]::after {
   --space: 0.35rem;
-
   content: attr(aria-label);
   background-color: var(--inverse-surface);
   color: var(--inverse-on-surface);
@@ -25,7 +24,7 @@
   font-size: 0.75rem;
   white-space: nowrap;
   opacity: 0;
-  transition: 0.2s;
+  transition: all 0.3s var(--curve-decel);
   z-index: 1000;
   pointer-events: none;
 }

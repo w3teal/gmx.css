@@ -73,7 +73,8 @@ body.dark {
   --surface-container-low: #1c1b1e;
   --surface-container: #201f22;
   --surface-container-high: #2b292d;
-  --surface-container-highest: #363438
+  --surface-container-highest: #363438;
+  color-scheme: dark;
 }
 
 :root {
