@@ -7,15 +7,15 @@
 }
 
 .container:not(:has(>header, >footer)),
-.container > header,
-.container:not(.min) > footer {
+.container>header,
+.container:not(.min)>footer {
   padding: 1rem;
   border-radius: var(--rounding-extra-large);
   background: var(--surface-container-low);
   color: var(--on-surface);
 }
 
-.container.min > footer {
+.container.min>footer {
   padding: 1rem 0;
 }
 
@@ -25,14 +25,14 @@
   gap: 0.5rem;
 }
 
-.container > header {
+.container>header {
   flex-grow: 1;
 }
 
-.container:not(.min) > header {
+.container:not(.min)>header {
   border-radius: var(--rounding-extra-large) var(--rounding-extra-large) var(--rounding-small) var(--rounding-small);
 }
 
-.container:not(.min) > footer {
+.container:not(.min)>footer {
   border-radius: var(--rounding-small) var(--rounding-small) var(--rounding-extra-large) var(--rounding-extra-large);
 }

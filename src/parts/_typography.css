@@ -130,10 +130,6 @@ pre {
   overflow-x: auto;
 }
 
-i {
-  line-height: 0;
-}
-
 hr {
   border: none;
   height: 0.025rem;
@@ -155,7 +151,7 @@ pre {
   margin: 0;
 }
 
-pre > code {
+pre>code {
   padding: 0;
   font-size: 1rem;
 }

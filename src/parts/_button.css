@@ -1,10 +1,4 @@
-img.btn {
-  object-fit: cover;
-  object-position: center;
-  border: none;
-}
-
-:where(button, .btn):not(.ex) {
+:where(button, .btn) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -17,184 +11,230 @@ img.btn {
   font-weight: 500;
   line-height: normal;
   letter-spacing: normal;
-  padding: 0.65rem 1rem;
+  height: calc(2.5rem + var(--density-term));
+  padding: 0 1rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   user-select: none;
   outline: 1px solid transparent;
-  transition: border-radius var(--easing-fast-spatial), box-shadow var(--easing-fast), background-color var(--easing-fast), color var(--easing-fast);
+  transition: border-radius var(--easing-fast-spatial), box-shadow var(--easing-fast), background-color var(--easing-fast), color var(--easing-fast), margin var(--easing-fast), padding var(--easing-fast-spatial);
 }
 
-:where(button, .btn):not(.ex):hover {
+:where(button, .btn):hover {
   background: rgb(from var(--primary) r g b / 90%);
   box-shadow: var(--elevation-1);
 }
 
-:is(button, .btn):active {
-  border-radius: var(--rounding-small) !important;
-}
-
-:where(button, .btn):not(.ex) i {
-  max-width: none;
-}
-
-:where(button, .btn):not(.ex) i * {
+:where(button, .btn) iconify-icon {
   font-size: 1.125rem;
   margin: 0 0.5rem 0 0;
 }
 
-:where(button, .btn):not(.ex).tonal,
-:is(.segmented, .split).tonal :where(button, .btn):not(.ex) {
+:where(button, .btn).tonal,
+:is(.group, .split).tonal :where(button, .btn) {
   background: var(--secondary-container);
   color: var(--on-secondary-container);
 }
 
-:where(button, .btn):not(.ex).tonal:hover,
+:where(button, .btn).tonal:hover,
 .chip:has(input:checked):hover,
-:is(.segmented, .split).tonal :where(button, .btn):not(.ex):hover {
+:is(.group, .split).tonal :where(button, .btn):hover {
   background: rgb(from var(--primary) r g b / 20%);
 }
 
-:where(button, .btn):not(.ex).text,
-:where(button, .btn):not(.ex).outline,
-:is(.split).outline :where(button, .btn):not(.ex) {
+.group.tonal :where(button, .btn):has(input:checked) {
+  background: var(--secondary);
+}
+
+:where(button, .btn).text,
+:where(button, .btn).outline,
+:is(.split).outline :where(button, .btn) {
   box-shadow: none;
   background: transparent;
   color: var(--primary);
 }
 
-:where(button, .btn):not(.ex).text:hover,
-:where(button, .btn):not(.ex).outline:hover,
-:is(.split).outline :where(button, .btn):not(.ex):hover,
-.tabs > label:has(input:checked):hover {
+:where(button, .btn).text:hover,
+:where(button, .btn).outline:hover,
+:is(.split).outline :where(button, .btn):hover,
+.tabs>label:has(input:checked):hover {
   box-shadow: none;
   background: rgb(from var(--primary) r g b / 10%);
 }
 
-:where(button, .btn):not(.ex).outline,
-:is(.split).outline :where(button, .btn):not(.ex) {
+:where(button, .btn).outline,
+:is(.split).outline :where(button, .btn) {
   border: 0.0625rem solid var(--outline);
 }
 
-:where(button, .btn):not(.ex).text {
+:where(button, .btn).text {
   padding: 0.8rem 0.8rem;
 }
 
-:where(button, .btn):not(.ex).elevated,
-:is(.split).elevated :where(button, .btn):not(.ex) {
+:where(button, .btn).elevated,
+:is(.split).elevated :where(button, .btn) {
   background: var(--surface-container-low);
   color: var(--primary);
   box-shadow: var(--elevation-1) !important;
 }
 
-:where(button, .btn):not(.ex).elevated:hover,
-:is(.split).elevated :where(button, .btn):not(.ex):hover {
+:where(button, .btn).elevated:hover,
+:is(.split).elevated :where(button, .btn):hover {
   background: rgb(from var(--primary) r g b / 15%);
   box-shadow: var(--elevation-2) !important;
 }
 
-main > aside li:not(.active):hover i,
-.menu > *:hover,
+main>aside li:not(.active):hover iconify-icon,
+.menu>*:hover,
 .chip:hover,
-.tabs > *:hover {
+.tabs>*:hover {
   background: var(--surface-container-highest);
 }
 
-:where(button, .btn):not(.ex):is(.icon, .fab:not(.extended)) {
+:where(button, .btn):is(.icon, .fab:not(.extended)) {
   aspect-ratio: 1/1;
   width: var(--size);
   height: var(--size);
 }
 
-:where(button, .btn):not(.ex):is(.icon, .fab.small) {
+:where(button, .btn):is(.icon, .fab.small) {
   --size: 2.5rem;
 }
 
-:where(button, .btn):not(.ex).chip.icon {
+:where(button, .btn).chip.icon {
   --size: 2rem;
 }
 
-:where(button, .btn):not(.ex):is(.icon, .fab) i * {
+:is(button, .btn, .fab):not(.flat):active {
+  border-radius: var(--rounding-small);
+}
+
+:where(button, .btn):is(.icon, .fab) iconify-icon,
+.group.icons iconify-icon {
   font-size: 1.5rem;
   margin-right: 0;
 }
 
-:where(button, .btn):not(.ex).fab.small {
+:where(button, .btn).fab.small {
   border-radius: var(--fab-small-shape);
 }
 
-:where(button, .btn):not(.ex).fab {
-  box-shadow: var(--elevation-2);
-
+:where(button, .btn).fab {
   --size: 3.5rem;
-
+  box-shadow: var(--elevation-2);
   border-radius: var(--fab-normal-shape);
 }
 
-:where(button, .btn):not(.ex).fab.large {
+:where(button, .btn).fab.large {
   --size: 5.5rem;
-
   border-radius: var(--fab-large-shape);
 }
 
-:where(button, .btn):not(.ex).fab.large i * {
+:where(button, .btn).fab.large iconify-icon {
   font-size: 2.5rem;
 }
 
-:where(button, .btn):not(.ex).fab.extended {
+:where(button, .btn).fab.extended {
   width: auto;
 }
 
-:where(button, .btn):not(.ex).fab.extended i * {
+:where(button, .btn).fab.extended iconify-icon {
   margin-right: 0.5rem;
 }
 
-:is(.segmented, .split) {
+:is(.group, .split) {
   display: flex;
   gap: 0.125rem;
 }
 
-.split > :where(button, .btn):first-child {
-  border-radius: var(--button-shape) var(--rounding-small) var(--rounding-small) var(--button-shape);
-}
-
-.split > :where(button, .btn):last-child {
-  border-radius: var(--rounding-small) var(--button-shape) var(--button-shape) var(--rounding-small);
-}
-
-.segmented > :where(button, .btn):not(.ex):first-child,
-.split > :where(button, .btn):first-child:hover {
-  border-radius: var(--button-shape) var(--rounding-large) var(--rounding-large) var(--button-shape);
-}
-
-.segmented > :where(button, .btn):not(.ex):last-child,
-.split > :where(button, .btn):last-child:hover {
-  border-radius: var(--rounding-large) var(--button-shape) var(--button-shape) var(--rounding-large);
-}
-
-.split > :where(button, .btn):active {
-  border-radius: var(--button-shape) !important;
-}
-
-.segmented :where(button, .btn):not(.ex) {
-  background: var(--surface-container);
-  color: var(--on-surface-variant);
-  border-radius: var(--rounding-medium);
+.group:not(.variable) :where(button, .btn) {
   width: 100%;
 }
 
-.segmented :where(button, .btn):not(.ex):hover {
+.group.variable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group :where(button, .btn) {
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+  border-radius: var(--rounding-medium);
+}
+
+.group :where(button, .btn):hover {
   box-shadow: none;
   background: var(--surface-container-highest);
 }
 
-.segmented :where(button, .btn):not(.ex):has(input:checked) {
+.split> :where(button, .btn):active {
+  border-radius: var(--button-shape) !important;
+}
+
+.group :where(button, .btn):has(input:checked) {
   border-radius: var(--button-shape);
   background: var(--primary);
   color: var(--on-primary);
 }
 
-.segmented.tonal :where(button, .btn):not(.ex):has(input:checked) {
-  background: var(--secondary);
+.split> :where(button, .btn):first-child,
+.group:not(.icons) :where(button, .btn):first-child:active {
+  border-radius: var(--button-shape) var(--rounding-small) var(--rounding-small) var(--button-shape);
+}
+
+.split> :where(button, .btn):last-child,
+.group:not(.icons) :where(button, .btn):last-child:active {
+  border-radius: var(--rounding-small) var(--button-shape) var(--button-shape) var(--rounding-small);
+}
+
+.group> :where(button, .btn):first-child,
+.split> :where(button, .btn):first-child:hover {
+  border-radius: var(--button-shape) var(--rounding-medium) var(--rounding-medium) var(--button-shape);
+}
+
+.group> :where(button, .btn):last-child,
+.split> :where(button, .btn):last-child:hover {
+  border-radius: var(--rounding-medium) var(--button-shape) var(--button-shape) var(--rounding-medium);
+}
+
+.group.icons {
+  gap: .5rem;
+}
+
+.group.icons :where(button, .btn) {
+  --size: 4.25rem;
+  height: var(--size);
+  border-radius: var(--group-icon-button-shape);
+}
+
+.group.icons.large :where(button, .btn) {
+  --size: 5rem;
+}
+
+.group.icons.extra :where(button, .btn) {
+  --size: 6rem;
+}
+
+.group.icons :where(button, .btn):has(input:checked) {
+  border-radius: var(--rounding-large);
+}
+
+.group.icons :where(button, .btn):active,
+.physics :where(button, .btn):active {
+  padding: 0 2rem;
+}
+
+.group.icons :where(button, .btn) iconify-icon {
+  font-size: 2rem;
+}
+
+.group .extended {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.group .extended iconify-icon {
+  margin-right: 1rem;
 }

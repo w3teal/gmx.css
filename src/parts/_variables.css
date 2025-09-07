@@ -79,19 +79,21 @@ body.dark {
 
 :root {
   --elevation-0: none;
-  --elevation-1: 0 3px 1px -2px rgb(from var(--shadow) r g b / 20%), 0 2px 2px 0 rgb(from var(--shadow) r g b / 14%), 0 1px 5px 0 rgb(from var(--shadow) r g b / 12%);
-  --elevation-2: 0 2px 4px -1px rgb(from var(--shadow) r g b / 20%), 0 4px 5px 0 rgb(from var(--shadow) r g b / 14%), 0 1px 10px 0 rgb(from var(--shadow) r g b / 12%);
-  --elevation-3: 0 5px 5px -3px rgb(from var(--shadow) r g b / 20%), 0 8px 10px 1px rgb(from var(--shadow) r g b / 14%), 0 3px 14px 2px rgb(from var(--shadow) r g b / 12%);
-  --elevation-4: 0 5px 5px -3px rgb(from var(--shadow) r g b / 20%), 0 8px 10px 1px rgb(from var(--shadow) r g b / 14%), 0 3px 14px 2px rgb(from var(--shadow) r g b / 12%);
-  --elevation-5: 0 8px 10px -6px rgb(from var(--shadow) r g b / 20%), 0 16px 24px 2px rgb(from var(--shadow) r g b / 14%), 0 6px 30px 5px rgb(from var(--shadow) r g b / 12%);
+  --elevation-1: 0px 1px 2px 0px rgb(from var(--shadow) r g b / .3), 0px 1px 3px 1px rgb(from var(--shadow) r g b / .15);
+  --elevation-2: 0px 1px 2px 0px rgb(from var(--shadow) r g b / .3), 0px 2px 6px 2px rgb(from var(--shadow) r g b / .15);
+  --elevation-3: 0px 1px 3px 0px rgb(from var(--shadow) r g b / .3), 0px 4px 8px 3px rgb(from var(--shadow) r g b / .15);
+  --elevation-4: 0px 2px 3px 0px rgb(from var(--shadow) r g b / .3), 0px 6px 10px 4px rgb(from var(--shadow) r g b / .15);
+  --elevation-5: 0px 4px 4px 0px rgb(from var(--shadow) r g b / .3), 0px 8px 12px 6px rgb(from var(--shadow) r g b / .15);
   --bottom-offset: 0;
+  --density: 0;
+  --density-term: calc(var(--density) * .25rem);
   --rounding-none: 0;
   --rounding-extra-small: 0.25rem;
   --rounding-small: 0.5rem;
   --rounding-medium: 0.75rem;
-  --rounding-large: 1rem;
+  --rounding-large: 1.25rem;
   --rounding-extra-large: 1.75rem;
-  --rounding-full: 2.25rem;
+  --rounding-full: calc(infinity * 1px);
   --font: roboto, "Roboto Variable", system-ui, sans-serif;
   --easing-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.9) 0.35s;
   --easing-spatial: cubic-bezier(0.38, 1.21, 0.22, 1) 0.5s;
@@ -107,7 +109,8 @@ body.dark {
 :root {
   --snackbar-shape: var(--rounding-extra-small);
   --segmented-button-shape: var(--rounding-full);
-  --button-shape: var(--rounding-full);
+  --button-shape: 1.25rem;
+  --group-icon-button-shape: 3rem;
   --chip-shape: var(--rounding-small);
   --textfield-outlined-shape: var(--rounding-extra-small);
   --textfield-filled-shape: var(--rounding-extra-small);

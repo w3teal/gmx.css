@@ -61,7 +61,7 @@
   transition: var(--easing);
 }
 
-.slider input:active ~ .thumb {
+.slider input:active~.thumb {
   width: 0.125rem;
 }
 

@@ -1,4 +1,5 @@
 .chip {
+  height: 2rem;
   display: inline-flex;
   padding: 0.35rem 1rem;
   border-radius: var(--chip-shape);
@@ -7,11 +8,11 @@
   border: solid 0.0625rem var(--outline);
 }
 
-.chip:not(.icon) i * {
+.chip:not(.icon) iconify-icon {
   margin-left: -0.25rem;
 }
 
-.chip:not(.icon) i:last-child {
+.chip:not(.icon) iconify-icon:last-child {
   margin-left: 0.65rem;
   margin-right: -0.75rem;
 }

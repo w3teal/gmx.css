@@ -1,4 +1,4 @@
-main > aside {
+main>aside {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,7 +6,7 @@ main > aside {
   padding: 0 1.25rem;
 }
 
-main > aside > :is(menu, .row) {
+main>aside> :is(menu, .row) {
   display: flex;
   height: 100%;
   justify-content: center;
@@ -15,14 +15,14 @@ main > aside > :is(menu, .row) {
   margin: 0;
 }
 
-main > article {
+main>article {
   width: 93%;
   margin: 0 0 0 auto;
   padding: 0 1.5rem;
 }
 
 @media screen and (max-width: 64em) {
-  main > aside {
+  main>aside {
     background: var(--surface);
     top: auto;
     bottom: 0;
@@ -32,7 +32,7 @@ main > article {
     height: min-content;
   }
 
-  main > aside > :is(menu, .row) {
+  main>aside> :is(menu, .row) {
     justify-content: space-around;
     flex-direction: row;
   }
@@ -42,7 +42,7 @@ main > article {
     margin: 0 auto 2rem;
   }
 
-  main > article {
+  main>article {
     width: 100%;
     padding: 0 0 !important;
     margin-bottom: 2.25rem;
@@ -55,11 +55,11 @@ main > article {
 }
 
 :is(nav, .row):not(.segmented),
-.list-box > *,
-.menu > *,
+.list-box>*,
+.menu>*,
 label.checkbox *,
 label.radio *,
-.field:has(i) {
+.field:has(iconify-icon) {
   display: flex;
   align-items: center;
   align-self: normal;
@@ -71,8 +71,8 @@ label.radio *,
   margin-top: 0;
 }
 
-main > aside li,
-main > aside li:has(*>i) > * {
+main>aside li,
+main>aside li:has(*>iconify-icon)>* {
   width: 3.5rem;
   margin: 0.2rem 0;
   cursor: pointer;
@@ -85,12 +85,12 @@ main > aside li:has(*>i) > * {
   color: inherit;
 }
 
-main > aside li span {
+main>aside li span {
   font-size: 0.75rem;
   font-weight: 500;
 }
 
-main > aside li i {
+main>aside li iconify-icon {
   width: 100%;
   display: flex;
   align-self: center;
@@ -101,18 +101,19 @@ main > aside li i {
   transition: 0.1s;
 }
 
-main > aside li.active i {
+main>aside li.active iconify-icon {
   background: var(--secondary-container);
+  color: var(--on-secondary-container);
 }
 
-main > aside li i * {
+main>aside li iconify-icon {
   font-size: 1.5rem;
 }
 
-main > article > section {
+main>article>section {
   margin: 3.5rem 0;
 }
 
-main > aside * {
+main>aside * {
   align-self: center;
 }

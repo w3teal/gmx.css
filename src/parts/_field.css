@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font: inherit;
   padding: 1rem;
+  resize: vertical;
 }
 
 .field:not(.outline) :is(input, textarea) {
@@ -87,24 +88,21 @@
   color: var(--primary);
 }
 
-.field:has(i) :is(input, textarea) {
+.field:has(iconify-icon) :is(input, textarea) {
   padding-left: 2.85rem !important;
 }
 
-.field:has(i) label {
+.field:has(iconify-icon) label {
   left: 2.85rem;
 }
 
-.field.outline:has(i) :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label {
+.field.outline:has(iconify-icon) :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label {
   left: 1rem;
 }
 
-.field i {
+.field iconify-icon {
   position: absolute;
   pointer-events: none;
   left: 0.65rem;
-}
-
-.field i * {
   font-size: 1.5rem;
 }

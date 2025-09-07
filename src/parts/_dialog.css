@@ -3,11 +3,11 @@
   position: absolute;
 }
 
-input.dialog-trigger:not(:checked) + .dialog {
+input.dialog-trigger:not(:checked)+.dialog {
   display: none;
 }
 
-input.dialog-trigger:checked + .dialog {
+input.dialog-trigger:checked+.dialog {
   display: block;
 }
 
@@ -21,6 +21,7 @@ input.dialog-trigger:checked + .dialog {
   background: var(--surface-container-high);
   color: var(--on-surface-variant);
   border: none;
+  outline: none;
   border-radius: var(--dialog-shape);
   min-width: 35rem;
   padding: 1.5rem 1.5rem;
@@ -34,13 +35,13 @@ input.dialog-trigger:checked + .dialog {
   min-width: 50rem;
 }
 
-:is(dialog, .dialog) :where(i, h1, h2, h3, h4, h5, h6) {
+:is(dialog, .dialog) :where(iconify-icon, h1, h2, h3, h4, h5, h6) {
   display: block;
   text-align: center;
 }
 
 dialog:not(.bottom-sheet)[open],
-input.dialog-trigger:checked + .dialog:not(.bottom-sheet) {
+input.dialog-trigger:checked+.dialog:not(.bottom-sheet) {
   animation: dialog-in var(--curve-decel) 0.5s, opacity var(--curve-decel) 0.1s both;
 }
 
@@ -55,7 +56,7 @@ input.dialog-trigger:checked + .dialog:not(.bottom-sheet) {
 }
 
 dialog[open].bottom-sheet,
-input.dialog-trigger:checked + .dialog.bottom-sheet {
+input.dialog-trigger:checked+.dialog.bottom-sheet {
   animation: dialog-bottom var(--curve-decel) 0.5s;
 }
 

@@ -10,13 +10,19 @@
 .tabs.variable > * {
   width: max-content;
   padding: 0.65rem 1rem;
+  height: 4rem;
 }
 
 .tabs > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 0.65rem 0;
+  padding: 0 0;
+  height: 3rem;
   cursor: pointer;
   width: 100%;
   text-align: center;
@@ -24,11 +30,10 @@
   transition: 0.1s;
 }
 
-.tabs i {
-  display: block;
-}
-
-.tabs i * {
+.tabs iconify-icon {
+  display: flex !important;
+  flex: 1 !important;
+  flex-grow: 1 !important;
   font-size: 1.5rem;
 }
 
@@ -36,15 +41,21 @@
   color: var(--primary);
 }
 
-.tabs > label:has(input:checked)::after {
+.tabs > label::after {
   content: "";
   position: absolute;
   top: auto;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 0.15rem;
+  height: 0;
   width: 3rem;
   margin: 0 auto;
   background: var(--primary);
+  border-radius: .1875rem .1875rem 0 0;
+  transition: height var(--easing-fast-spatial);
+}
+
+.tabs > label:has(input:checked)::after {
+  height: .1875rem;
 }

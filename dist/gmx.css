@@ -79,19 +79,21 @@ body.dark {
 
 :root {
   --elevation-0: none;
-  --elevation-1: 0 3px 1px -2px rgb(from var(--shadow) r g b / 20%), 0 2px 2px 0 rgb(from var(--shadow) r g b / 14%), 0 1px 5px 0 rgb(from var(--shadow) r g b / 12%);
-  --elevation-2: 0 2px 4px -1px rgb(from var(--shadow) r g b / 20%), 0 4px 5px 0 rgb(from var(--shadow) r g b / 14%), 0 1px 10px 0 rgb(from var(--shadow) r g b / 12%);
-  --elevation-3: 0 5px 5px -3px rgb(from var(--shadow) r g b / 20%), 0 8px 10px 1px rgb(from var(--shadow) r g b / 14%), 0 3px 14px 2px rgb(from var(--shadow) r g b / 12%);
-  --elevation-4: 0 5px 5px -3px rgb(from var(--shadow) r g b / 20%), 0 8px 10px 1px rgb(from var(--shadow) r g b / 14%), 0 3px 14px 2px rgb(from var(--shadow) r g b / 12%);
-  --elevation-5: 0 8px 10px -6px rgb(from var(--shadow) r g b / 20%), 0 16px 24px 2px rgb(from var(--shadow) r g b / 14%), 0 6px 30px 5px rgb(from var(--shadow) r g b / 12%);
+  --elevation-1: 0px 1px 2px 0px rgb(from var(--shadow) r g b / .3), 0px 1px 3px 1px rgb(from var(--shadow) r g b / .15);
+  --elevation-2: 0px 1px 2px 0px rgb(from var(--shadow) r g b / .3), 0px 2px 6px 2px rgb(from var(--shadow) r g b / .15);
+  --elevation-3: 0px 1px 3px 0px rgb(from var(--shadow) r g b / .3), 0px 4px 8px 3px rgb(from var(--shadow) r g b / .15);
+  --elevation-4: 0px 2px 3px 0px rgb(from var(--shadow) r g b / .3), 0px 6px 10px 4px rgb(from var(--shadow) r g b / .15);
+  --elevation-5: 0px 4px 4px 0px rgb(from var(--shadow) r g b / .3), 0px 8px 12px 6px rgb(from var(--shadow) r g b / .15);
   --bottom-offset: 0;
+  --density: 0;
+  --density-term: calc(var(--density) * .25rem);
   --rounding-none: 0;
   --rounding-extra-small: 0.25rem;
   --rounding-small: 0.5rem;
   --rounding-medium: 0.75rem;
-  --rounding-large: 1rem;
+  --rounding-large: 1.25rem;
   --rounding-extra-large: 1.75rem;
-  --rounding-full: 2.25rem;
+  --rounding-full: calc(infinity * 1px);
   --font: roboto, "Roboto Variable", system-ui, sans-serif;
   --easing-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.9) 0.35s;
   --easing-spatial: cubic-bezier(0.38, 1.21, 0.22, 1) 0.5s;
@@ -107,7 +109,8 @@ body.dark {
 :root {
   --snackbar-shape: var(--rounding-extra-small);
   --segmented-button-shape: var(--rounding-full);
-  --button-shape: var(--rounding-full);
+  --button-shape: 1.25rem;
+  --group-icon-button-shape: 3rem;
   --chip-shape: var(--rounding-small);
   --textfield-outlined-shape: var(--rounding-extra-small);
   --textfield-filled-shape: var(--rounding-extra-small);
@@ -146,68 +149,6 @@ body.dark {
   max-width: 100%;
 }
 
-:is(a,button,.btn,.chip):focus-visible {
-  outline: 0.125rem solid var(--primary);
-  outline-offset: 0.25rem;
-}
-
-[disabled] {
-  color: rgb(from var(--on-surface) r g b / 38%);
-  pointer-events: none;
-}
-
-img[width][height] {
-  height: auto;
-}
-
-summary {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-}
-
-input.ex {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: absolute;
-}
-
-button.ex {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  letter-spacing: inherit;
-}
-
-iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-}
-
-.chip input,
-.tabs input,
-.segmented input {
-  padding: 0;
-  height: initial;
-  width: initial;
-  margin-bottom: 0;
-  display: none;
-  cursor: pointer;
-}
-
-.radio,
-.checkbox,
-.switch {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
 html,
 body {
   margin: 0;
@@ -228,14 +169,18 @@ main {
   min-height: 100vh;
 }
 
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
+:is(a, button, .btn, .chip):focus-visible {
+  outline: 0.125rem solid var(--primary);
+  outline-offset: 0.25rem;
+}
 
-  100% {
-    opacity: 1;
-  }
+[disabled] {
+  color: rgb(from var(--on-surface) r g b / 38%);
+  pointer-events: none;
+}
+
+img[width][height] {
+  height: auto;
 }
 
 img.btn {
@@ -246,7 +191,52 @@ img.btn {
   border: none;
 }
 
-:where(button, .btn):not(.ex) {
+summary {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+iconify-icon:not(aside iconify-icon, iconify-icon[width][height]) {
+  display: inline-block;
+  line-height: 0;
+  width: 1em;
+  height: 1em;
+  max-width: none;
+}
+
+.chip input,
+.tabs input,
+.group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.radio,
+.checkbox,
+.switch {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+:where(button, .btn) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +249,8 @@ img.btn {
   font-weight: 500;
   line-height: normal;
   letter-spacing: normal;
-  padding: 0.65rem 1rem;
+  height: calc(2.5rem + var(--density-term));
+  padding: 0 1rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -267,180 +258,225 @@ img.btn {
      -moz-user-select: none;
           user-select: none;
   outline: 1px solid transparent;
-  transition: border-radius var(--easing-fast-spatial), box-shadow var(--easing-fast), background-color var(--easing-fast), color var(--easing-fast);
+  transition: border-radius var(--easing-fast-spatial), box-shadow var(--easing-fast), background-color var(--easing-fast), color var(--easing-fast), margin var(--easing-fast), padding var(--easing-fast-spatial);
 }
 
-:where(button, .btn):not(.ex):hover {
+:where(button, .btn):hover {
   background: rgb(from var(--primary) r g b / 90%);
   box-shadow: var(--elevation-1);
 }
 
-:is(button, .btn):active {
-  border-radius: var(--rounding-small) !important;
-}
-
-:where(button, .btn):not(.ex) i {
-  max-width: none;
-}
-
-:where(button, .btn):not(.ex) i * {
+:where(button, .btn) iconify-icon {
   font-size: 1.125rem;
   margin: 0 0.5rem 0 0;
 }
 
-:where(button, .btn):not(.ex).tonal,
-:is(.segmented, .split).tonal :where(button, .btn):not(.ex) {
+:where(button, .btn).tonal,
+:is(.group, .split).tonal :where(button, .btn) {
   background: var(--secondary-container);
   color: var(--on-secondary-container);
 }
 
-:where(button, .btn):not(.ex).tonal:hover,
+:where(button, .btn).tonal:hover,
 .chip:has(input:checked):hover,
-:is(.segmented, .split).tonal :where(button, .btn):not(.ex):hover {
+:is(.group, .split).tonal :where(button, .btn):hover {
   background: rgb(from var(--primary) r g b / 20%);
 }
 
-:where(button, .btn):not(.ex).text,
-:where(button, .btn):not(.ex).outline,
-:is(.split).outline :where(button, .btn):not(.ex) {
+.group.tonal :where(button, .btn):has(input:checked) {
+  background: var(--secondary);
+}
+
+:where(button, .btn).text,
+:where(button, .btn).outline,
+:is(.split).outline :where(button, .btn) {
   box-shadow: none;
   background: transparent;
   color: var(--primary);
 }
 
-:where(button, .btn):not(.ex).text:hover,
-:where(button, .btn):not(.ex).outline:hover,
-:is(.split).outline :where(button, .btn):not(.ex):hover,
-.tabs > label:has(input:checked):hover {
+:where(button, .btn).text:hover,
+:where(button, .btn).outline:hover,
+:is(.split).outline :where(button, .btn):hover,
+.tabs>label:has(input:checked):hover {
   box-shadow: none;
   background: rgb(from var(--primary) r g b / 10%);
 }
 
-:where(button, .btn):not(.ex).outline,
-:is(.split).outline :where(button, .btn):not(.ex) {
+:where(button, .btn).outline,
+:is(.split).outline :where(button, .btn) {
   border: 0.0625rem solid var(--outline);
 }
 
-:where(button, .btn):not(.ex).text {
+:where(button, .btn).text {
   padding: 0.8rem 0.8rem;
 }
 
-:where(button, .btn):not(.ex).elevated,
-:is(.split).elevated :where(button, .btn):not(.ex) {
+:where(button, .btn).elevated,
+:is(.split).elevated :where(button, .btn) {
   background: var(--surface-container-low);
   color: var(--primary);
   box-shadow: var(--elevation-1) !important;
 }
 
-:where(button, .btn):not(.ex).elevated:hover,
-:is(.split).elevated :where(button, .btn):not(.ex):hover {
+:where(button, .btn).elevated:hover,
+:is(.split).elevated :where(button, .btn):hover {
   background: rgb(from var(--primary) r g b / 15%);
   box-shadow: var(--elevation-2) !important;
 }
 
-main > aside li:not(.active):hover i,
-.menu > *:hover,
+main>aside li:not(.active):hover iconify-icon,
+.menu>*:hover,
 .chip:hover,
-.tabs > *:hover {
+.tabs>*:hover {
   background: var(--surface-container-highest);
 }
 
-:where(button, .btn):not(.ex):is(.icon, .fab:not(.extended)) {
+:where(button, .btn):is(.icon, .fab:not(.extended)) {
   aspect-ratio: 1/1;
   width: var(--size);
   height: var(--size);
 }
 
-:where(button, .btn):not(.ex):is(.icon, .fab.small) {
+:where(button, .btn):is(.icon, .fab.small) {
   --size: 2.5rem;
 }
 
-:where(button, .btn):not(.ex).chip.icon {
+:where(button, .btn).chip.icon {
   --size: 2rem;
 }
 
-:where(button, .btn):not(.ex):is(.icon, .fab) i * {
+:is(button, .btn, .fab):not(.flat):active {
+  border-radius: var(--rounding-small);
+}
+
+:where(button, .btn):is(.icon, .fab) iconify-icon,
+.group.icons iconify-icon {
   font-size: 1.5rem;
   margin-right: 0;
 }
 
-:where(button, .btn):not(.ex).fab.small {
+:where(button, .btn).fab.small {
   border-radius: var(--fab-small-shape);
 }
 
-:where(button, .btn):not(.ex).fab {
-  box-shadow: var(--elevation-2);
-
+:where(button, .btn).fab {
   --size: 3.5rem;
-
+  box-shadow: var(--elevation-2);
   border-radius: var(--fab-normal-shape);
 }
 
-:where(button, .btn):not(.ex).fab.large {
+:where(button, .btn).fab.large {
   --size: 5.5rem;
-
   border-radius: var(--fab-large-shape);
 }
 
-:where(button, .btn):not(.ex).fab.large i * {
+:where(button, .btn).fab.large iconify-icon {
   font-size: 2.5rem;
 }
 
-:where(button, .btn):not(.ex).fab.extended {
+:where(button, .btn).fab.extended {
   width: auto;
 }
 
-:where(button, .btn):not(.ex).fab.extended i * {
+:where(button, .btn).fab.extended iconify-icon {
   margin-right: 0.5rem;
 }
 
-:is(.segmented, .split) {
+:is(.group, .split) {
   display: flex;
   gap: 0.125rem;
 }
 
-.split > :where(button, .btn):first-child {
-  border-radius: var(--button-shape) var(--rounding-small) var(--rounding-small) var(--button-shape);
-}
-
-.split > :where(button, .btn):last-child {
-  border-radius: var(--rounding-small) var(--button-shape) var(--button-shape) var(--rounding-small);
-}
-
-.segmented > :where(button, .btn):not(.ex):first-child,
-.split > :where(button, .btn):first-child:hover {
-  border-radius: var(--button-shape) var(--rounding-large) var(--rounding-large) var(--button-shape);
-}
-
-.segmented > :where(button, .btn):not(.ex):last-child,
-.split > :where(button, .btn):last-child:hover {
-  border-radius: var(--rounding-large) var(--button-shape) var(--button-shape) var(--rounding-large);
-}
-
-.split > :where(button, .btn):active {
-  border-radius: var(--button-shape) !important;
-}
-
-.segmented :where(button, .btn):not(.ex) {
-  background: var(--surface-container);
-  color: var(--on-surface-variant);
-  border-radius: var(--rounding-medium);
+.group:not(.variable) :where(button, .btn) {
   width: 100%;
 }
 
-.segmented :where(button, .btn):not(.ex):hover {
+.group.variable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group :where(button, .btn) {
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+  border-radius: var(--rounding-medium);
+}
+
+.group :where(button, .btn):hover {
   box-shadow: none;
   background: var(--surface-container-highest);
 }
 
-.segmented :where(button, .btn):not(.ex):has(input:checked) {
+.split> :where(button, .btn):active {
+  border-radius: var(--button-shape) !important;
+}
+
+.group :where(button, .btn):has(input:checked) {
   border-radius: var(--button-shape);
   background: var(--primary);
   color: var(--on-primary);
 }
 
-.segmented.tonal :where(button, .btn):not(.ex):has(input:checked) {
-  background: var(--secondary);
+.split> :where(button, .btn):first-child,
+.group:not(.icons) :where(button, .btn):first-child:active {
+  border-radius: var(--button-shape) var(--rounding-small) var(--rounding-small) var(--button-shape);
+}
+
+.split> :where(button, .btn):last-child,
+.group:not(.icons) :where(button, .btn):last-child:active {
+  border-radius: var(--rounding-small) var(--button-shape) var(--button-shape) var(--rounding-small);
+}
+
+.group> :where(button, .btn):first-child,
+.split> :where(button, .btn):first-child:hover {
+  border-radius: var(--button-shape) var(--rounding-medium) var(--rounding-medium) var(--button-shape);
+}
+
+.group> :where(button, .btn):last-child,
+.split> :where(button, .btn):last-child:hover {
+  border-radius: var(--rounding-medium) var(--button-shape) var(--button-shape) var(--rounding-medium);
+}
+
+.group.icons {
+  gap: .5rem;
+}
+
+.group.icons :where(button, .btn) {
+  --size: 4.25rem;
+  height: var(--size);
+  border-radius: var(--group-icon-button-shape);
+}
+
+.group.icons.large :where(button, .btn) {
+  --size: 5rem;
+}
+
+.group.icons.extra :where(button, .btn) {
+  --size: 6rem;
+}
+
+.group.icons :where(button, .btn):has(input:checked) {
+  border-radius: var(--rounding-large);
+}
+
+.group.icons :where(button, .btn):active,
+.physics :where(button, .btn):active {
+  padding: 0 2rem;
+}
+
+.group.icons :where(button, .btn) iconify-icon {
+  font-size: 2rem;
+}
+
+.group .extended {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.group .extended iconify-icon {
+  margin-right: 1rem;
 }
 
 .card {
@@ -452,15 +488,15 @@ main > aside li:not(.active):hover i,
 }
 
 .container:not(:has(>header, >footer)),
-.container > header,
-.container:not(.min) > footer {
+.container>header,
+.container:not(.min)>footer {
   padding: 1rem;
   border-radius: var(--rounding-extra-large);
   background: var(--surface-container-low);
   color: var(--on-surface);
 }
 
-.container.min > footer {
+.container.min>footer {
   padding: 1rem 0;
 }
 
@@ -470,19 +506,20 @@ main > aside li:not(.active):hover i,
   gap: 0.5rem;
 }
 
-.container > header {
+.container>header {
   flex-grow: 1;
 }
 
-.container:not(.min) > header {
+.container:not(.min)>header {
   border-radius: var(--rounding-extra-large) var(--rounding-extra-large) var(--rounding-small) var(--rounding-small);
 }
 
-.container:not(.min) > footer {
+.container:not(.min)>footer {
   border-radius: var(--rounding-small) var(--rounding-small) var(--rounding-extra-large) var(--rounding-extra-large);
 }
 
 .chip {
+  height: 2rem;
   display: inline-flex;
   padding: 0.35rem 1rem;
   border-radius: var(--chip-shape);
@@ -491,11 +528,11 @@ main > aside li:not(.active):hover i,
   border: solid 0.0625rem var(--outline);
 }
 
-.chip:not(.icon) i * {
+.chip:not(.icon) iconify-icon {
   margin-left: -0.25rem;
 }
 
-.chip:not(.icon) i:last-child {
+.chip:not(.icon) iconify-icon:last-child {
   margin-left: 0.65rem;
   margin-right: -0.75rem;
 }
@@ -517,11 +554,11 @@ main > aside li:not(.active):hover i,
   position: absolute;
 }
 
-input.dialog-trigger:not(:checked) + .dialog {
+input.dialog-trigger:not(:checked)+.dialog {
   display: none;
 }
 
-input.dialog-trigger:checked + .dialog {
+input.dialog-trigger:checked+.dialog {
   display: block;
 }
 
@@ -535,6 +572,7 @@ input.dialog-trigger:checked + .dialog {
   background: var(--surface-container-high);
   color: var(--on-surface-variant);
   border: none;
+  outline: none;
   border-radius: var(--dialog-shape);
   min-width: 35rem;
   padding: 1.5rem 1.5rem;
@@ -548,13 +586,13 @@ input.dialog-trigger:checked + .dialog {
   min-width: 50rem;
 }
 
-:is(dialog, .dialog) :where(i, h1, h2, h3, h4, h5, h6) {
+:is(dialog, .dialog) :where(iconify-icon, h1, h2, h3, h4, h5, h6) {
   display: block;
   text-align: center;
 }
 
 dialog:not(.bottom-sheet)[open],
-input.dialog-trigger:checked + .dialog:not(.bottom-sheet) {
+input.dialog-trigger:checked+.dialog:not(.bottom-sheet) {
   animation: dialog-in var(--curve-decel) 0.5s, opacity var(--curve-decel) 0.1s both;
 }
 
@@ -569,7 +607,7 @@ input.dialog-trigger:checked + .dialog:not(.bottom-sheet) {
 }
 
 dialog[open].bottom-sheet,
-input.dialog-trigger:checked + .dialog.bottom-sheet {
+input.dialog-trigger:checked+.dialog.bottom-sheet {
   animation: dialog-bottom var(--curve-decel) 0.5s;
 }
 
@@ -654,6 +692,7 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   box-sizing: border-box;
   font: inherit;
   padding: 1rem;
+  resize: vertical;
 }
 
 .field:not(.outline) :is(input, textarea) {
@@ -743,29 +782,26 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   color: var(--primary);
 }
 
-.field:has(i) :is(input, textarea) {
+.field:has(iconify-icon) :is(input, textarea) {
   padding-left: 2.85rem !important;
 }
 
-.field:has(i) label {
+.field:has(iconify-icon) label {
   left: 2.85rem;
 }
 
-.field.outline:has(i) :is(input, textarea):is(:focus, :not(:-moz-placeholder)) + label {
+.field.outline:has(iconify-icon) :is(input, textarea):is(:focus, :not(:-moz-placeholder)) + label {
   left: 1rem;
 }
 
-.field.outline:has(i) :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label {
+.field.outline:has(iconify-icon) :is(input, textarea):is(:focus, :not(:placeholder-shown)) + label {
   left: 1rem;
 }
 
-.field i {
+.field iconify-icon {
   position: absolute;
   pointer-events: none;
   left: 0.65rem;
-}
-
-.field i * {
   font-size: 1.5rem;
 }
 
@@ -780,7 +816,7 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   margin-right: 0.75rem;
 }
 
-:is(.checkbox, .radio) > input {
+:is(.checkbox, .radio)>input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -802,11 +838,11 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   transition: all var(--curve-decel) 0.35s;
 }
 
-:is(.checkbox, .radio):hover > input {
+:is(.checkbox, .radio):hover>input {
   opacity: 0.08;
 }
 
-:is(.checkbox, .radio) > span::before {
+:is(.checkbox, .radio)>span::before {
   content: "";
   display: inline-block;
   box-sizing: border-box;
@@ -816,31 +852,31 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   transition: all 0.2s;
 }
 
-.checkbox > span::before {
+.checkbox>span::before {
   margin: 3px 11px 3px 1px;
   width: 18px;
   height: 18px;
 }
 
-.checkbox > input:checked + span::before {
+.checkbox>input:checked+span::before {
   border-color: var(--primary);
   background-color: var(--primary);
 }
 
-.radio >span::before {
+.radio>span::before {
   margin: 2px 10px 2px 0;
   border-radius: 50%;
   width: 20px;
   height: 20px;
 }
 
-:is(.checkbox, .radio) > span::after {
+:is(.checkbox, .radio)>span::after {
   content: "";
   display: block;
   position: absolute;
 }
 
-.checkbox > span::after {
+.checkbox>span::after {
   top: 4px;
   left: 1px;
   width: 10px;
@@ -851,7 +887,7 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   transform: translate(3px, 4px) rotate(-45deg);
 }
 
-.radio > span::after {
+.radio>span::after {
   top: 2px;
   left: 0;
   border-radius: 50%;
@@ -862,20 +898,20 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   transition: transform var(--easing-fast-spatial);
 }
 
-.radio > input:checked + span::after {
+.radio>input:checked+span::after {
   transform: translate(5px, 5px) scale(1);
 }
 
-:is(.checkbox, .radio) > input:checked {
+:is(.checkbox, .radio)>input:checked {
   background-color: var(--primary);
 }
 
-:is(.checkbox, .radio) > input:checked + span::after {
+:is(.checkbox, .radio)>input:checked+span::after {
   border-color: var(--on-primary);
 }
 
-:is(.checkbox, .radio) > input:active + span::before,
-.radio > input:checked + span::before {
+:is(.checkbox, .radio)>input:active+span::before,
+.radio>input:checked+span::before {
   border-color: var(--primary);
 }
 
@@ -885,191 +921,193 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   gap: 1rem;
 }
 
-.grid > * {
+.grid>* {
   margin: 0;
   grid-column: span var(--num);
 }
 
-.grid > .s1,
-.grid.all-s1 > * {
+.grid>.s1,
+.grid.all-s1>* {
   --num: 1;
 }
 
-.grid > .s2,
-.grid.all-s2 > * {
+.grid>.s2,
+.grid.all-s2>* {
   --num: 2;
 }
 
-.grid > .s3,
-.grid.all-s3 > * {
+.grid>.s3,
+.grid.all-s3>* {
   --num: 3;
 }
 
-.grid > .s4,
-.grid.all-s4 > * {
+.grid>.s4,
+.grid.all-s4>* {
   --num: 4;
 }
 
-.grid > .s5,
-.grid.all-s5 > * {
+.grid>.s5,
+.grid.all-s5>* {
   --num: 5;
 }
 
-.grid > .s6,
-.grid.all-s6 > * {
+.grid>.s6,
+.grid.all-s6>* {
   --num: 6;
 }
 
-.grid > .s7,
-.grid.all-s7 > * {
+.grid>.s7,
+.grid.all-s7>* {
   --num: 7;
 }
 
-.grid > .s8,
-.grid.all-s8 > * {
+.grid>.s8,
+.grid.all-s8>* {
   --num: 8;
 }
 
-.grid > .s9,
-.grid.all-s9 > * {
+.grid>.s9,
+.grid.all-s9>* {
   --num: 9;
 }
 
-.grid > .s10,
-.grid.all-s10 > * {
+.grid>.s10,
+.grid.all-s10>* {
   --num: 10;
 }
 
-.grid > .s11,
-.grid.all-s11 > * {
+.grid>.s11,
+.grid.all-s11>* {
   --num: 11;
 }
 
-.grid > .s12,
-.grid.all-s12 > * {
+.grid>.s12,
+.grid.all-s12>* {
   --num: 12;
 }
 
 @media screen and (min-width: 48em) {
-  .grid > .m1,
-  .grid.all-m1 > * {
+
+  .grid>.m1,
+  .grid.all-m1>* {
     --num: 1;
   }
 
-  .grid > .m2,
-  .grid.all-m2 > * {
+  .grid>.m2,
+  .grid.all-m2>* {
     --num: 2;
   }
 
-  .grid > .m3,
-  .grid.all-m3 > * {
+  .grid>.m3,
+  .grid.all-m3>* {
     --num: 3;
   }
 
-  .grid > .m4,
-  .grid.all-m4 > * {
+  .grid>.m4,
+  .grid.all-m4>* {
     --num: 4;
   }
 
-  .grid > .m5,
-  .grid.all-m5 > * {
+  .grid>.m5,
+  .grid.all-m5>* {
     --num: 5;
   }
 
-  .grid > .m6,
-  .grid.all-m6 > * {
+  .grid>.m6,
+  .grid.all-m6>* {
     --num: 6;
   }
 
-  .grid > .m7,
-  .grid.all-m7 > * {
+  .grid>.m7,
+  .grid.all-m7>* {
     --num: 7;
   }
 
-  .grid > .m8,
-  .grid.all-m8 > * {
+  .grid>.m8,
+  .grid.all-m8>* {
     --num: 8;
   }
 
-  .grid > .m9,
-  .grid.all-m9 > * {
+  .grid>.m9,
+  .grid.all-m9>* {
     --num: 9;
   }
 
-  .grid > .m10,
-  .grid.all-m10 > * {
+  .grid>.m10,
+  .grid.all-m10>* {
     --num: 10;
   }
 
-  .grid > .m11,
-  .grid.all-m11 > * {
+  .grid>.m11,
+  .grid.all-m11>* {
     --num: 11;
   }
 
-  .grid > .m12,
-  .grid.all-m12 > * {
+  .grid>.m12,
+  .grid.all-m12>* {
     --num: 12;
   }
 }
 
 @media screen and (min-width: 64em) {
-  .grid > .l1,
-  .grid.all-l1 > * {
+
+  .grid>.l1,
+  .grid.all-l1>* {
     --num: 1;
   }
 
-  .grid > .l2,
-  .grid.all-l2 > * {
+  .grid>.l2,
+  .grid.all-l2>* {
     --num: 2;
   }
 
-  .grid > .l3,
-  .grid.all-l3 > * {
+  .grid>.l3,
+  .grid.all-l3>* {
     --num: 3;
   }
 
-  .grid > .l4,
-  .grid.all-l4 > * {
+  .grid>.l4,
+  .grid.all-l4>* {
     --num: 4;
   }
 
-  .grid > .l5,
-  .grid.all-l5 > * {
+  .grid>.l5,
+  .grid.all-l5>* {
     --num: 5;
   }
 
-  .grid > .l6,
-  .grid.all-l6 > * {
+  .grid>.l6,
+  .grid.all-l6>* {
     --num: 6;
   }
 
-  .grid > .l7,
-  .grid.all-l7 > * {
+  .grid>.l7,
+  .grid.all-l7>* {
     --num: 7;
   }
 
-  .grid > .l8,
-  .grid.all-l8 > * {
+  .grid>.l8,
+  .grid.all-l8>* {
     --num: 8;
   }
 
-  .grid > .l9,
-  .grid.all-l9 > * {
+  .grid>.l9,
+  .grid.all-l9>* {
     --num: 9;
   }
 
-  .grid > .l10,
-  .grid.all-l10 > * {
+  .grid>.l10,
+  .grid.all-l10>* {
     --num: 10;
   }
 
-  .grid > .l11,
-  .grid.all-l11 > * {
+  .grid>.l11,
+  .grid.all-l11>* {
     --num: 11;
   }
 
-  .grid > .l12,
-  .grid.all-l12 > * {
+  .grid>.l12,
+  .grid.all-l12>* {
     --num: 12;
   }
 }
@@ -1080,7 +1118,7 @@ input.dialog-trigger:has(+ .dialog.bottom-sheet):checked::after {
   gap: 0;
 }
 
-.grid-outline > * {
+.grid-outline>* {
   border-top: 1px solid var(--outline-variant);
   border-right: 1px solid var(--outline-variant);
 }
@@ -1092,27 +1130,26 @@ details .menu {
 
 .list-box,
 .menu {
-  background: var(--surface-container);
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.list-box > * {
+.list-box>* {
   padding: 1.15rem 1rem 0.75rem;
 }
 
-.list-box > * > article * {
+.list-box>*>article * {
   margin: 0;
 }
 
-.list-box > * i *,
-.menu > * i * {
+.list-box>* iconify-icon,
+.menu>* iconify-icon {
   font-size: 1.5rem;
   margin-right: 1rem;
 }
 
-.list-box > * + * {
+.list-box>*+* {
   border-top: 1px solid var(--outline-variant);
 }
 
@@ -1127,13 +1164,13 @@ details .menu {
   max-width: 17.5rem;
 }
 
-.menu > * {
+.menu>* {
   padding: 0.75rem;
   cursor: pointer;
   transition: 0.1s;
 }
 
-main > aside {
+main>aside {
   position: fixed;
   top: 0;
   left: 0;
@@ -1141,7 +1178,7 @@ main > aside {
   padding: 0 1.25rem;
 }
 
-main > aside > :is(menu, .row) {
+main>aside> :is(menu, .row) {
   display: flex;
   height: 100%;
   justify-content: center;
@@ -1150,14 +1187,14 @@ main > aside > :is(menu, .row) {
   margin: 0;
 }
 
-main > article {
+main>article {
   width: 93%;
   margin: 0 0 0 auto;
   padding: 0 1.5rem;
 }
 
 @media screen and (max-width: 64em) {
-  main > aside {
+  main>aside {
     background: var(--surface);
     top: auto;
     bottom: 0;
@@ -1168,7 +1205,7 @@ main > article {
     height: min-content;
   }
 
-  main > aside > :is(menu, .row) {
+  main>aside> :is(menu, .row) {
     justify-content: space-around;
     flex-direction: row;
   }
@@ -1178,7 +1215,7 @@ main > article {
     margin: 0 auto 2rem;
   }
 
-  main > article {
+  main>article {
     width: 100%;
     padding: 0 0 !important;
     margin-bottom: 2.25rem;
@@ -1191,11 +1228,11 @@ main > article {
 }
 
 :is(nav, .row):not(.segmented),
-.list-box > *,
-.menu > *,
+.list-box>*,
+.menu>*,
 label.checkbox *,
 label.radio *,
-.field:has(i) {
+.field:has(iconify-icon) {
   display: flex;
   align-items: center;
   align-self: normal;
@@ -1207,8 +1244,8 @@ label.radio *,
   margin-top: 0;
 }
 
-main > aside li,
-main > aside li:has(*>i) > * {
+main>aside li,
+main>aside li:has(*>iconify-icon)>* {
   width: 3.5rem;
   margin: 0.2rem 0;
   cursor: pointer;
@@ -1221,12 +1258,12 @@ main > aside li:has(*>i) > * {
   color: inherit;
 }
 
-main > aside li span {
+main>aside li span {
   font-size: 0.75rem;
   font-weight: 500;
 }
 
-main > aside li i {
+main>aside li iconify-icon {
   width: 100%;
   display: flex;
   align-self: center;
@@ -1237,19 +1274,20 @@ main > aside li i {
   transition: 0.1s;
 }
 
-main > aside li.active i {
+main>aside li.active iconify-icon {
   background: var(--secondary-container);
+  color: var(--on-secondary-container);
 }
 
-main > aside li i * {
+main>aside li iconify-icon {
   font-size: 1.5rem;
 }
 
-main > article > section {
+main>article>section {
   margin: 3.5rem 0;
 }
 
-main > aside * {
+main>aside * {
   align-self: center;
 }
 
@@ -1400,7 +1438,7 @@ progress.circle.spin {
   transition: var(--easing);
 }
 
-.slider input:active ~ .thumb {
+.slider input:active~.thumb {
   width: 0.125rem;
 }
 
@@ -1472,12 +1510,12 @@ progress.circle.spin {
 
 .switch {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   width: 3.25rem;
   height: 2rem;
 }
 
-.switch > span {
+.switch>span {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -1490,97 +1528,87 @@ progress.circle.spin {
   border-radius: 2rem;
 }
 
-.switch > span::before {
-  position: absolute;
+.switch>input+span::before {
   content: "";
+  position: absolute;
   width: 1rem;
   height: 1rem;
-  left: 0.4rem;
-  bottom: 0.4rem;
-  background: var(--outline);
-  transition: var(--easing-fast-spatial);
   border-radius: var(--switch-handle-shape);
+  background-color: var(--outline);
+  color: var(--on-primary, var(--on-primary-container));
+  cursor: pointer;
+  transition: var(--easing-fast-spatial);
+  left: .4rem;
+  top: 50%;
+  translate: 0 -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .switch input {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-  margin: -0.5rem 0;
+  -moz-appearance: none;
+  appearance: none;
   border-radius: var(--rounding-full);
-  transform: translateX(-0.5rem);
-  transition: 0.1s;
-  z-index: 1;
+  height: 3rem;
+  margin: -.5rem 0;
   pointer-events: none;
+  position: absolute;
+  transform: translateX(-.5rem);
+  transition: .1s;
+  width: 3rem;
+  z-index: 1
 }
 
 .switch:hover input {
-  background: rgb(from var(--primary) r g b / 10%);
+  background: rgb(from var(--primary) r g b/10%)
 }
 
-.switch > input:checked {
-  transform: translateX(0.75rem);
+.switch>input:checked {
+  transform: translateX(.75rem)
 }
 
-.switch > input:not(:checked):active + span::before {
-  width: 1.7rem;
-  height: 1.7rem;
-  bottom: .5px;
-  left: .75px;
-}
-
-.switch > input:hover + span {
-  border-color: var(--on-surface-variant);
-}
-
-.switch > input:hover + span::before {
-  background: var(--on-surface-variant);
-}
-
-.switch > input:checked + span {
+.switch>input:checked+span {
   background: var(--primary);
   border-color: var(--primary);
 }
 
-.switch > input:checked + span::before {
-  width: 1.55rem;
-  height: 1.55rem;
-  background: var(--on-primary);
-  transform: translateX(1rem);
-  bottom: 1.5px;
+.switch>input:hover+span:before {
+  background: var(--on-surface-variant)
 }
 
-.switch > input:checked:hover + span::before {
-  background: var(--primary-container);
+.switch>input:checked:hover+span:before {
+  background: var(--primary-container)
 }
 
-.switch > input:checked:active + span::before {
-  width: 1.8rem;
-  height: 1.8rem;
-  bottom: -.25px;
-  left: 4px;
+.switch>input:checked+span::before {
+  background-color: var(--on-primary);
+  scale: 1.5;
+  left: 1.65rem;
 }
 
-.switch > input + span::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0.45rem;
-  width: 0.3rem;
-  left: 0.65rem;
-  height: 11px;
+.switch:active>input+span::before {
+  scale: 1.75;
+}
+
+.switch>input+span:after {
   border: solid transparent;
-  border-width: 0 0.15em 0.15em 0;
+  border-width: 0 .1em .1em 0;
+  content: "";
+  display: block;
+  height: .55rem;
+  left: .7rem;
+  position: absolute;
+  top: .5rem;
   transform: translateX(0) rotate(45deg);
   transition: var(--easing-fast-spatial);
+  width: .275rem
 }
 
-.switch > input:checked + span::after {
-  transform: translateX(1.25rem) rotate(45deg);
+.switch>input:checked+span:after {
   border-color: var(--primary);
+  transform: translateX(1.25rem) rotate(45deg)
 }
 
 .tabs {
@@ -1596,13 +1624,19 @@ progress.circle.spin {
   width: -moz-max-content;
   width: max-content;
   padding: 0.65rem 1rem;
+  height: 4rem;
 }
 
 .tabs > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 0.65rem 0;
+  padding: 0 0;
+  height: 3rem;
   cursor: pointer;
   width: 100%;
   text-align: center;
@@ -1612,11 +1646,10 @@ progress.circle.spin {
   transition: 0.1s;
 }
 
-.tabs i {
-  display: block;
-}
-
-.tabs i * {
+.tabs iconify-icon {
+  display: flex !important;
+  flex: 1 !important;
+  flex-grow: 1 !important;
   font-size: 1.5rem;
 }
 
@@ -1624,17 +1657,23 @@ progress.circle.spin {
   color: var(--primary);
 }
 
-.tabs > label:has(input:checked)::after {
+.tabs > label::after {
   content: "";
   position: absolute;
   top: auto;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 0.15rem;
+  height: 0;
   width: 3rem;
   margin: 0 auto;
   background: var(--primary);
+  border-radius: .1875rem .1875rem 0 0;
+  transition: height var(--easing-fast-spatial);
+}
+
+.tabs > label:has(input:checked)::after {
+  height: .1875rem;
 }
 
 [class*=tooltipped] {
@@ -1853,10 +1892,6 @@ pre {
   overflow-x: auto;
 }
 
-i {
-  line-height: 0;
-}
-
 hr {
   border: none;
   height: 0.025rem;
@@ -1878,7 +1913,7 @@ pre {
   margin: 0;
 }
 
-pre > code {
+pre>code {
   padding: 0;
   font-size: 1rem;
 }

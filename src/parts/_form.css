@@ -9,7 +9,7 @@
   margin-right: 0.75rem;
 }
 
-:is(.checkbox, .radio) > input {
+:is(.checkbox, .radio)>input {
   appearance: none;
   z-index: -1;
   position: absolute;
@@ -29,11 +29,11 @@
   transition: all var(--curve-decel) 0.35s;
 }
 
-:is(.checkbox, .radio):hover > input {
+:is(.checkbox, .radio):hover>input {
   opacity: 0.08;
 }
 
-:is(.checkbox, .radio) > span::before {
+:is(.checkbox, .radio)>span::before {
   content: "";
   display: inline-block;
   box-sizing: border-box;
@@ -43,31 +43,31 @@
   transition: all 0.2s;
 }
 
-.checkbox > span::before {
+.checkbox>span::before {
   margin: 3px 11px 3px 1px;
   width: 18px;
   height: 18px;
 }
 
-.checkbox > input:checked + span::before {
+.checkbox>input:checked+span::before {
   border-color: var(--primary);
   background-color: var(--primary);
 }
 
-.radio >span::before {
+.radio>span::before {
   margin: 2px 10px 2px 0;
   border-radius: 50%;
   width: 20px;
   height: 20px;
 }
 
-:is(.checkbox, .radio) > span::after {
+:is(.checkbox, .radio)>span::after {
   content: "";
   display: block;
   position: absolute;
 }
 
-.checkbox > span::after {
+.checkbox>span::after {
   top: 4px;
   left: 1px;
   width: 10px;
@@ -78,7 +78,7 @@
   transform: translate(3px, 4px) rotate(-45deg);
 }
 
-.radio > span::after {
+.radio>span::after {
   top: 2px;
   left: 0;
   border-radius: 50%;
@@ -89,19 +89,19 @@
   transition: transform var(--easing-fast-spatial);
 }
 
-.radio > input:checked + span::after {
+.radio>input:checked+span::after {
   transform: translate(5px, 5px) scale(1);
 }
 
-:is(.checkbox, .radio) > input:checked {
+:is(.checkbox, .radio)>input:checked {
   background-color: var(--primary);
 }
 
-:is(.checkbox, .radio) > input:checked + span::after {
+:is(.checkbox, .radio)>input:checked+span::after {
   border-color: var(--on-primary);
 }
 
-:is(.checkbox, .radio) > input:active + span::before,
-.radio > input:checked + span::before {
+:is(.checkbox, .radio)>input:active+span::before,
+.radio>input:checked+span::before {
   border-color: var(--primary);
 }
