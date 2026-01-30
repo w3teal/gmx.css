@@ -1,3 +1,7 @@
+> # This repository has been moved!
+> 
+> See this repository on [SourceHut](https://sourcehut.org/): https://git.sr.ht/~w3teal/gmx.css
+
 # GMX.css
 
 [![NPM Version](https://img.shields.io/npm/v/gmx.css)](https://www.npmjs.com/package/gmx.css)
