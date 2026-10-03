@@ -1,0 +1,67 @@
+label.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+label.check input {
+  margin: 0;
+  zoom: 1.5;
+  width: auto;
+}
+
+fieldset.select,
+fieldset.text {
+  border: 2px solid var(--overlay);
+  border-radius: 0.25rem;
+  transition: 0.175s;
+}
+
+fieldset.select:has(select:focus),
+fieldset.text:has(input:focus) {
+  border: 2px solid var(--accent);
+}
+
+fieldset.select select,
+fieldset.text input,
+fieldset.range input {
+  width: 100%;
+}
+
+fieldset.select option {
+  background: var(--surface);
+}
+
+fieldset.select legend,
+fieldset.text legend {
+  padding-inline: 0.25rem;
+}
+
+fieldset.radio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  border: none;
+  padding: 0;
+}
+
+fieldset.radio input {
+  display: none;
+}
+
+fieldset.radio label {
+  flex: 1;
+}
+
+fieldset.radio legend,
+fieldset.range legend {
+  padding-inline: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+fieldset.range {
+  display: flex;
+  padding: 0;
+  border: none;
+  margin-inline: 0;
+}

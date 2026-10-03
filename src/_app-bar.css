@@ -1,0 +1,11 @@
+.app-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--bg);
+  padding-block: 0.5rem;
+}
+
+.app-bar .title {
+  padding-inline: 1rem;
+}

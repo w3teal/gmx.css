@@ -1,0 +1,29 @@
+button,
+.button,
+fieldset.radio label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background: var(--overlay);
+  border-radius: 0.5rem;
+  transition: 0.175s;
+  cursor: pointer;
+}
+
+button.accent,
+.button.accent,
+fieldset.radio label:has(input:checked) {
+  background: var(--accent);
+  color: var(--accent-txt);
+  border-radius: 1.375rem;
+}
+
+button:active,
+.button:active,
+fieldset.radio label:active {
+  border-radius: 0.875rem !important;
+}

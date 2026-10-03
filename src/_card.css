@@ -1,0 +1,16 @@
+.card {
+  background: var(--surface);
+  position: relative;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-block: 1rem;
+  min-block-size: 8rem;
+}
+
+.card > :first-child {
+  margin-block-start: 0;
+}
+
+.card > :last-child {
+  margin-block-end: 0;
+}

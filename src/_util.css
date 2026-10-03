@@ -1,0 +1,22 @@
+.bg-none {
+  background: none;
+}
+
+.bg-accent {
+  background: color-mix(in srgb, var(--accent) 25%, var(--bg));
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row > * {
+  margin: 0;
+}
+
+.max {
+  width: 100%;
+}

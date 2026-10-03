@@ -1,0 +1,163 @@
+html {
+  :has(#system:checked) {
+    --font:
+      system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  :has(#serif:checked) {
+    --font: Georgia, "Times New Roman", Times, serif;
+  }
+
+  :has(#mono:checked) {
+    --font: monospace;
+  }
+
+  :has(#latte:checked) {
+    color-scheme: light;
+    --bg: #eff1f5;
+    --surface: #ccd0da;
+    --text: #4c4f69;
+    --accent-txt: #eff1f5;
+    --overlay: #bcc0cc;
+
+    :has(#mauve:checked) {
+      --accent: #8839ef;
+    }
+
+    :has(#red:checked) {
+      --accent: #d20f39;
+    }
+
+    :has(#peach:checked) {
+      --accent: #fe640b;
+    }
+
+    :has(#yellow:checked) {
+      --accent: #df8e1d;
+    }
+
+    :has(#green:checked) {
+      --accent: #40a02b;
+    }
+
+    :has(#teal:checked) {
+      --accent: #179299;
+    }
+
+    :has(#blue:checked) {
+      --accent: #1e66f5;
+    }
+  }
+
+  :has(#frappe:checked) {
+    color-scheme: dark;
+    --bg: #303446;
+    --surface: #414559;
+    --text: #c6d0f5;
+    --accent-txt: #303446;
+    --overlay: #51576d;
+
+    :has(#mauve:checked) {
+      --accent: #ca9ee6;
+    }
+
+    :has(#red:checked) {
+      --accent: #e78284;
+    }
+
+    :has(#peach:checked) {
+      --accent: #ef9f76;
+    }
+
+    :has(#yellow:checked) {
+      --accent: #e5c890;
+    }
+
+    :has(#green:checked) {
+      --accent: #a6d189;
+    }
+
+    :has(#teal:checked) {
+      --accent: #81c8be;
+    }
+
+    :has(#blue:checked) {
+      --accent: #8caaee;
+    }
+  }
+
+  :has(#macchiato:checked) {
+    color-scheme: dark;
+    --bg: #24273a;
+    --surface: #363a4f;
+    --text: #cad3f5;
+    --accent-txt: #24273a;
+    --overlay: #494d64;
+
+    :has(#mauve:checked) {
+      --accent: #c6a0f6;
+    }
+
+    :has(#red:checked) {
+      --accent: #ed8796;
+    }
+
+    :has(#peach:checked) {
+      --accent: #f5a97f;
+    }
+
+    :has(#yellow:checked) {
+      --accent: #eed49f;
+    }
+
+    :has(#green:checked) {
+      --accent: #a6da95;
+    }
+
+    :has(#teal:checked) {
+      --accent: #8bd5ca;
+    }
+
+    :has(#blue:checked) {
+      --accent: #8aadf4;
+    }
+  }
+
+  :has(#mocha:checked) {
+    color-scheme: dark;
+    --bg: #1e1e2e;
+    --surface: #313244;
+    --text: #cdd6f4;
+    --accent-txt: #1e1e2e;
+    --overlay: #45475a;
+
+    :has(#mauve:checked) {
+      --accent: #cba6f7;
+    }
+
+    :has(#red:checked) {
+      --accent: #f38ba8;
+    }
+
+    :has(#peach:checked) {
+      --accent: #fab387;
+    }
+
+    :has(#yellow:checked) {
+      --accent: #f9e2af;
+    }
+
+    :has(#green:checked) {
+      --accent: #a6e3a1;
+    }
+
+    :has(#teal:checked) {
+      --accent: #94e2d5;
+    }
+
+    :has(#blue:checked) {
+      --accent: #89b4fa;
+    }
+  }
+}

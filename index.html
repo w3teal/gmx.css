@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMX.css</title>
+    <link rel="stylesheet" href="src/gmx.css" />
+  </head>
+
+  <body>
+    <main>
+      <header class="app-bar">
+        <h1 class="title">GMX.css</h1>
+      </header>
+
+      <section class="card">
+        <h1>Brand new image <span class="chip">0.1.0</span></h1>
+
+        <div class="grid all-s12 all-m6">
+          <div>
+            <p>
+              It's dead easy, lightweight and pretty in everywhere! Our
+              guideline is the
+              <span title="Funny right?">rough Material Design</span> with
+              Catppuccin colors, with pure CSS and good semantic HTML
+              underneath, without external libraries, leaving no trace of
+              unwanted codes and <code>!important</code> thingy. There's no need
+              to adding a bunch of class names like other frameworks.
+            </p>
+            <p>
+              It is the <b>G</b>ood <b>M</b>aterial e<b>X</b>perience.
+              (self-proclaimed)
+            </p>
+          </div>
+
+          <div>
+            <div class="row">
+              <a
+                href="https://github.com/w3teal/gmx.css"
+                target="_blank"
+                class="button max accent"
+                >GitHub</a
+              >
+              <a
+                href="https://www.npmjs.com/package/gmx.css"
+                target="_blank"
+                class="button max"
+                >NPM</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid all-s12 all-m6">
+        <div class="card">
+          <h1>Appearance</h1>
+
+          <p>
+            This is an prime example on how checked state hack in CSS can be
+            used, it's experimental, yet just working.
+          </p>
+          <fieldset class="radio">
+            <legend>Flavors</legend>
+            <label for="latte">
+              <input type="radio" id="latte" name="flavors" />
+              Latte
+            </label>
+            <label for="frappe">
+              <input type="radio" id="frappe" name="flavors" />
+              Frappé
+            </label>
+            <label for="macchiato">
+              <input type="radio" id="macchiato" name="flavors" />
+              Macchiato
+            </label>
+            <label for="mocha">
+              <input type="radio" id="mocha" name="flavors" checked />
+              Mocha
+            </label>
+          </fieldset>
+
+          <fieldset class="radio">
+            <legend>Accents</legend>
+            <label for="mauve">
+              <input type="radio" id="mauve" name="accents" checked />
+              Mauve
+            </label>
+            <label for="red">
+              <input type="radio" id="red" name="accents" />
+              Red
+            </label>
+            <label for="peach">
+              <input type="radio" id="peach" name="accents" />
+              Peach
+            </label>
+            <label for="yellow">
+              <input type="radio" id="yellow" name="accents" />
+              Yellow
+            </label>
+            <label for="green">
+              <input type="radio" id="green" name="accents" />
+              Green
+            </label>
+            <label for="teal">
+              <input type="radio" id="teal" name="accents" />
+              Teal
+            </label>
+            <label for="blue">
+              <input type="radio" id="blue" name="accents" />
+              Blue
+            </label>
+          </fieldset>
+
+          <fieldset class="radio">
+            <legend>Fonts</legend>
+            <label for="system">
+              <input type="radio" id="system" name="fonts" checked />
+              System
+            </label>
+            <label for="serif">
+              <input type="radio" id="serif" name="fonts" />
+              Serif
+            </label>
+            <label for="mono">
+              <input type="radio" id="mono" name="fonts" />
+              Mono
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="card">
+          <h1>Components</h1>
+          <p>
+            It's should be just works and pretty! It's using the semantic
+            fieldset, legend and labels, that is also looks beautiful in code
+            editor.
+          </p>
+
+          <div class="row">
+            <button>Button</button>
+            <button class="accent">Button</button>
+            <label class="check" for="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" checked />
+              <span>Checkbox</span>
+            </label>
+            <fieldset class="text">
+              <legend title="I don't know the name!">Your Name</legend>
+              <input type="text" value="Mada kono sekai wa" name="" id="" />
+            </fieldset>
+            <fieldset class="range">
+              <input type="range" name="" id="" />
+            </fieldset>
+            <span class="chip">Chip</span>
+            <blockquote>
+              It's no longer an poor copy of
+              <a href="https://kendell.dev/m3-svelte/">M3 Svelte</a>, I start to
+              re-working it into stronger, ready to use UI framework instead
+              just a beta prototype, and carefully hand-written.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <div class="card bg-none">
+        <h1>Example</h1>
+        <p>What you can do? More coming soon.</p>
+      </div>
+
+      <section class="grid">
+        <div class="card s12 m8 bg-accent"></div>
+
+        <div class="card s12 m4">
+          <h2>Page & image settings</h2>
+
+          <fieldset class="text">
+            <legend>Date</legend>
+            <input type="date" name="date" id="date" value="2024-12-08" />
+          </fieldset>
+
+          <fieldset class="select">
+            <legend>Paper size</legend>
+            <select name="paper-size" id="paper-size">
+              <option value="A0">A0 (841×1189 mm)</option>
+              <option value="A1">A1 (594×841 mm)</option>
+              <option value="A2">A2 (420×594 mm)</option>
+              <option value="A3">A3 (297×420 mm)</option>
+              <option value="A4">A4 (210×297 mm)</option>
+            </select>
+          </fieldset>
+
+          <fieldset class="radio">
+            <legend>Orientation</legend>
+            <label for="portrait"
+              ><input
+                type="radio"
+                id="portrait"
+                name="orientation"
+                value="portrait"
+                checked
+              />Portrait</label
+            >
+            <label for="landscape"
+              ><input
+                type="radio"
+                id="landscape"
+                name="orientation"
+              />Landscape</label
+            >
+          </fieldset>
+
+          <fieldset class="radio">
+            <legend>Image fit</legend>
+            <label for="contain"
+              ><input
+                type="radio"
+                id="contain"
+                name="image-fit"
+                value="contain"
+                checked
+              />Contain</label
+            >
+            <label for="cover"
+              ><input
+                type="radio"
+                id="cover"
+                name="image-fit"
+                value="cover"
+              />Cover</label
+            >
+          </fieldset>
+
+          <fieldset class="range">
+            <legend>Margin</legend>
+            <input
+              type="range"
+              min="0"
+              max="50"
+              step="5"
+              name=""
+              id=""
+              list="markers"
+            />
+
+            <datalist id="markers">
+              <option value="0"></option>
+              <option value="5"></option>
+              <option value="10"></option>
+              <option value="15"></option>
+              <option value="20"></option>
+              <option value="25"></option>
+              <option value="30"></option>
+              <option value="35"></option>
+              <option value="40"></option>
+              <option value="45"></option>
+              <option value="50"></option>
+            </datalist>
+          </fieldset>
+
+          <button class="accent max">Add images to print</button>
+        </div>
+      </section>
+
+      <div class="card bg-none">
+        <h1>Grid</h1>
+        <p>Example of the grid system.</p>
+      </div>
+      <section class="grid">
+        <div class="card s4"></div>
+        <div class="card s8"></div>
+        <div class="card s3"></div>
+        <div class="card s2"></div>
+        <div class="card s1"></div>
+        <div class="card s4"></div>
+        <div class="card s2"></div>
+      </section>
+
+      <footer>
+        <p>
+          Made with ❤️ by <a href="https://w3teal.ill.my.id/">W3Teal</a> <br />
+          For clean web
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

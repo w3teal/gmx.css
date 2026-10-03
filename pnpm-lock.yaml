@@ -1,0 +1,305 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies: {}
+    packageManagerDependencies:
+      pnpm:
+        specifier: 12.8.1
+        version: 12.8.1
+
+packages:
+
+  '@pnpm/exe.android-arm64@12.8.1':
+    resolution: {integrity: sha512-siDxcidfz5eM6L2tJfik+i2bbUEw8UC7MZ3Yl2HYdRmqbdhHGAOQACtOOu6QVW4Jul4/w5wVKm+wM8ACtgh1Pg==}
+    cpu: [arm64]
+    os: [android]
+
+  '@pnpm/exe.android-x64@12.8.1':
+    resolution: {integrity: sha512-0F/uqPRc3aN4vLHsa0f+6fTtmsigFQ9/yxEU43fionF//pNHEd5e97b3w/nKIgqYMCUQCJphmBRMA9Q8/wlo9Q==}
+    cpu: [x64]
+    os: [android]
+
+  '@pnpm/exe.darwin-arm64@12.8.1':
+    resolution: {integrity: sha512-/rwavvMQJsl2RIxOHBnDF+4Gk+fhQFAY4M3PQZoKskJOEnaJcygG9p1xby6wcQcbS4d9dIubv09CQhufTgfmpw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@pnpm/exe.darwin-x64@12.8.1':
+    resolution: {integrity: sha512-htYt2gN7zqJKLhC99Ft6EUiO7myjZAZXfmGCTJUL1v+o7vE9hZdE1+fAkk4Oj1ZHNRti6b2woOxEkRkAusi8OQ==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@pnpm/exe.freebsd-x64@12.8.1':
+    resolution: {integrity: sha512-PB5BULNgytxvExoOXUUeseS/DcpPENs+cg3iA6xHHeaLT4ctEGKSGXEbuj7USeqvo8JBpAx039hivnbzGqDwnA==}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@pnpm/exe.linux-arm64-musl@12.8.1':
+    resolution: {integrity: sha512-kKeyC/ArjrgdciQRBrOL0j9HtOI4gDRgoyP+eJ1CQKyadpKlf/DhDDyspXe07R3B9KagTVLUF2nlt6Dr5quFIg==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-arm64@12.8.1':
+    resolution: {integrity: sha512-q4s9a9X2O3N9aeUFooW24orNrxvu20+jyVUFR5RanPCqOKKPBrgs2iywMkBBx1aXkkzdWT54/mfz8Be8sJlWEw==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-ppc64@12.8.1':
+    resolution: {integrity: sha512-F7XSjKJthwCh/L6abZiMpAfo2Cm61SZIT3e4dfgiIjESndlWaXCnfLKngSgZ/SEMsdmHT6dud3+kWIB3tw0/xQ==}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-riscv64@12.8.1':
+    resolution: {integrity: sha512-z1ecpIK/ZY08Unk69KWWE9867oaKUytGUjrHnBoGFAAhsK+q+0cfvBH+f5fWobJ7FX97leMlLO+gkJolddM45Q==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-s390x@12.8.1':
+    resolution: {integrity: sha512-KU6tnrBfu4uKXTq6N5qJwSm8FSrs9Wc8b5AUEsHK9bRXwNdsZ1/lRxG1++X29SKRW9OSNuDSjxASv5mAvGo1gA==}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-x64-musl@12.8.1':
+    resolution: {integrity: sha512-eUE8BWJkDr2tJb/yrk0yVnszlmNqFarVxUlqiZ9BAkct28Nq/5g2H0tvMDmPA7fAQW3STNj+omJPPRVT+4s5sQ==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-x64@12.8.1':
+    resolution: {integrity: sha512-8bDZ0lZlCdi2rvnFul7EYgcC7zKeWSe76y8JV2oXobaS8p9i9d6PSf6LgLtTM0fI7R9Oh4eLCbveXyNDMmvZ+g==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.win32-arm64@12.8.1':
+    resolution: {integrity: sha512-MsT0dlrRxnCRCHCaosNbhWpEiAFnFuMEu3KuDJDU41BXgTwiINxU8goloUSUDejWZUqKaUqNC/qUTihl9nFtqg==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@pnpm/exe.win32-x64@12.8.1':
+    resolution: {integrity: sha512-SWtPe0PsbTTk//gJND10tMdOfCYjrkq5+qV49hzVhY7xz2iJ339Rc+xwASlcvbwTfrvH39YNqpKYibD+CRGLwA==}
+    cpu: [x64]
+    os: [win32]
+
+  pnpm@12.8.1:
+    resolution: {integrity: sha512-9kupB1B/XOr+BsjTjmBS0BeURFgOwSed3Vv8EctIqoomRLZlmOB+dh2oSHKp/FfV+QK4f6SdAkGY1VhhKqu+RQ==}
+    engines: {node: '>=18.*'}
+    hasBin: true
+
+snapshots:
+
+  '@pnpm/exe.android-arm64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.android-x64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.darwin-arm64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.darwin-x64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.freebsd-x64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.linux-arm64-musl@12.8.1':
+    optional: true
+
+  '@pnpm/exe.linux-arm64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.linux-ppc64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.linux-riscv64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.linux-s390x@12.8.1':
+    optional: true
+
+  '@pnpm/exe.linux-x64-musl@12.8.1':
+    optional: true
+
+  '@pnpm/exe.linux-x64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.win32-arm64@12.8.1':
+    optional: true
+
+  '@pnpm/exe.win32-x64@12.8.1':
+    optional: true
+
+  pnpm@12.8.1:
+    optionalDependencies:
+      '@pnpm/exe.android-arm64': 12.8.1
+      '@pnpm/exe.android-x64': 12.8.1
+      '@pnpm/exe.darwin-arm64': 12.8.1
+      '@pnpm/exe.darwin-x64': 12.8.1
+      '@pnpm/exe.freebsd-x64': 12.8.1
+      '@pnpm/exe.linux-arm64': 12.8.1
+      '@pnpm/exe.linux-arm64-musl': 12.8.1
+      '@pnpm/exe.linux-ppc64': 12.8.1
+      '@pnpm/exe.linux-riscv64': 12.8.1
+      '@pnpm/exe.linux-s390x': 12.8.1
+      '@pnpm/exe.linux-x64': 12.8.1
+      '@pnpm/exe.linux-x64-musl': 12.8.1
+      '@pnpm/exe.win32-arm64': 12.8.1
+      '@pnpm/exe.win32-x64': 12.8.1
+
+---
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      lightningcss-cli:
+        specifier: ^1.33.0
+        version: 1.33.0
+
+packages:
+
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
+    engines: {node: '>=8'}
+
+  lightningcss-cli-android-arm64@1.33.0:
+    resolution: {integrity: sha512-c0Xd7Gxaw3mNOyrb9ET1JH3JjuB69GY/6pHO4vgwEbIoHCXAt6DBg6kxr5t/oZL9LRxdnZCXF+o0Evz6kuR/xA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [android]
+
+  lightningcss-cli-darwin-arm64@1.33.0:
+    resolution: {integrity: sha512-sso5hSFPis7ldw2FcBopsZviSVAXWRGX8ybUwMhQHssTlERenQJ88WihZs08tCdSnQULo2kunnrGhh4VjRw8Fg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+
+  lightningcss-cli-darwin-x64@1.33.0:
+    resolution: {integrity: sha512-/aDYpMv2QKpJoSIwvwpIs4tIX9SCU894eospSm55FR5MxDZkJDy4fEX6elsXkHCBDqbAknb4qd2h/oDMLTC4Ew==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [darwin]
+
+  lightningcss-cli-freebsd-x64@1.33.0:
+    resolution: {integrity: sha512-kK9u4IEAvt3+1m7lkloyfZNfXykXq2vCH7lgZ5aEqa8VuBZYqvcAIQ4Qt1593QJxbko9HEKUP0erdSxw7k7eFw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [freebsd]
+
+  lightningcss-cli-linux-arm-gnueabihf@1.33.0:
+    resolution: {integrity: sha512-4bHmUlYCb8WKdPKx2yhk8y/kD034JVuUatDMWav0uU/hEIYJrxPimWBJJ4w2lgpcWchVnk/Kuihs4vaLjO/ozw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm]
+    os: [linux]
+
+  lightningcss-cli-linux-arm64-gnu@1.33.0:
+    resolution: {integrity: sha512-DkYmkBix3icAZKZsxGsjBAj59CIV0zflZtsT66lCPd2z3OqBLJlhKRrw4TlAW7mIkYeOEYWKVz/G00ZGXNse4A==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  lightningcss-cli-linux-arm64-musl@1.33.0:
+    resolution: {integrity: sha512-euNOhzo1ysRl719HfFzRe9r9usWO2Z/Nb8RnmqXxb/kvzOgAv2BcflpoTu6tWhSrbHX6YS/WP6mMFrmII6T7Hw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  lightningcss-cli-linux-x64-gnu@1.33.0:
+    resolution: {integrity: sha512-9Q4DAglm17bLhA+HZPB+vxjrHXdhR/8U44zyc8MQNA5Rw+tisvcoR/lv4iuBUFn2qreYVRWQq0wP0rgdhTSxyQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  lightningcss-cli-linux-x64-musl@1.33.0:
+    resolution: {integrity: sha512-+EobHdqxQ21SUMF8OU0qcizNIrLpPDaPTKQCaGbra9gL3NrW3ELG+exZl5y+WzJsEjLZ0hhjbCFjHUL/03H2JA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  lightningcss-cli-win32-arm64-msvc@1.33.0:
+    resolution: {integrity: sha512-iwQ+8rHQy3ewC4c43Ik3UZ8TCC/rjShP3r/8TOPw4fT8wQmW7dS3BNNHPK+LWz9qNrObATJ4MZEEZVRneckOBw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [win32]
+
+  lightningcss-cli-win32-x64-msvc@1.33.0:
+    resolution: {integrity: sha512-sgtNPw2gxnY8OzCCMTKCkHSIiBYb/wfXLpLMmDIJFzcX2OETY+VOnQd7OBHx+hVSlrMU7iWL6oJ5rc+nQwteVA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [win32]
+
+  lightningcss-cli@1.33.0:
+    resolution: {integrity: sha512-/tBcBZlBFFxy1iYKDC/HSH/NEjv7Frq6dmDVKRbhGJQI/gFJIJ1/4ZXclxJkd0eEjBjDc5MY0YugHcvJVVGJVg==}
+    engines: {node: '>= 12.0.0'}
+    hasBin: true
+
+snapshots:
+
+  detect-libc@2.1.2: {}
+
+  lightningcss-cli-android-arm64@1.33.0:
+    optional: true
+
+  lightningcss-cli-darwin-arm64@1.33.0:
+    optional: true
+
+  lightningcss-cli-darwin-x64@1.33.0:
+    optional: true
+
+  lightningcss-cli-freebsd-x64@1.33.0:
+    optional: true
+
+  lightningcss-cli-linux-arm-gnueabihf@1.33.0:
+    optional: true
+
+  lightningcss-cli-linux-arm64-gnu@1.33.0:
+    optional: true
+
+  lightningcss-cli-linux-arm64-musl@1.33.0:
+    optional: true
+
+  lightningcss-cli-linux-x64-gnu@1.33.0:
+    optional: true
+
+  lightningcss-cli-linux-x64-musl@1.33.0:
+    optional: true
+
+  lightningcss-cli-win32-arm64-msvc@1.33.0:
+    optional: true
+
+  lightningcss-cli-win32-x64-msvc@1.33.0:
+    optional: true
+
+  lightningcss-cli@1.33.0:
+    dependencies:
+      detect-libc: 2.1.2
+    optionalDependencies:
+      lightningcss-cli-android-arm64: 1.33.0
+      lightningcss-cli-darwin-arm64: 1.33.0
+      lightningcss-cli-darwin-x64: 1.33.0
+      lightningcss-cli-freebsd-x64: 1.33.0
+      lightningcss-cli-linux-arm-gnueabihf: 1.33.0
+      lightningcss-cli-linux-arm64-gnu: 1.33.0
+      lightningcss-cli-linux-arm64-musl: 1.33.0
+      lightningcss-cli-linux-x64-gnu: 1.33.0
+      lightningcss-cli-linux-x64-musl: 1.33.0
+      lightningcss-cli-win32-arm64-msvc: 1.33.0
+      lightningcss-cli-win32-x64-msvc: 1.33.0

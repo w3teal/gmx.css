@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  accent-color: var(--accent);
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+body > main {
+  padding-inline: 1rem;
+}
+
+main > footer {
+  padding-block: 2rem;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+}
+
+code {
+  font-size: 1rem;
+  background: var(--overlay);
+  color: var(--accent);
+}
+
+blockquote {
+  border-left: 0.25rem dotted var(--accent);
+  padding: 1rem;
+  margin-inline: 0;
+}
+
+button,
+.button,
+input,
+select {
+  background: transparent;
+  color: unset;
+  font: unset;
+  border: unset;
+  outline: none;
+}
+
+section,
+fieldset,
+button,
+.row {
+  margin-block: 1rem;
+}
